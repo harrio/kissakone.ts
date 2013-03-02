@@ -1,6 +1,6 @@
 $(window).load(function() { 
     console.log("poo");
-    $("#onForm").submit(function(event) {
+    $(".switchForm").submit(function(event) {
         console.log("jes");
         /* stop form from submitting normally */
         event.preventDefault();
