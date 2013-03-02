@@ -13,7 +13,6 @@ exports.gpioOn = function(req, res){
       			console.log(gpio4.value);    // should log 0
       			gpio4.unexport();            // all done
       		}, 5000);
-      		gpio4.reset();                // sets pin to low (can also call gpio4.reset()
    		}
 	});
 	res.send("OK");
