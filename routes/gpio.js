@@ -6,11 +6,11 @@ exports.gpioOn = function(req, res){
 
    		ready: function() {
     		gpio4.set();                 // sets pin to high
-      		console.log(gpio4.value);    // should log 1
+      		console.log("set: " + gpio4.value);    // should log 1
 
       		setTimeout(function() { 
       			gpio4.reset(); 
-      			console.log(gpio4.value);    // should log 0
+      			console.log("reset: " + gpio4.value);    // should log 0
       			gpio4.unexport();            // all done
       		}, 5000);
    		}
