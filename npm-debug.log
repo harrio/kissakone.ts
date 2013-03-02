@@ -1,0 +1,2051 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.1.32
+3 info using node@v0.8.0
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+5 verbose config file C:\Users\ohra\.npmrc
+6 verbose config file C:\Program Files (x86)\nodejs\etc\npmrc
+7 verbose config file C:\Program Files (x86)\nodejs\node_modules\npm\npmrc
+8 verbose read json C:\work\GitHub\kissamaatti\package.json
+9 verbose readDependencies using package.json deps
+10 verbose install where, deps [ 'C:\\work\\GitHub\\kissamaatti',
+10 verbose install   [ 'express', 'jade', 'gpio', 'jquery' ] ]
+11 verbose from cache C:\work\GitHub\kissamaatti\package.json
+12 info preinstall application-name@0.0.1
+13 verbose read json C:\work\GitHub\kissamaatti\node_modules\express\package.json
+14 verbose read json C:\work\GitHub\kissamaatti\node_modules\gpio\package.json
+15 verbose read json C:\work\GitHub\kissamaatti\node_modules\jade\package.json
+16 verbose from cache C:\work\GitHub\kissamaatti\package.json
+17 verbose readDependencies using package.json deps
+18 verbose read json C:\work\GitHub\kissamaatti\node_modules\.bin\package.json
+19 verbose from cache C:\work\GitHub\kissamaatti\node_modules\express\package.json
+20 verbose from cache C:\work\GitHub\kissamaatti\node_modules\gpio\package.json
+21 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jade\package.json
+22 verbose already installed skipping express@3.1.0 C:\work\GitHub\kissamaatti
+23 verbose already installed skipping jade@* C:\work\GitHub\kissamaatti
+24 verbose already installed skipping gpio@* C:\work\GitHub\kissamaatti
+25 verbose cache add [ 'jquery@*', null ]
+26 silly cache add name=undefined spec="jquery@*" args=["jquery@*",null]
+27 verbose parsed url { pathname: 'jquery@*', path: 'jquery@*', href: 'jquery@*' }
+28 silly cache add name="jquery" spec="*" args=["jquery","*"]
+29 verbose parsed url { pathname: '*', path: '*', href: '*' }
+30 verbose addNamed [ 'jquery', '*' ]
+31 verbose addNamed [ null, '' ]
+32 silly addNameRange { name: 'jquery', range: '', hasData: false }
+33 verbose url raw jquery
+34 verbose url resolving [ 'https://registry.npmjs.org/', './jquery' ]
+35 verbose url resolved https://registry.npmjs.org/jquery
+36 http GET https://registry.npmjs.org/jquery
+37 http 200 https://registry.npmjs.org/jquery
+38 silly registry.get cb [ 200,
+38 silly registry.get   { vary: 'Accept',
+38 silly registry.get     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+38 silly registry.get     etag: '"F2JMATMMQ3LNWD3PI0XD45079"',
+38 silly registry.get     date: 'Sat, 02 Mar 2013 15:55:49 GMT',
+38 silly registry.get     'content-type': 'application/json',
+38 silly registry.get     'content-length': '14264' } ]
+39 silly addNameRange number 2 { name: 'jquery', range: '', hasData: true }
+40 silly addNameRange versions [ 'jquery',
+40 silly addNameRange   [ '1.5.1', '1.6.2', '1.6.3', '1.7.3', '1.8.2', '1.8.3' ] ]
+41 verbose addRemoteTarball [ 'https://registry.npmjs.org/jquery/-/jquery-1.8.3.tgz',
+41 verbose addRemoteTarball   'cfa2941c05a83d966f21347f759a6d15281c60cc' ]
+42 verbose fetch to= C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239750990-0.5331184018868953\tmp.tgz
+43 http GET https://registry.npmjs.org/jquery/-/jquery-1.8.3.tgz
+44 silly shasum updated bytes 40960
+45 silly shasum updated bytes 40960
+46 silly shasum updated bytes 40960
+47 silly shasum updated bytes 40960
+48 silly shasum updated bytes 9658
+49 info shasum cfa2941c05a83d966f21347f759a6d15281c60cc
+49 info shasum C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239750990-0.5331184018868953\tmp.tgz
+50 verbose tar unpack C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239750990-0.5331184018868953\tmp.tgz
+51 silly gunzTarPerm modes [ '755', '644' ]
+52 silly gunzTarPerm extractEntry package.json
+53 silly gunzTarPerm extractEntry .npmignore
+54 silly gunzTarPerm extractEntry README.md
+55 silly gunzTarPerm extractEntry grunt.js
+56 silly gunzTarPerm extractEntry lib/node-jquery.js
+57 silly gunzTarPerm extractEntry LICENSE-MIT
+58 silly gunzTarPerm extractEntry src/wrapper.js
+59 silly gunzTarPerm extractEntry test/core.js
+60 silly gunzTarPerm extractEntry test/css.js
+61 silly gunzTarPerm extractEntry test/fixtures/core.html
+62 silly gunzTarPerm extractEntry test/fixtures/css.css
+63 silly gunzTarPerm extractEntry test/fixtures/css.html
+64 silly gunzTarPerm extractEntry test/helpers/helper.js
+65 silly gunzTarPerm extractEntry tmp/jquery.js
+66 verbose read json C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239750990-0.5331184018868953\package\package.json
+67 verbose from cache C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239750990-0.5331184018868953\package\package.json
+68 verbose tar pack [ 'C:\\Users\\ohra\\AppData\\Roaming\\npm-cache\\jquery\\1.8.3\\package.tgz',
+68 verbose tar pack   'C:\\Users\\ohra\\AppData\\Local\\Temp\\npm-1362239750990\\1362239750990-0.5331184018868953\\package' ]
+69 verbose tarball C:\Users\ohra\AppData\Roaming\npm-cache\jquery\1.8.3\package.tgz
+70 verbose folder C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239750990-0.5331184018868953\package
+71 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\jquery\1.8.3\package.tgz
+72 silly gunzTarPerm modes [ '755', '644' ]
+73 silly gunzTarPerm extractEntry package.json
+74 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+75 silly gunzTarPerm extractEntry .npmignore
+76 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+77 silly gunzTarPerm extractEntry README.md
+78 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+79 silly gunzTarPerm extractEntry grunt.js
+80 silly gunzTarPerm modified mode [ 'grunt.js', 438, 420 ]
+81 silly gunzTarPerm extractEntry lib/node-jquery.js
+82 silly gunzTarPerm modified mode [ 'lib/node-jquery.js', 438, 420 ]
+83 silly gunzTarPerm extractEntry LICENSE-MIT
+84 silly gunzTarPerm modified mode [ 'LICENSE-MIT', 438, 420 ]
+85 silly gunzTarPerm extractEntry src/wrapper.js
+86 silly gunzTarPerm modified mode [ 'src/wrapper.js', 438, 420 ]
+87 silly gunzTarPerm extractEntry test/core.js
+88 silly gunzTarPerm modified mode [ 'test/core.js', 438, 420 ]
+89 silly gunzTarPerm extractEntry test/css.js
+90 silly gunzTarPerm modified mode [ 'test/css.js', 438, 420 ]
+91 silly gunzTarPerm extractEntry test/fixtures/core.html
+92 silly gunzTarPerm modified mode [ 'test/fixtures/core.html', 438, 420 ]
+93 silly gunzTarPerm extractEntry test/fixtures/css.css
+94 silly gunzTarPerm modified mode [ 'test/fixtures/css.css', 438, 420 ]
+95 silly gunzTarPerm extractEntry test/fixtures/css.html
+96 silly gunzTarPerm modified mode [ 'test/fixtures/css.html', 438, 420 ]
+97 silly gunzTarPerm extractEntry test/helpers/helper.js
+98 silly gunzTarPerm modified mode [ 'test/helpers/helper.js', 438, 420 ]
+99 silly gunzTarPerm extractEntry tmp/jquery.js
+100 silly gunzTarPerm modified mode [ 'tmp/jquery.js', 438, 420 ]
+101 verbose read json C:\Users\ohra\AppData\Roaming\npm-cache\jquery\1.8.3\package\package.json
+102 silly shasum updated bytes 40960
+103 silly shasum updated bytes 40960
+104 silly shasum updated bytes 40960
+105 silly shasum updated bytes 40960
+106 silly shasum updated bytes 9615
+107 info shasum 6d7df4f664eca42bfbfcd92b57250835d133ee9c
+107 info shasum C:\Users\ohra\AppData\Roaming\npm-cache\jquery\1.8.3\package.tgz
+108 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\jquery\1.8.3\package\package.json
+109 verbose chmod C:\Users\ohra\AppData\Roaming\npm-cache\jquery\1.8.3\package.tgz 644
+110 silly chown skipping for windows C:\Users\ohra\AppData\Roaming\npm-cache\jquery\1.8.3\package.tgz
+111 silly resolved [ { name: 'jquery',
+111 silly resolved     description: 'jQuery: The Write Less, Do More, JavaScript Library (packaged for Node.JS)',
+111 silly resolved     version: '1.8.3',
+111 silly resolved     url: 'http://jquery.com',
+111 silly resolved     homepage: 'https://github.com/coolaj86/node-jquery',
+111 silly resolved     author: { name: 'James Morrin', email: 'treasonx@gmail.com' },
+111 silly resolved     repository:
+111 silly resolved      { type: 'git',
+111 silly resolved        url: 'git://github.com/coolaj86/node-jquery.git' },
+111 silly resolved     bugs: { url: 'https://github.com/coolaj86/node-jquery/issues' },
+111 silly resolved     licenses: [ [Object] ],
+111 silly resolved     main: 'lib/node-jquery',
+111 silly resolved     engines: { node: '>=0.6' },
+111 silly resolved     scripts: { test: 'grunt test' },
+111 silly resolved     dependencies:
+111 silly resolved      { jsdom: '~0.2.14',
+111 silly resolved        htmlparser: '1.7.6',
+111 silly resolved        xmlhttprequest: '~1.4.2',
+111 silly resolved        location: '0.0.1',
+111 silly resolved        navigator: '~1.0.1',
+111 silly resolved        contextify: '~0.1.3' },
+111 silly resolved     devDependencies: { grunt: '~0.3.8', nodeunit: '~0.7.4' },
+111 silly resolved     keywords: [ 'util', 'dom', 'jquery' ],
+111 silly resolved     readme: 'DOES NOT WORK ON WINDOWS\n====\nMany people are having problems getting this module to work on windows. The\nfailure has to do with building contextify on window. It seems to be a windows\nenvironment issue. I don\'t have access to a windows machine so I cannot explore\nworking through the windows install process. If you figure out how to build\n[contextify](https://github.com/brianmcd/contextify) on windows please send me working instructions!\n\nNPM module jQuery is an EnderJS package. \n====\nplease use `npm install jquery` not `npm install jQuery`\n\n\nnode-jQuery\n====\n\nA stupid-simple wrapper over jQuery for  Node.JS (server). Currently 1.7.2.\n\nNode.JS\n---\n```\n    npm install jquery\n\n    var $ = require(\'jquery\');\n```\n\nExamples\n---\n```javascript\n    $("<h1>test passes</h1>").appendTo("body");\n    console.log($("body").html());\n```\n\nIn Node.JS you may also create separate window instances\n\n```javascript\n    var jsdom = require(\'jsdom\').jsdom\n      , myWindow = jsdom().createWindow()\n      , $ = require(\'jquery\')\n      , jq = require(\'jquery\').create()\n      , jQuery = require(\'jquery\').create(myWindow)\n      ;\n\n    $("<h1>test passes</h1>").appendTo("body");\n    console.log($("body").html());\n\n    jq("<h2>other test passes</h2>").appendTo("body");\n    console.log(jq("body").html());\n\n    jQuery("<h3>third test passes</h3>").appendTo("body");\n    console.log(jQuery("body").html());\n```\n\nOutput:\n\n```html\n    <h1>test passes</h1>\n    <h2>other test passes</h2>\n    <h3>third test passes</h3>\n```\n\nJSONP Example\n----\n\n```javascript\n    var $ = require(\'jquery\');\n\n    $.getJSON(\'http://twitter.com/status/user_timeline/treason.json?count=10&callback=?\',function(data) {\n      console.log(data);\n    });\n```\n\n',
+111 silly resolved     _id: 'jquery@1.8.3',
+111 silly resolved     dist: { shasum: '6d7df4f664eca42bfbfcd92b57250835d133ee9c' },
+111 silly resolved     _from: 'jquery@*' } ]
+112 info install jquery@1.8.3 into C:\work\GitHub\kissamaatti
+113 info installOne jquery@1.8.3
+114 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\jquery\1.8.3\package\package.json
+115 info C:\work\GitHub\kissamaatti\node_modules\jquery unbuild
+116 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\package.json
+117 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\jquery\1.8.3\package.tgz
+118 silly gunzTarPerm modes [ '755', '644' ]
+119 silly gunzTarPerm extractEntry package.json
+120 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+121 silly gunzTarPerm extractEntry .npmignore
+122 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+123 silly gunzTarPerm extractEntry README.md
+124 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+125 silly gunzTarPerm extractEntry grunt.js
+126 silly gunzTarPerm modified mode [ 'grunt.js', 438, 420 ]
+127 silly gunzTarPerm extractEntry lib/node-jquery.js
+128 silly gunzTarPerm modified mode [ 'lib/node-jquery.js', 438, 420 ]
+129 silly gunzTarPerm extractEntry LICENSE-MIT
+130 silly gunzTarPerm modified mode [ 'LICENSE-MIT', 438, 420 ]
+131 silly gunzTarPerm extractEntry src/wrapper.js
+132 silly gunzTarPerm modified mode [ 'src/wrapper.js', 438, 420 ]
+133 silly gunzTarPerm extractEntry test/core.js
+134 silly gunzTarPerm modified mode [ 'test/core.js', 438, 420 ]
+135 silly gunzTarPerm extractEntry test/css.js
+136 silly gunzTarPerm modified mode [ 'test/css.js', 438, 420 ]
+137 silly gunzTarPerm extractEntry test/fixtures/core.html
+138 silly gunzTarPerm modified mode [ 'test/fixtures/core.html', 438, 420 ]
+139 silly gunzTarPerm extractEntry test/fixtures/css.css
+140 silly gunzTarPerm modified mode [ 'test/fixtures/css.css', 438, 420 ]
+141 silly gunzTarPerm extractEntry test/fixtures/css.html
+142 silly gunzTarPerm modified mode [ 'test/fixtures/css.html', 438, 420 ]
+143 silly gunzTarPerm extractEntry test/helpers/helper.js
+144 silly gunzTarPerm modified mode [ 'test/helpers/helper.js', 438, 420 ]
+145 silly gunzTarPerm extractEntry tmp/jquery.js
+146 silly gunzTarPerm modified mode [ 'tmp/jquery.js', 438, 420 ]
+147 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\package.json
+148 info preinstall jquery@1.8.3
+149 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\package.json
+150 verbose readDependencies using package.json deps
+151 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\package.json
+152 verbose readDependencies using package.json deps
+153 verbose cache add [ 'jsdom@~0.2.14', null ]
+154 silly cache add name=undefined spec="jsdom@~0.2.14" args=["jsdom@~0.2.14",null]
+155 verbose parsed url { pathname: 'jsdom@~0.2.14',
+155 verbose parsed url   path: 'jsdom@~0.2.14',
+155 verbose parsed url   href: 'jsdom@~0.2.14' }
+156 silly cache add name="jsdom" spec="~0.2.14" args=["jsdom","~0.2.14"]
+157 verbose parsed url { pathname: '~0.2.14', path: '~0.2.14', href: '~0.2.14' }
+158 verbose addNamed [ 'jsdom', '~0.2.14' ]
+159 verbose addNamed [ null, '>=0.2.14- <0.3.0-' ]
+160 silly addNameRange { name: 'jsdom', range: '>=0.2.14- <0.3.0-', hasData: false }
+161 verbose cache add [ 'htmlparser@1.7.6', null ]
+162 silly cache add name=undefined spec="htmlparser@1.7.6" args=["htmlparser@1.7.6",null]
+163 verbose parsed url { pathname: 'htmlparser@1.7.6',
+163 verbose parsed url   path: 'htmlparser@1.7.6',
+163 verbose parsed url   href: 'htmlparser@1.7.6' }
+164 silly cache add name="htmlparser" spec="1.7.6" args=["htmlparser","1.7.6"]
+165 verbose parsed url { pathname: '1.7.6', path: '1.7.6', href: '1.7.6' }
+166 verbose addNamed [ 'htmlparser', '1.7.6' ]
+167 verbose addNamed [ '1.7.6', '1.7.6' ]
+168 verbose cache add [ 'xmlhttprequest@~1.4.2', null ]
+169 silly cache add name=undefined spec="xmlhttprequest@~1.4.2" args=["xmlhttprequest@~1.4.2",null]
+170 verbose parsed url { pathname: 'xmlhttprequest@~1.4.2',
+170 verbose parsed url   path: 'xmlhttprequest@~1.4.2',
+170 verbose parsed url   href: 'xmlhttprequest@~1.4.2' }
+171 silly cache add name="xmlhttprequest" spec="~1.4.2" args=["xmlhttprequest","~1.4.2"]
+172 verbose parsed url { pathname: '~1.4.2', path: '~1.4.2', href: '~1.4.2' }
+173 verbose addNamed [ 'xmlhttprequest', '~1.4.2' ]
+174 verbose addNamed [ null, '>=1.4.2- <1.5.0-' ]
+175 silly addNameRange { name: 'xmlhttprequest',
+175 silly addNameRange   range: '>=1.4.2- <1.5.0-',
+175 silly addNameRange   hasData: false }
+176 verbose cache add [ 'location@0.0.1', null ]
+177 silly cache add name=undefined spec="location@0.0.1" args=["location@0.0.1",null]
+178 verbose parsed url { pathname: 'location@0.0.1',
+178 verbose parsed url   path: 'location@0.0.1',
+178 verbose parsed url   href: 'location@0.0.1' }
+179 silly cache add name="location" spec="0.0.1" args=["location","0.0.1"]
+180 verbose parsed url { pathname: '0.0.1', path: '0.0.1', href: '0.0.1' }
+181 verbose addNamed [ 'location', '0.0.1' ]
+182 verbose addNamed [ '0.0.1', '0.0.1' ]
+183 verbose cache add [ 'navigator@~1.0.1', null ]
+184 silly cache add name=undefined spec="navigator@~1.0.1" args=["navigator@~1.0.1",null]
+185 verbose parsed url { pathname: 'navigator@~1.0.1',
+185 verbose parsed url   path: 'navigator@~1.0.1',
+185 verbose parsed url   href: 'navigator@~1.0.1' }
+186 silly cache add name="navigator" spec="~1.0.1" args=["navigator","~1.0.1"]
+187 verbose parsed url { pathname: '~1.0.1', path: '~1.0.1', href: '~1.0.1' }
+188 verbose addNamed [ 'navigator', '~1.0.1' ]
+189 verbose addNamed [ null, '>=1.0.1- <1.1.0-' ]
+190 silly addNameRange { name: 'navigator', range: '>=1.0.1- <1.1.0-', hasData: false }
+191 verbose cache add [ 'contextify@~0.1.3', null ]
+192 silly cache add name=undefined spec="contextify@~0.1.3" args=["contextify@~0.1.3",null]
+193 verbose parsed url { pathname: 'contextify@~0.1.3',
+193 verbose parsed url   path: 'contextify@~0.1.3',
+193 verbose parsed url   href: 'contextify@~0.1.3' }
+194 silly cache add name="contextify" spec="~0.1.3" args=["contextify","~0.1.3"]
+195 verbose parsed url { pathname: '~0.1.3', path: '~0.1.3', href: '~0.1.3' }
+196 verbose addNamed [ 'contextify', '~0.1.3' ]
+197 verbose addNamed [ null, '>=0.1.3- <0.2.0-' ]
+198 silly addNameRange { name: 'contextify', range: '>=0.1.3- <0.2.0-', hasData: false }
+199 verbose url raw jsdom
+200 verbose url resolving [ 'https://registry.npmjs.org/', './jsdom' ]
+201 verbose url resolved https://registry.npmjs.org/jsdom
+202 http GET https://registry.npmjs.org/jsdom
+203 verbose url raw htmlparser/1.7.6
+204 verbose url resolving [ 'https://registry.npmjs.org/', './htmlparser/1.7.6' ]
+205 verbose url resolved https://registry.npmjs.org/htmlparser/1.7.6
+206 http GET https://registry.npmjs.org/htmlparser/1.7.6
+207 verbose url raw xmlhttprequest
+208 verbose url resolving [ 'https://registry.npmjs.org/', './xmlhttprequest' ]
+209 verbose url resolved https://registry.npmjs.org/xmlhttprequest
+210 http GET https://registry.npmjs.org/xmlhttprequest
+211 verbose url raw location/0.0.1
+212 verbose url resolving [ 'https://registry.npmjs.org/', './location/0.0.1' ]
+213 verbose url resolved https://registry.npmjs.org/location/0.0.1
+214 http GET https://registry.npmjs.org/location/0.0.1
+215 verbose url raw navigator
+216 verbose url resolving [ 'https://registry.npmjs.org/', './navigator' ]
+217 verbose url resolved https://registry.npmjs.org/navigator
+218 http GET https://registry.npmjs.org/navigator
+219 verbose url raw contextify
+220 verbose url resolving [ 'https://registry.npmjs.org/', './contextify' ]
+221 verbose url resolved https://registry.npmjs.org/contextify
+222 http GET https://registry.npmjs.org/contextify
+223 http 200 https://registry.npmjs.org/location/0.0.1
+224 silly registry.get cb [ 200,
+224 silly registry.get   { vary: 'Accept',
+224 silly registry.get     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+224 silly registry.get     etag: '"23CC5FVLYYZ0CPR9WPN09VW7O"',
+224 silly registry.get     date: 'Sat, 02 Mar 2013 15:55:54 GMT',
+224 silly registry.get     'content-type': 'application/json',
+224 silly registry.get     'content-length': '755' } ]
+225 verbose addRemoteTarball [ 'https://registry.npmjs.org/location/-/location-0.0.1.tgz',
+225 verbose addRemoteTarball   'fa071d21365dd76661e2271ade8ca1314dc6f580' ]
+226 verbose fetch to= C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756157-0.9731814542319626\tmp.tgz
+227 http GET https://registry.npmjs.org/location/-/location-0.0.1.tgz
+228 http 200 https://registry.npmjs.org/xmlhttprequest
+229 silly registry.get cb [ 200,
+229 silly registry.get   { vary: 'Accept',
+229 silly registry.get     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+229 silly registry.get     etag: '"H397HZVQQP2R6OR2ZGXLXAKW"',
+229 silly registry.get     date: 'Sat, 02 Mar 2013 15:55:54 GMT',
+229 silly registry.get     'content-type': 'application/json',
+229 silly registry.get     'content-length': '14398' } ]
+230 silly addNameRange number 2 { name: 'xmlhttprequest',
+230 silly addNameRange   range: '>=1.4.2- <1.5.0-',
+230 silly addNameRange   hasData: true }
+231 silly addNameRange versions [ 'xmlhttprequest',
+231 silly addNameRange   [ '1.0.0',
+231 silly addNameRange     '1.2.0',
+231 silly addNameRange     '1.2.1',
+231 silly addNameRange     '1.2.2',
+231 silly addNameRange     '1.3.0',
+231 silly addNameRange     '1.4.0',
+231 silly addNameRange     '1.4.2',
+231 silly addNameRange     '1.5.0' ] ]
+232 verbose addRemoteTarball [ 'https://registry.npmjs.org/xmlhttprequest/-/xmlhttprequest-1.4.2.tgz',
+232 verbose addRemoteTarball   '01453a1d9bed1e8f172f6495bbf4c8c426321500' ]
+233 verbose fetch to= C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756392-0.893328458070755\tmp.tgz
+234 http GET https://registry.npmjs.org/xmlhttprequest/-/xmlhttprequest-1.4.2.tgz
+235 http 200 https://registry.npmjs.org/navigator
+236 silly registry.get cb [ 200,
+236 silly registry.get   { vary: 'Accept',
+236 silly registry.get     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+236 silly registry.get     etag: '"5NZYP066XM0DHBJNCZ8EP2WW0"',
+236 silly registry.get     date: 'Sat, 02 Mar 2013 15:55:54 GMT',
+236 silly registry.get     'content-type': 'application/json',
+236 silly registry.get     'content-length': '2411' } ]
+237 silly addNameRange number 2 { name: 'navigator', range: '>=1.0.1- <1.1.0-', hasData: true }
+238 silly addNameRange versions [ 'navigator', [ '1.0.0', '1.0.1' ] ]
+239 verbose addRemoteTarball [ 'https://registry.npmjs.org/navigator/-/navigator-1.0.1.tgz',
+239 verbose addRemoteTarball   'ba69c1929a39a9b50eb7e9f5c11178789caf790f' ]
+240 verbose fetch to= C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756467-0.7758803975302726\tmp.tgz
+241 http GET https://registry.npmjs.org/navigator/-/navigator-1.0.1.tgz
+242 http 200 https://registry.npmjs.org/htmlparser/1.7.6
+243 silly registry.get cb [ 200,
+243 silly registry.get   { vary: 'Accept',
+243 silly registry.get     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+243 silly registry.get     etag: '"ELN8QO1Z1UX22TLPVWQ99VA0P"',
+243 silly registry.get     date: 'Sat, 02 Mar 2013 15:55:54 GMT',
+243 silly registry.get     'content-type': 'application/json',
+243 silly registry.get     'content-length': '6478' } ]
+244 verbose addRemoteTarball [ 'https://registry.npmjs.org/htmlparser/-/htmlparser-1.7.6.tgz',
+244 verbose addRemoteTarball   '6a263c7ee5930f3e5c56fa564011f99e49f80d34' ]
+245 verbose fetch to= C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756651-0.2979114146437496\tmp.tgz
+246 http GET https://registry.npmjs.org/htmlparser/-/htmlparser-1.7.6.tgz
+247 http 200 https://registry.npmjs.org/contextify
+248 silly registry.get cb [ 200,
+248 silly registry.get   { vary: 'Accept',
+248 silly registry.get     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+248 silly registry.get     etag: '"85N24B5C5DU5E5OXWV014GZWR"',
+248 silly registry.get     date: 'Sat, 02 Mar 2013 15:55:54 GMT',
+248 silly registry.get     'content-type': 'application/json',
+248 silly registry.get     'content-length': '31819' } ]
+249 silly addNameRange number 2 { name: 'contextify', range: '>=0.1.3- <0.2.0-', hasData: true }
+250 silly addNameRange versions [ 'contextify',
+250 silly addNameRange   [ '0.0.2',
+250 silly addNameRange     '0.0.3',
+250 silly addNameRange     '0.0.4',
+250 silly addNameRange     '0.0.5',
+250 silly addNameRange     '0.0.6',
+250 silly addNameRange     '0.0.7',
+250 silly addNameRange     '0.1.0',
+250 silly addNameRange     '0.1.1',
+250 silly addNameRange     '0.1.2',
+250 silly addNameRange     '0.1.3',
+250 silly addNameRange     '0.1.4' ] ]
+251 verbose addRemoteTarball [ 'https://registry.npmjs.org/contextify/-/contextify-0.1.4.tgz',
+251 verbose addRemoteTarball   'd0ba0c85a9b01c755872ee4873b42928cfffe62f' ]
+252 verbose fetch to= C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239757204-0.5382574922405183\tmp.tgz
+253 http GET https://registry.npmjs.org/contextify/-/contextify-0.1.4.tgz
+254 silly shasum updated bytes 7764
+255 info shasum 01453a1d9bed1e8f172f6495bbf4c8c426321500
+255 info shasum C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756392-0.893328458070755\tmp.tgz
+256 verbose tar unpack C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756392-0.893328458070755\tmp.tgz
+257 silly gunzTarPerm modes [ '755', '644' ]
+258 silly gunzTarPerm extractEntry package.json
+259 silly gunzTarPerm extractEntry README.md
+260 silly gunzTarPerm extractEntry autotest.watchr
+261 silly gunzTarPerm extractEntry example/demo.js
+262 silly gunzTarPerm extractEntry lib/XMLHttpRequest.js
+263 silly gunzTarPerm extractEntry tests/test-constants.js
+264 silly gunzTarPerm extractEntry tests/test-events.js
+265 silly gunzTarPerm extractEntry tests/test-exceptions.js
+266 silly gunzTarPerm extractEntry tests/test-headers.js
+267 silly gunzTarPerm extractEntry tests/test-request-methods.js
+268 silly gunzTarPerm extractEntry tests/test-request-protocols.js
+269 silly shasum updated bytes 975
+270 info shasum fa071d21365dd76661e2271ade8ca1314dc6f580
+270 info shasum C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756157-0.9731814542319626\tmp.tgz
+271 verbose tar unpack C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756157-0.9731814542319626\tmp.tgz
+272 silly gunzTarPerm modes [ '755', '644' ]
+273 silly gunzTarPerm extractEntry location.js
+274 silly gunzTarPerm modified mode [ 'location.js', 436, 420 ]
+275 silly gunzTarPerm extractEntry tests/testdata.txt
+276 silly gunzTarPerm extractEntry package.json
+277 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+278 silly gunzTarPerm extractEntry README.md
+279 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+280 verbose read json C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756157-0.9731814542319626\package\package.json
+281 verbose from cache C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756157-0.9731814542319626\package\package.json
+282 verbose tar pack [ 'C:\\Users\\ohra\\AppData\\Roaming\\npm-cache\\location\\0.0.1\\package.tgz',
+282 verbose tar pack   'C:\\Users\\ohra\\AppData\\Local\\Temp\\npm-1362239750990\\1362239756157-0.9731814542319626\\package' ]
+283 verbose tarball C:\Users\ohra\AppData\Roaming\npm-cache\location\0.0.1\package.tgz
+284 verbose folder C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756157-0.9731814542319626\package
+285 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\location\0.0.1\package.tgz
+286 silly gunzTarPerm modes [ '755', '644' ]
+287 silly gunzTarPerm extractEntry package.json
+288 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+289 silly gunzTarPerm extractEntry README.md
+290 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+291 silly gunzTarPerm extractEntry location.js
+292 silly gunzTarPerm modified mode [ 'location.js', 438, 420 ]
+293 verbose read json C:\Users\ohra\AppData\Roaming\npm-cache\location\0.0.1\package\package.json
+294 silly shasum updated bytes 941
+295 info shasum 007b37220cfd0c17e4e04f5c53a96773c11a0107
+295 info shasum C:\Users\ohra\AppData\Roaming\npm-cache\location\0.0.1\package.tgz
+296 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\location\0.0.1\package\package.json
+297 verbose chmod C:\Users\ohra\AppData\Roaming\npm-cache\location\0.0.1\package.tgz 644
+298 silly chown skipping for windows C:\Users\ohra\AppData\Roaming\npm-cache\location\0.0.1\package.tgz
+299 verbose read json C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756392-0.893328458070755\package\package.json
+300 verbose from cache C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756392-0.893328458070755\package\package.json
+301 verbose tar pack [ 'C:\\Users\\ohra\\AppData\\Roaming\\npm-cache\\xmlhttprequest\\1.4.2\\package.tgz',
+301 verbose tar pack   'C:\\Users\\ohra\\AppData\\Local\\Temp\\npm-1362239750990\\1362239756392-0.893328458070755\\package' ]
+302 verbose tarball C:\Users\ohra\AppData\Roaming\npm-cache\xmlhttprequest\1.4.2\package.tgz
+303 verbose folder C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756392-0.893328458070755\package
+304 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\xmlhttprequest\1.4.2\package.tgz
+305 silly gunzTarPerm modes [ '755', '644' ]
+306 silly gunzTarPerm extractEntry package.json
+307 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+308 silly gunzTarPerm extractEntry README.md
+309 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+310 silly gunzTarPerm extractEntry autotest.watchr
+311 silly gunzTarPerm modified mode [ 'autotest.watchr', 438, 420 ]
+312 silly gunzTarPerm extractEntry example/demo.js
+313 silly gunzTarPerm modified mode [ 'example/demo.js', 438, 420 ]
+314 silly gunzTarPerm extractEntry lib/XMLHttpRequest.js
+315 silly gunzTarPerm modified mode [ 'lib/XMLHttpRequest.js', 438, 420 ]
+316 silly gunzTarPerm extractEntry tests/test-constants.js
+317 silly gunzTarPerm modified mode [ 'tests/test-constants.js', 438, 420 ]
+318 silly gunzTarPerm extractEntry tests/test-events.js
+319 silly gunzTarPerm modified mode [ 'tests/test-events.js', 438, 420 ]
+320 silly gunzTarPerm extractEntry tests/test-exceptions.js
+321 silly gunzTarPerm modified mode [ 'tests/test-exceptions.js', 438, 420 ]
+322 silly gunzTarPerm extractEntry tests/test-headers.js
+323 silly gunzTarPerm modified mode [ 'tests/test-headers.js', 438, 420 ]
+324 silly gunzTarPerm extractEntry tests/test-request-methods.js
+325 silly gunzTarPerm modified mode [ 'tests/test-request-methods.js', 438, 420 ]
+326 silly gunzTarPerm extractEntry tests/test-request-protocols.js
+327 silly gunzTarPerm modified mode [ 'tests/test-request-protocols.js', 438, 420 ]
+328 silly gunzTarPerm extractEntry tests/testdata.txt
+329 silly gunzTarPerm modified mode [ 'tests/testdata.txt', 438, 420 ]
+330 verbose read json C:\Users\ohra\AppData\Roaming\npm-cache\xmlhttprequest\1.4.2\package\package.json
+331 silly shasum updated bytes 7674
+332 info shasum 828171a8f0023a016ceb7ca91b59018437a2b399
+332 info shasum C:\Users\ohra\AppData\Roaming\npm-cache\xmlhttprequest\1.4.2\package.tgz
+333 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\xmlhttprequest\1.4.2\package\package.json
+334 verbose chmod C:\Users\ohra\AppData\Roaming\npm-cache\xmlhttprequest\1.4.2\package.tgz 644
+335 silly chown skipping for windows C:\Users\ohra\AppData\Roaming\npm-cache\xmlhttprequest\1.4.2\package.tgz
+336 silly shasum updated bytes 10240
+337 info shasum ba69c1929a39a9b50eb7e9f5c11178789caf790f
+337 info shasum C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756467-0.7758803975302726\tmp.tgz
+338 verbose tar unpack C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756467-0.7758803975302726\tmp.tgz
+339 silly gunzTarPerm modes [ '755', '644' ]
+340 silly gunzTarPerm extractEntry index.js
+341 silly gunzTarPerm extractEntry package.json
+342 silly gunzTarPerm extractEntry README.md
+343 verbose read json C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756467-0.7758803975302726\package\package.json
+344 verbose from cache C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756467-0.7758803975302726\package\package.json
+345 verbose tar pack [ 'C:\\Users\\ohra\\AppData\\Roaming\\npm-cache\\navigator\\1.0.1\\package.tgz',
+345 verbose tar pack   'C:\\Users\\ohra\\AppData\\Local\\Temp\\npm-1362239750990\\1362239756467-0.7758803975302726\\package' ]
+346 verbose tarball C:\Users\ohra\AppData\Roaming\npm-cache\navigator\1.0.1\package.tgz
+347 verbose folder C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756467-0.7758803975302726\package
+348 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\navigator\1.0.1\package.tgz
+349 silly gunzTarPerm modes [ '755', '644' ]
+350 silly gunzTarPerm extractEntry package.json
+351 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+352 silly gunzTarPerm extractEntry README.md
+353 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+354 silly gunzTarPerm extractEntry index.js
+355 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+356 verbose read json C:\Users\ohra\AppData\Roaming\npm-cache\navigator\1.0.1\package\package.json
+357 silly shasum updated bytes 934
+358 info shasum 0e97cc7df4b3dcc6c3b33b0442badd0be0f28665
+358 info shasum C:\Users\ohra\AppData\Roaming\npm-cache\navigator\1.0.1\package.tgz
+359 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\navigator\1.0.1\package\package.json
+360 verbose chmod C:\Users\ohra\AppData\Roaming\npm-cache\navigator\1.0.1\package.tgz 644
+361 silly chown skipping for windows C:\Users\ohra\AppData\Roaming\npm-cache\navigator\1.0.1\package.tgz
+362 silly shasum updated bytes 9036
+363 info shasum d0ba0c85a9b01c755872ee4873b42928cfffe62f
+363 info shasum C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239757204-0.5382574922405183\tmp.tgz
+364 verbose tar unpack C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239757204-0.5382574922405183\tmp.tgz
+365 silly gunzTarPerm modes [ '755', '644' ]
+366 silly gunzTarPerm extractEntry package.json
+367 silly gunzTarPerm extractEntry .npmignore
+368 silly gunzTarPerm extractEntry README.md
+369 silly gunzTarPerm extractEntry binding.gyp
+370 silly gunzTarPerm extractEntry test/contextify.js
+371 silly gunzTarPerm extractEntry src/contextify.cc
+372 silly gunzTarPerm extractEntry lib/contextify.js
+373 silly gunzTarPerm extractEntry LICENSE.txt
+374 silly gunzTarPerm extractEntry wscript
+375 silly gunzTarPerm extractEntry changelog
+376 verbose read json C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239757204-0.5382574922405183\package\package.json
+377 verbose from cache C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239757204-0.5382574922405183\package\package.json
+378 verbose tar pack [ 'C:\\Users\\ohra\\AppData\\Roaming\\npm-cache\\contextify\\0.1.4\\package.tgz',
+378 verbose tar pack   'C:\\Users\\ohra\\AppData\\Local\\Temp\\npm-1362239750990\\1362239757204-0.5382574922405183\\package' ]
+379 verbose tarball C:\Users\ohra\AppData\Roaming\npm-cache\contextify\0.1.4\package.tgz
+380 verbose folder C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239757204-0.5382574922405183\package
+381 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\contextify\0.1.4\package.tgz
+382 silly gunzTarPerm modes [ '755', '644' ]
+383 silly gunzTarPerm extractEntry package.json
+384 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+385 silly gunzTarPerm extractEntry .npmignore
+386 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+387 silly gunzTarPerm extractEntry README.md
+388 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+389 silly gunzTarPerm extractEntry binding.gyp
+390 silly gunzTarPerm modified mode [ 'binding.gyp', 438, 420 ]
+391 silly gunzTarPerm extractEntry changelog
+392 silly gunzTarPerm modified mode [ 'changelog', 438, 420 ]
+393 silly gunzTarPerm extractEntry lib/contextify.js
+394 silly gunzTarPerm modified mode [ 'lib/contextify.js', 438, 420 ]
+395 silly gunzTarPerm extractEntry LICENSE.txt
+396 silly gunzTarPerm modified mode [ 'LICENSE.txt', 438, 420 ]
+397 silly gunzTarPerm extractEntry src/contextify.cc
+398 silly gunzTarPerm modified mode [ 'src/contextify.cc', 438, 420 ]
+399 silly gunzTarPerm extractEntry test/contextify.js
+400 silly gunzTarPerm modified mode [ 'test/contextify.js', 438, 420 ]
+401 silly gunzTarPerm extractEntry wscript
+402 silly gunzTarPerm modified mode [ 'wscript', 438, 420 ]
+403 verbose read json C:\Users\ohra\AppData\Roaming\npm-cache\contextify\0.1.4\package\package.json
+404 silly shasum updated bytes 8948
+405 info shasum 806b65ad556febe0e573643e7847fd721a0cd70f
+405 info shasum C:\Users\ohra\AppData\Roaming\npm-cache\contextify\0.1.4\package.tgz
+406 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\contextify\0.1.4\package\package.json
+407 verbose chmod C:\Users\ohra\AppData\Roaming\npm-cache\contextify\0.1.4\package.tgz 644
+408 silly chown skipping for windows C:\Users\ohra\AppData\Roaming\npm-cache\contextify\0.1.4\package.tgz
+409 http 200 https://registry.npmjs.org/jsdom
+410 silly registry.get cb [ 200,
+410 silly registry.get   { vary: 'Accept',
+410 silly registry.get     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+410 silly registry.get     etag: '"EPOY8LY1FJO6JMZ4SAID9QE49"',
+410 silly registry.get     date: 'Sat, 02 Mar 2013 15:55:54 GMT',
+410 silly registry.get     'content-type': 'application/json',
+410 silly registry.get     'content-length': '260999' } ]
+411 silly addNameRange number 2 { name: 'jsdom', range: '>=0.2.14- <0.3.0-', hasData: true }
+412 silly addNameRange versions [ 'jsdom',
+412 silly addNameRange   [ '0.0.1',
+412 silly addNameRange     '0.1.2',
+412 silly addNameRange     '0.1.4',
+412 silly addNameRange     '0.1.5',
+412 silly addNameRange     '0.1.6',
+412 silly addNameRange     '0.1.7',
+412 silly addNameRange     '0.1.8',
+412 silly addNameRange     '0.1.9',
+412 silly addNameRange     '0.1.10',
+412 silly addNameRange     '0.1.11',
+412 silly addNameRange     '0.1.12',
+412 silly addNameRange     '0.1.13',
+412 silly addNameRange     '0.1.15',
+412 silly addNameRange     '0.1.16',
+412 silly addNameRange     '0.1.17',
+412 silly addNameRange     '0.1.18',
+412 silly addNameRange     '0.1.19',
+412 silly addNameRange     '0.1.20',
+412 silly addNameRange     '0.1.21',
+412 silly addNameRange     '0.1.22',
+412 silly addNameRange     '0.1.23',
+412 silly addNameRange     '0.2.0',
+412 silly addNameRange     '0.2.1',
+412 silly addNameRange     '0.2.2',
+412 silly addNameRange     '0.2.3',
+412 silly addNameRange     '0.2.4',
+412 silly addNameRange     '0.2.5',
+412 silly addNameRange     '0.2.6',
+412 silly addNameRange     '0.2.7',
+412 silly addNameRange     '0.2.8',
+412 silly addNameRange     '0.2.9',
+412 silly addNameRange     '0.2.10',
+412 silly addNameRange     '0.2.11',
+412 silly addNameRange     '0.2.12',
+412 silly addNameRange     '0.2.13',
+412 silly addNameRange     '0.2.14',
+412 silly addNameRange     '0.2.15',
+412 silly addNameRange     '0.2.16',
+412 silly addNameRange     '0.2.17',
+412 silly addNameRange     '0.2.18',
+412 silly addNameRange     '0.2.19',
+412 silly addNameRange     '0.3.0',
+412 silly addNameRange     '0.3.1',
+412 silly addNameRange     '0.3.2',
+412 silly addNameRange     '0.3.3',
+412 silly addNameRange     '0.3.4',
+412 silly addNameRange     '0.4.0',
+412 silly addNameRange     '0.4.1',
+412 silly addNameRange     '0.4.2',
+412 silly addNameRange     '0.5.0' ] ]
+413 verbose addRemoteTarball [ 'https://registry.npmjs.org/jsdom/-/jsdom-0.2.19.tgz',
+413 verbose addRemoteTarball   'c0811df73901289ea6a0c825c7bb0c09c8c88629' ]
+414 verbose fetch to= C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239759716-0.48613050347194076\tmp.tgz
+415 http GET https://registry.npmjs.org/jsdom/-/jsdom-0.2.19.tgz
+416 silly shasum updated bytes 40960
+417 silly shasum updated bytes 40960
+418 silly shasum updated bytes 40960
+419 silly shasum updated bytes 40960
+420 silly shasum updated bytes 40960
+421 silly shasum updated bytes 38774
+422 info shasum 6a263c7ee5930f3e5c56fa564011f99e49f80d34
+422 info shasum C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756651-0.2979114146437496\tmp.tgz
+423 verbose tar unpack C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756651-0.2979114146437496\tmp.tgz
+424 silly gunzTarPerm modes [ '755', '644' ]
+425 silly gunzTarPerm extractEntry .project
+426 silly gunzTarPerm extractEntry .project.bak
+427 silly gunzTarPerm extractEntry .settings/
+428 silly gunzTarPerm extractEntry .settings/.jsdtscope
+429 silly gunzTarPerm extractEntry .settings/org.eclipse.core.resources.prefs
+430 silly gunzTarPerm extractEntry .settings/org.eclipse.wst.jsdt.ui.superType.container
+431 silly gunzTarPerm extractEntry .settings/org.eclipse.wst.jsdt.ui.superType.name
+432 silly gunzTarPerm extractEntry a
+433 silly gunzTarPerm extractEntry b
+434 silly gunzTarPerm extractEntry c
+435 silly gunzTarPerm extractEntry CHANGELOG
+436 silly gunzTarPerm extractEntry json2.js
+437 silly gunzTarPerm extractEntry lib/
+438 silly gunzTarPerm extractEntry lib/htmlparser.js
+439 silly gunzTarPerm extractEntry lib/htmlparser.min.js
+440 silly gunzTarPerm extractEntry lib/node-htmlparser.js
+441 silly gunzTarPerm extractEntry lib/node-htmlparser.min.js
+442 silly gunzTarPerm extractEntry libxmljs.node
+443 silly gunzTarPerm extractEntry LICENSE
+444 silly gunzTarPerm extractEntry new/
+445 silly gunzTarPerm extractEntry new/a
+446 silly gunzTarPerm extractEntry new/b
+447 silly gunzTarPerm extractEntry new/compat.js
+448 silly gunzTarPerm extractEntry new/htmlparser.js
+449 silly gunzTarPerm extractEntry new/parser.zip
+450 silly gunzTarPerm extractEntry new/test01.js
+451 silly gunzTarPerm extractEntry new/test02.js
+452 silly gunzTarPerm extractEntry newparser.js
+453 silly gunzTarPerm extractEntry node-htmlparser.old.js
+454 silly gunzTarPerm extractEntry package.json
+455 silly gunzTarPerm extractEntry profile
+456 silly gunzTarPerm extractEntry profile.getelement.js
+457 silly gunzTarPerm extractEntry profile.getelement.txt
+458 silly gunzTarPerm extractEntry profile.js
+459 silly gunzTarPerm extractEntry profileresults.txt
+460 silly gunzTarPerm extractEntry pulls/
+461 silly gunzTarPerm extractEntry pulls/node-htmlparser/
+462 silly gunzTarPerm extractEntry pulls/node-htmlparser/CHANGELOG
+463 silly gunzTarPerm extractEntry pulls/node-htmlparser/json2.js
+464 silly gunzTarPerm extractEntry pulls/node-htmlparser/lib/
+465 silly gunzTarPerm extractEntry pulls/node-htmlparser/lib/node-htmlparser.js
+466 silly gunzTarPerm extractEntry pulls/node-htmlparser/lib/node-htmlparser.min.js
+467 silly gunzTarPerm extractEntry pulls/node-htmlparser/LICENSE
+468 silly gunzTarPerm extractEntry pulls/node-htmlparser/package.json
+469 silly gunzTarPerm extractEntry pulls/node-htmlparser/profile.js
+470 silly gunzTarPerm extractEntry pulls/node-htmlparser/README.md
+471 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.html
+472 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.js
+473 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.min.html
+474 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.min.js
+475 silly gunzTarPerm extractEntry pulls/node-htmlparser/snippet.js
+476 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/
+477 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/01-basic.js
+478 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/02-single_tag_1.js
+479 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/03-single_tag_2.js
+480 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/04-unescaped_in_script.js
+481 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/05-tags_in_comment.js
+482 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/06-comment_in_script.js
+483 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/07-unescaped_in_style.js
+484 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/08-extra_spaces_in_tag.js
+485 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/09-unquoted_attrib.js
+486 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/10-singular_attribute.js
+487 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/11-text_outside_tags.js
+488 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/12-text_only.js
+489 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/13-comment_in_text.js
+490 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/14-comment_in_text_in_script.js
+491 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/15-non-verbose.js
+492 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/16-ignore_whitespace.js
+493 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/17-xml_namespace.js
+494 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/18-enforce_empty_tags.js
+495 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/19-ignore_empty_tags.js
+496 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/20-rss.js
+497 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/21-atom.js
+498 silly gunzTarPerm extractEntry pulls/node-htmlparser/utils_example.js
+499 silly gunzTarPerm extractEntry README.md
+500 silly gunzTarPerm extractEntry rssbug.js
+501 silly gunzTarPerm extractEntry rssbug.rss
+502 silly gunzTarPerm extractEntry runtests.html
+503 silly gunzTarPerm extractEntry runtests.js
+504 silly gunzTarPerm extractEntry runtests.min.html
+505 silly gunzTarPerm extractEntry runtests.min.js
+506 silly gunzTarPerm extractEntry runtests_new.js
+507 silly gunzTarPerm extractEntry snippet.js
+508 silly gunzTarPerm extractEntry test01.js
+509 silly gunzTarPerm extractEntry testdata/
+510 silly gunzTarPerm extractEntry testdata/.tmp_test.html.2854~
+511 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker.html.65425~
+512 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker.html.76922~
+513 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker.html.80022~
+514 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker2.html.51378~
+515 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker2.html.75287~
+516 silly gunzTarPerm extractEntry testdata/api.html
+517 silly gunzTarPerm extractEntry testdata/getelement.html
+518 silly gunzTarPerm extractEntry testdata/trackerchecker.html
+519 silly gunzTarPerm extractEntry tests/
+520 silly gunzTarPerm extractEntry tests/01-basic.js
+521 silly gunzTarPerm extractEntry tests/02-single_tag_1.js
+522 silly gunzTarPerm extractEntry tests/03-single_tag_2.js
+523 silly gunzTarPerm extractEntry tests/04-unescaped_in_script.js
+524 silly gunzTarPerm extractEntry tests/05-tags_in_comment.js
+525 silly gunzTarPerm extractEntry tests/06-comment_in_script.js
+526 silly gunzTarPerm extractEntry tests/07-unescaped_in_style.js
+527 silly gunzTarPerm extractEntry tests/08-extra_spaces_in_tag.js
+528 silly gunzTarPerm extractEntry tests/09-unquoted_attrib.js
+529 silly gunzTarPerm extractEntry tests/10-singular_attribute.js
+530 silly gunzTarPerm extractEntry tests/11-text_outside_tags.js
+531 silly gunzTarPerm extractEntry tests/12-text_only.js
+532 silly gunzTarPerm extractEntry tests/13-comment_in_text.js
+533 silly gunzTarPerm extractEntry tests/14-comment_in_text_in_script.js
+534 silly gunzTarPerm extractEntry tests/15-non-verbose.js
+535 silly gunzTarPerm extractEntry tests/16-ignore_whitespace.js
+536 silly gunzTarPerm extractEntry tests/17-xml_namespace.js
+537 silly gunzTarPerm extractEntry tests/18-enforce_empty_tags.js
+538 silly gunzTarPerm extractEntry tests/19-ignore_empty_tags.js
+539 silly gunzTarPerm extractEntry tests/20-rss.js
+540 silly gunzTarPerm extractEntry tests/21-atom.js
+541 silly gunzTarPerm extractEntry tests/22-position_data.js
+542 silly gunzTarPerm extractEntry tmp/
+543 silly gunzTarPerm extractEntry tmp/snippet.js
+544 silly gunzTarPerm extractEntry utils_example.js
+545 silly gunzTarPerm extractEntry v8.log
+546 verbose read json C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756651-0.2979114146437496\package\package.json
+547 verbose from cache C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756651-0.2979114146437496\package\package.json
+548 verbose tar pack [ 'C:\\Users\\ohra\\AppData\\Roaming\\npm-cache\\htmlparser\\1.7.6\\package.tgz',
+548 verbose tar pack   'C:\\Users\\ohra\\AppData\\Local\\Temp\\npm-1362239750990\\1362239756651-0.2979114146437496\\package' ]
+549 verbose tarball C:\Users\ohra\AppData\Roaming\npm-cache\htmlparser\1.7.6\package.tgz
+550 verbose folder C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239756651-0.2979114146437496\package
+551 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\htmlparser\1.7.6\package.tgz
+552 silly gunzTarPerm modes [ '755', '644' ]
+553 silly gunzTarPerm extractEntry package.json
+554 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+555 silly gunzTarPerm extractEntry README.md
+556 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+557 silly gunzTarPerm extractEntry LICENSE
+558 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+559 silly gunzTarPerm extractEntry node-htmlparser.old.js
+560 silly gunzTarPerm modified mode [ 'node-htmlparser.old.js', 438, 420 ]
+561 silly gunzTarPerm extractEntry profile.getelement.js
+562 silly gunzTarPerm modified mode [ 'profile.getelement.js', 438, 420 ]
+563 silly gunzTarPerm extractEntry newparser.js
+564 silly gunzTarPerm modified mode [ 'newparser.js', 438, 420 ]
+565 silly gunzTarPerm extractEntry rssbug.js
+566 silly gunzTarPerm modified mode [ 'rssbug.js', 438, 420 ]
+567 silly gunzTarPerm extractEntry runtests.js
+568 silly gunzTarPerm modified mode [ 'runtests.js', 438, 420 ]
+569 silly gunzTarPerm extractEntry runtests.min.js
+570 silly gunzTarPerm modified mode [ 'runtests.min.js', 438, 420 ]
+571 silly gunzTarPerm extractEntry runtests_new.js
+572 silly gunzTarPerm modified mode [ 'runtests_new.js', 438, 420 ]
+573 silly gunzTarPerm extractEntry snippet.js
+574 silly gunzTarPerm modified mode [ 'snippet.js', 438, 420 ]
+575 silly gunzTarPerm extractEntry test01.js
+576 silly gunzTarPerm modified mode [ 'test01.js', 438, 420 ]
+577 silly gunzTarPerm extractEntry json2.js
+578 silly gunzTarPerm modified mode [ 'json2.js', 438, 420 ]
+579 silly gunzTarPerm extractEntry profile.js
+580 silly gunzTarPerm modified mode [ 'profile.js', 438, 420 ]
+581 silly gunzTarPerm extractEntry utils_example.js
+582 silly gunzTarPerm modified mode [ 'utils_example.js', 438, 420 ]
+583 silly gunzTarPerm extractEntry profile
+584 silly gunzTarPerm modified mode [ 'profile', 438, 420 ]
+585 silly gunzTarPerm extractEntry CHANGELOG
+586 silly gunzTarPerm modified mode [ 'CHANGELOG', 438, 420 ]
+587 silly gunzTarPerm extractEntry profile.getelement.txt
+588 silly gunzTarPerm modified mode [ 'profile.getelement.txt', 438, 420 ]
+589 silly gunzTarPerm extractEntry .project.bak
+590 silly gunzTarPerm modified mode [ '.project.bak', 438, 420 ]
+591 silly gunzTarPerm extractEntry profileresults.txt
+592 silly gunzTarPerm modified mode [ 'profileresults.txt', 438, 420 ]
+593 silly gunzTarPerm extractEntry pulls/node-htmlparser/package.json
+594 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/package.json', 438, 420 ]
+595 silly gunzTarPerm extractEntry pulls/node-htmlparser/README.md
+596 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/README.md', 438, 420 ]
+597 silly gunzTarPerm extractEntry pulls/node-htmlparser/LICENSE
+598 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/LICENSE', 438, 420 ]
+599 silly gunzTarPerm extractEntry pulls/node-htmlparser/utils_example.js
+600 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/utils_example.js', 438, 420 ]
+601 silly gunzTarPerm extractEntry pulls/node-htmlparser/profile.js
+602 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/profile.js', 438, 420 ]
+603 silly gunzTarPerm extractEntry pulls/node-htmlparser/json2.js
+604 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/json2.js', 438, 420 ]
+605 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.js
+606 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/runtests.js', 438, 420 ]
+607 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.min.js
+608 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/runtests.min.js', 438, 420 ]
+609 silly gunzTarPerm extractEntry pulls/node-htmlparser/snippet.js
+610 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/snippet.js', 438, 420 ]
+611 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.min.html
+612 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/runtests.min.html', 438, 420 ]
+613 silly gunzTarPerm extractEntry pulls/node-htmlparser/CHANGELOG
+614 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/CHANGELOG', 438, 420 ]
+615 silly gunzTarPerm extractEntry pulls/node-htmlparser/lib/node-htmlparser.js
+616 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/lib/node-htmlparser.js', 438, 420 ]
+617 silly gunzTarPerm extractEntry pulls/node-htmlparser/lib/node-htmlparser.min.js
+618 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/lib/node-htmlparser.min.js', 438, 420 ]
+619 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/01-basic.js
+620 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/01-basic.js', 438, 420 ]
+621 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/08-extra_spaces_in_tag.js
+622 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/08-extra_spaces_in_tag.js',
+622 silly gunzTarPerm   438,
+622 silly gunzTarPerm   420 ]
+623 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/09-unquoted_attrib.js
+624 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/09-unquoted_attrib.js', 438, 420 ]
+625 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/10-singular_attribute.js
+626 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/10-singular_attribute.js',
+626 silly gunzTarPerm   438,
+626 silly gunzTarPerm   420 ]
+627 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/07-unescaped_in_style.js
+628 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/07-unescaped_in_style.js',
+628 silly gunzTarPerm   438,
+628 silly gunzTarPerm   420 ]
+629 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/12-text_only.js
+630 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/12-text_only.js', 438, 420 ]
+631 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/13-comment_in_text.js
+632 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/13-comment_in_text.js', 438, 420 ]
+633 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/14-comment_in_text_in_script.js
+634 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/14-comment_in_text_in_script.js',
+634 silly gunzTarPerm   438,
+634 silly gunzTarPerm   420 ]
+635 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/15-non-verbose.js
+636 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/15-non-verbose.js', 438, 420 ]
+637 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/16-ignore_whitespace.js
+638 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/16-ignore_whitespace.js',
+638 silly gunzTarPerm   438,
+638 silly gunzTarPerm   420 ]
+639 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/06-comment_in_script.js
+640 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/06-comment_in_script.js',
+640 silly gunzTarPerm   438,
+640 silly gunzTarPerm   420 ]
+641 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/17-xml_namespace.js
+642 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/17-xml_namespace.js', 438, 420 ]
+643 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/05-tags_in_comment.js
+644 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/05-tags_in_comment.js', 438, 420 ]
+645 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/18-enforce_empty_tags.js
+646 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/18-enforce_empty_tags.js',
+646 silly gunzTarPerm   438,
+646 silly gunzTarPerm   420 ]
+647 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/04-unescaped_in_script.js
+648 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/04-unescaped_in_script.js',
+648 silly gunzTarPerm   438,
+648 silly gunzTarPerm   420 ]
+649 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/19-ignore_empty_tags.js
+650 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/19-ignore_empty_tags.js',
+650 silly gunzTarPerm   438,
+650 silly gunzTarPerm   420 ]
+651 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/03-single_tag_2.js
+652 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/03-single_tag_2.js', 438, 420 ]
+653 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/20-rss.js
+654 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/20-rss.js', 438, 420 ]
+655 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/02-single_tag_1.js
+656 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/02-single_tag_1.js', 438, 420 ]
+657 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/21-atom.js
+658 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/21-atom.js', 438, 420 ]
+659 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/11-text_outside_tags.js
+660 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/11-text_outside_tags.js',
+660 silly gunzTarPerm   438,
+660 silly gunzTarPerm   420 ]
+661 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.html
+662 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/runtests.html', 438, 420 ]
+663 silly gunzTarPerm extractEntry .project
+664 silly gunzTarPerm modified mode [ '.project', 438, 420 ]
+665 silly gunzTarPerm extractEntry lib/htmlparser.js
+666 silly gunzTarPerm modified mode [ 'lib/htmlparser.js', 438, 420 ]
+667 silly gunzTarPerm extractEntry lib/htmlparser.min.js
+668 silly gunzTarPerm modified mode [ 'lib/htmlparser.min.js', 438, 420 ]
+669 silly gunzTarPerm extractEntry lib/node-htmlparser.js
+670 silly gunzTarPerm modified mode [ 'lib/node-htmlparser.js', 438, 420 ]
+671 silly gunzTarPerm extractEntry lib/node-htmlparser.min.js
+672 silly gunzTarPerm modified mode [ 'lib/node-htmlparser.min.js', 438, 420 ]
+673 silly gunzTarPerm extractEntry rssbug.rss
+674 silly gunzTarPerm modified mode [ 'rssbug.rss', 438, 420 ]
+675 silly gunzTarPerm extractEntry runtests.html
+676 silly gunzTarPerm modified mode [ 'runtests.html', 438, 420 ]
+677 silly gunzTarPerm extractEntry libxmljs.node
+678 silly gunzTarPerm modified mode [ 'libxmljs.node', 438, 420 ]
+679 silly gunzTarPerm extractEntry runtests.min.html
+680 silly gunzTarPerm modified mode [ 'runtests.min.html', 438, 420 ]
+681 silly gunzTarPerm extractEntry .settings/.jsdtscope
+682 silly gunzTarPerm modified mode [ '.settings/.jsdtscope', 438, 420 ]
+683 silly gunzTarPerm extractEntry .settings/org.eclipse.core.resources.prefs
+684 silly gunzTarPerm modified mode [ '.settings/org.eclipse.core.resources.prefs', 438, 420 ]
+685 silly gunzTarPerm extractEntry .settings/org.eclipse.wst.jsdt.ui.superType.container
+686 silly gunzTarPerm modified mode [ '.settings/org.eclipse.wst.jsdt.ui.superType.container',
+686 silly gunzTarPerm   438,
+686 silly gunzTarPerm   420 ]
+687 silly gunzTarPerm extractEntry .settings/org.eclipse.wst.jsdt.ui.superType.name
+688 silly gunzTarPerm modified mode [ '.settings/org.eclipse.wst.jsdt.ui.superType.name', 438, 420 ]
+689 silly gunzTarPerm extractEntry new/compat.js
+690 silly gunzTarPerm modified mode [ 'new/compat.js', 438, 420 ]
+691 silly gunzTarPerm extractEntry new/htmlparser.js
+692 silly gunzTarPerm modified mode [ 'new/htmlparser.js', 438, 420 ]
+693 silly gunzTarPerm extractEntry new/test01.js
+694 silly gunzTarPerm modified mode [ 'new/test01.js', 438, 420 ]
+695 silly gunzTarPerm extractEntry new/test02.js
+696 silly gunzTarPerm modified mode [ 'new/test02.js', 438, 420 ]
+697 silly gunzTarPerm extractEntry new/a
+698 silly gunzTarPerm modified mode [ 'new/a', 438, 420 ]
+699 silly gunzTarPerm extractEntry new/b
+700 silly gunzTarPerm modified mode [ 'new/b', 438, 420 ]
+701 silly gunzTarPerm extractEntry new/parser.zip
+702 silly gunzTarPerm modified mode [ 'new/parser.zip', 438, 420 ]
+703 silly gunzTarPerm extractEntry a
+704 silly gunzTarPerm modified mode [ 'a', 438, 420 ]
+705 silly gunzTarPerm extractEntry b
+706 silly gunzTarPerm modified mode [ 'b', 438, 420 ]
+707 silly gunzTarPerm extractEntry testdata/.tmp_test.html.2854~
+708 silly gunzTarPerm modified mode [ 'testdata/.tmp_test.html.2854~', 438, 420 ]
+709 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker.html.65425~
+710 silly gunzTarPerm modified mode [ 'testdata/.tmp_trackerchecker.html.65425~', 438, 420 ]
+711 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker.html.76922~
+712 silly gunzTarPerm modified mode [ 'testdata/.tmp_trackerchecker.html.76922~', 438, 420 ]
+713 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker.html.80022~
+714 silly gunzTarPerm modified mode [ 'testdata/.tmp_trackerchecker.html.80022~', 438, 420 ]
+715 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker2.html.51378~
+716 silly gunzTarPerm modified mode [ 'testdata/.tmp_trackerchecker2.html.51378~', 438, 420 ]
+717 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker2.html.75287~
+718 silly gunzTarPerm modified mode [ 'testdata/.tmp_trackerchecker2.html.75287~', 438, 420 ]
+719 silly gunzTarPerm extractEntry testdata/api.html
+720 silly gunzTarPerm modified mode [ 'testdata/api.html', 438, 420 ]
+721 silly gunzTarPerm extractEntry testdata/getelement.html
+722 silly gunzTarPerm modified mode [ 'testdata/getelement.html', 438, 420 ]
+723 silly gunzTarPerm extractEntry testdata/trackerchecker.html
+724 silly gunzTarPerm modified mode [ 'testdata/trackerchecker.html', 438, 420 ]
+725 silly gunzTarPerm extractEntry tests/01-basic.js
+726 silly gunzTarPerm modified mode [ 'tests/01-basic.js', 438, 420 ]
+727 silly gunzTarPerm extractEntry tests/08-extra_spaces_in_tag.js
+728 silly gunzTarPerm modified mode [ 'tests/08-extra_spaces_in_tag.js', 438, 420 ]
+729 silly gunzTarPerm extractEntry tests/09-unquoted_attrib.js
+730 silly gunzTarPerm modified mode [ 'tests/09-unquoted_attrib.js', 438, 420 ]
+731 silly gunzTarPerm extractEntry tests/10-singular_attribute.js
+732 silly gunzTarPerm modified mode [ 'tests/10-singular_attribute.js', 438, 420 ]
+733 silly gunzTarPerm extractEntry tests/11-text_outside_tags.js
+734 silly gunzTarPerm modified mode [ 'tests/11-text_outside_tags.js', 438, 420 ]
+735 silly gunzTarPerm extractEntry tests/07-unescaped_in_style.js
+736 silly gunzTarPerm modified mode [ 'tests/07-unescaped_in_style.js', 438, 420 ]
+737 silly gunzTarPerm extractEntry tests/13-comment_in_text.js
+738 silly gunzTarPerm modified mode [ 'tests/13-comment_in_text.js', 438, 420 ]
+739 silly gunzTarPerm extractEntry tests/14-comment_in_text_in_script.js
+740 silly gunzTarPerm modified mode [ 'tests/14-comment_in_text_in_script.js', 438, 420 ]
+741 silly gunzTarPerm extractEntry tests/15-non-verbose.js
+742 silly gunzTarPerm modified mode [ 'tests/15-non-verbose.js', 438, 420 ]
+743 silly gunzTarPerm extractEntry tests/16-ignore_whitespace.js
+744 silly gunzTarPerm modified mode [ 'tests/16-ignore_whitespace.js', 438, 420 ]
+745 silly gunzTarPerm extractEntry tests/17-xml_namespace.js
+746 silly gunzTarPerm modified mode [ 'tests/17-xml_namespace.js', 438, 420 ]
+747 silly gunzTarPerm extractEntry tests/06-comment_in_script.js
+748 silly gunzTarPerm modified mode [ 'tests/06-comment_in_script.js', 438, 420 ]
+749 silly gunzTarPerm extractEntry tests/18-enforce_empty_tags.js
+750 silly gunzTarPerm modified mode [ 'tests/18-enforce_empty_tags.js', 438, 420 ]
+751 silly gunzTarPerm extractEntry tests/05-tags_in_comment.js
+752 silly gunzTarPerm modified mode [ 'tests/05-tags_in_comment.js', 438, 420 ]
+753 silly gunzTarPerm extractEntry tests/19-ignore_empty_tags.js
+754 silly gunzTarPerm modified mode [ 'tests/19-ignore_empty_tags.js', 438, 420 ]
+755 silly gunzTarPerm extractEntry tests/04-unescaped_in_script.js
+756 silly gunzTarPerm modified mode [ 'tests/04-unescaped_in_script.js', 438, 420 ]
+757 silly gunzTarPerm extractEntry tests/20-rss.js
+758 silly gunzTarPerm modified mode [ 'tests/20-rss.js', 438, 420 ]
+759 silly gunzTarPerm extractEntry tests/03-single_tag_2.js
+760 silly gunzTarPerm modified mode [ 'tests/03-single_tag_2.js', 438, 420 ]
+761 silly gunzTarPerm extractEntry tests/21-atom.js
+762 silly gunzTarPerm modified mode [ 'tests/21-atom.js', 438, 420 ]
+763 silly gunzTarPerm extractEntry tests/02-single_tag_1.js
+764 silly gunzTarPerm modified mode [ 'tests/02-single_tag_1.js', 438, 420 ]
+765 silly gunzTarPerm extractEntry tests/22-position_data.js
+766 silly gunzTarPerm modified mode [ 'tests/22-position_data.js', 438, 420 ]
+767 silly gunzTarPerm extractEntry tests/12-text_only.js
+768 silly gunzTarPerm modified mode [ 'tests/12-text_only.js', 438, 420 ]
+769 silly gunzTarPerm extractEntry tmp/snippet.js
+770 silly gunzTarPerm modified mode [ 'tmp/snippet.js', 438, 420 ]
+771 silly gunzTarPerm extractEntry c
+772 silly gunzTarPerm modified mode [ 'c', 438, 420 ]
+773 silly gunzTarPerm extractEntry v8.log
+774 silly gunzTarPerm modified mode [ 'v8.log', 438, 420 ]
+775 verbose read json C:\Users\ohra\AppData\Roaming\npm-cache\htmlparser\1.7.6\package\package.json
+776 silly shasum updated bytes 40960
+777 silly shasum updated bytes 40960
+778 silly shasum updated bytes 40960
+779 silly shasum updated bytes 40960
+780 silly shasum updated bytes 40960
+781 silly shasum updated bytes 39934
+782 info shasum 234ab65d35297022e65c72f66a69564df78213c7
+782 info shasum C:\Users\ohra\AppData\Roaming\npm-cache\htmlparser\1.7.6\package.tgz
+783 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\htmlparser\1.7.6\package\package.json
+784 verbose chmod C:\Users\ohra\AppData\Roaming\npm-cache\htmlparser\1.7.6\package.tgz 644
+785 silly chown skipping for windows C:\Users\ohra\AppData\Roaming\npm-cache\htmlparser\1.7.6\package.tgz
+786 silly shasum updated bytes 40960
+787 silly shasum updated bytes 40960
+788 silly shasum updated bytes 7540
+789 info shasum c0811df73901289ea6a0c825c7bb0c09c8c88629
+789 info shasum C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239759716-0.48613050347194076\tmp.tgz
+790 verbose tar unpack C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239759716-0.48613050347194076\tmp.tgz
+791 silly gunzTarPerm modes [ '755', '644' ]
+792 silly gunzTarPerm extractEntry package.json
+793 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+794 silly gunzTarPerm extractEntry README.md
+795 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+796 silly gunzTarPerm extractEntry lib/jsdom.js
+797 silly gunzTarPerm modified mode [ 'lib/jsdom.js', 438, 420 ]
+798 silly gunzTarPerm extractEntry lib/jsdom/utils.js
+799 silly gunzTarPerm modified mode [ 'lib/jsdom/utils.js', 438, 420 ]
+800 silly gunzTarPerm extractEntry lib/jsdom/browser/documentfeatures.js
+801 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/documentfeatures.js', 438, 420 ]
+802 silly gunzTarPerm extractEntry lib/jsdom/browser/domtohtml.js
+803 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/domtohtml.js', 438, 420 ]
+804 silly gunzTarPerm extractEntry lib/jsdom/browser/htmlencoding.js
+805 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/htmlencoding.js', 438, 420 ]
+806 silly gunzTarPerm extractEntry lib/jsdom/browser/htmltodom.js
+807 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/htmltodom.js', 438, 420 ]
+808 silly gunzTarPerm extractEntry lib/jsdom/browser/index.js
+809 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/index.js', 438, 420 ]
+810 silly gunzTarPerm extractEntry lib/jsdom/level1/core.js
+811 silly gunzTarPerm modified mode [ 'lib/jsdom/level1/core.js', 438, 420 ]
+812 silly gunzTarPerm extractEntry lib/jsdom/level2/core.js
+813 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/core.js', 438, 420 ]
+814 silly gunzTarPerm extractEntry lib/jsdom/level2/events.js
+815 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/events.js', 438, 420 ]
+816 silly gunzTarPerm extractEntry lib/jsdom/level2/html.js
+817 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/html.js', 438, 420 ]
+818 silly gunzTarPerm extractEntry lib/jsdom/level2/index.js
+819 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/index.js', 438, 420 ]
+820 silly gunzTarPerm extractEntry lib/jsdom/level2/style.js
+821 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/style.js', 438, 420 ]
+822 silly gunzTarPerm extractEntry lib/jsdom/level2/languages/javascript.js
+823 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/languages/javascript.js', 438, 420 ]
+824 silly gunzTarPerm extractEntry lib/jsdom/level3/core.js
+825 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/core.js', 438, 420 ]
+826 silly gunzTarPerm extractEntry lib/jsdom/level3/events.js
+827 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/events.js', 438, 420 ]
+828 silly gunzTarPerm extractEntry lib/jsdom/level3/html.js
+829 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/html.js', 438, 420 ]
+830 silly gunzTarPerm extractEntry lib/jsdom/level3/index.js
+831 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/index.js', 438, 420 ]
+832 silly gunzTarPerm extractEntry lib/jsdom/level3/ls.js
+833 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/ls.js', 438, 420 ]
+834 silly gunzTarPerm extractEntry lib/jsdom/level3/xpath.js
+835 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/xpath.js', 438, 420 ]
+836 silly gunzTarPerm extractEntry lib/jsdom/selectors/index.js
+837 silly gunzTarPerm modified mode [ 'lib/jsdom/selectors/index.js', 438, 420 ]
+838 silly gunzTarPerm extractEntry lib/jsdom/selectors/sizzle.js
+839 silly gunzTarPerm modified mode [ 'lib/jsdom/selectors/sizzle.js', 438, 420 ]
+840 silly gunzTarPerm extractEntry LICENSE.txt
+841 silly gunzTarPerm modified mode [ 'LICENSE.txt', 438, 420 ]
+842 verbose read json C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239759716-0.48613050347194076\package\package.json
+843 verbose from cache C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239759716-0.48613050347194076\package\package.json
+844 verbose tar pack [ 'C:\\Users\\ohra\\AppData\\Roaming\\npm-cache\\jsdom\\0.2.19\\package.tgz',
+844 verbose tar pack   'C:\\Users\\ohra\\AppData\\Local\\Temp\\npm-1362239750990\\1362239759716-0.48613050347194076\\package' ]
+845 verbose tarball C:\Users\ohra\AppData\Roaming\npm-cache\jsdom\0.2.19\package.tgz
+846 verbose folder C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239759716-0.48613050347194076\package
+847 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\jsdom\0.2.19\package.tgz
+848 silly gunzTarPerm modes [ '755', '644' ]
+849 silly gunzTarPerm extractEntry package.json
+850 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+851 silly gunzTarPerm extractEntry README.md
+852 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+853 silly gunzTarPerm extractEntry lib/jsdom.js
+854 silly gunzTarPerm modified mode [ 'lib/jsdom.js', 438, 420 ]
+855 silly gunzTarPerm extractEntry lib/jsdom/utils.js
+856 silly gunzTarPerm modified mode [ 'lib/jsdom/utils.js', 438, 420 ]
+857 silly gunzTarPerm extractEntry lib/jsdom/browser/documentfeatures.js
+858 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/documentfeatures.js', 438, 420 ]
+859 silly gunzTarPerm extractEntry lib/jsdom/browser/domtohtml.js
+860 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/domtohtml.js', 438, 420 ]
+861 silly gunzTarPerm extractEntry lib/jsdom/browser/htmlencoding.js
+862 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/htmlencoding.js', 438, 420 ]
+863 silly gunzTarPerm extractEntry lib/jsdom/browser/htmltodom.js
+864 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/htmltodom.js', 438, 420 ]
+865 silly gunzTarPerm extractEntry lib/jsdom/browser/index.js
+866 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/index.js', 438, 420 ]
+867 silly gunzTarPerm extractEntry lib/jsdom/level1/core.js
+868 silly gunzTarPerm modified mode [ 'lib/jsdom/level1/core.js', 438, 420 ]
+869 silly gunzTarPerm extractEntry lib/jsdom/level2/core.js
+870 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/core.js', 438, 420 ]
+871 silly gunzTarPerm extractEntry lib/jsdom/level2/events.js
+872 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/events.js', 438, 420 ]
+873 silly gunzTarPerm extractEntry lib/jsdom/level2/html.js
+874 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/html.js', 438, 420 ]
+875 silly gunzTarPerm extractEntry lib/jsdom/level2/index.js
+876 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/index.js', 438, 420 ]
+877 silly gunzTarPerm extractEntry lib/jsdom/level2/style.js
+878 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/style.js', 438, 420 ]
+879 silly gunzTarPerm extractEntry lib/jsdom/level2/languages/javascript.js
+880 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/languages/javascript.js', 438, 420 ]
+881 silly gunzTarPerm extractEntry lib/jsdom/level3/core.js
+882 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/core.js', 438, 420 ]
+883 silly gunzTarPerm extractEntry lib/jsdom/level3/events.js
+884 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/events.js', 438, 420 ]
+885 silly gunzTarPerm extractEntry lib/jsdom/level3/html.js
+886 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/html.js', 438, 420 ]
+887 silly gunzTarPerm extractEntry lib/jsdom/level3/index.js
+888 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/index.js', 438, 420 ]
+889 silly gunzTarPerm extractEntry lib/jsdom/level3/ls.js
+890 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/ls.js', 438, 420 ]
+891 silly gunzTarPerm extractEntry lib/jsdom/level3/xpath.js
+892 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/xpath.js', 438, 420 ]
+893 silly gunzTarPerm extractEntry lib/jsdom/selectors/index.js
+894 silly gunzTarPerm modified mode [ 'lib/jsdom/selectors/index.js', 438, 420 ]
+895 silly gunzTarPerm extractEntry lib/jsdom/selectors/sizzle.js
+896 silly gunzTarPerm modified mode [ 'lib/jsdom/selectors/sizzle.js', 438, 420 ]
+897 silly gunzTarPerm extractEntry LICENSE.txt
+898 silly gunzTarPerm modified mode [ 'LICENSE.txt', 438, 420 ]
+899 verbose read json C:\Users\ohra\AppData\Roaming\npm-cache\jsdom\0.2.19\package\package.json
+900 silly shasum updated bytes 40960
+901 silly shasum updated bytes 40960
+902 silly shasum updated bytes 7521
+903 info shasum c92f309be66746957efa787189f9d4dc2f2dc77a
+903 info shasum C:\Users\ohra\AppData\Roaming\npm-cache\jsdom\0.2.19\package.tgz
+904 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\jsdom\0.2.19\package\package.json
+905 verbose chmod C:\Users\ohra\AppData\Roaming\npm-cache\jsdom\0.2.19\package.tgz 644
+906 silly chown skipping for windows C:\Users\ohra\AppData\Roaming\npm-cache\jsdom\0.2.19\package.tgz
+907 silly resolved [ { author:
+907 silly resolved      { name: 'AJ ONeal',
+907 silly resolved        email: 'coolaj86@gmail.com',
+907 silly resolved        url: 'http://coolaj86.info' },
+907 silly resolved     name: 'location',
+907 silly resolved     description: 'A Browser-esque location object',
+907 silly resolved     version: '0.0.1',
+907 silly resolved     repository:
+907 silly resolved      { type: 'git',
+907 silly resolved        url: 'git://github.com/coolaj86/node-location.git' },
+907 silly resolved     main: 'location.js',
+907 silly resolved     engines: { node: '>= 0.2.0' },
+907 silly resolved     dependencies: {},
+907 silly resolved     devDependencies: {},
+907 silly resolved     readme: 'location\n====\n\nA mock location object for unit tests and such and to maintain compatibility between `Ender.JS` and `Node.JS`\n\nFor best results, create a `location.config.js` in the working directory of your app that returns a location object that should be used.\n\nCurrent Implementation\n---\n\n    var fs = require(\'fs\')\n      , location\n      , defaultLocation\n      ;\n\n    defaultLocation = {\n      "origin": "http://localhost:3000",\n      "pathname": "/",\n      "host": "localhost:3000",\n      "hostname": "localhost",\n      "port": "3000",\n      "search": "",\n      "hash": "#home",\n      "href": "http://localhost:3000/#home",\n      "protocol": "http:"\n    };\n\n    try {\n      // TODO try all from `__dirname` to `/` before giving up\n      location = fs.readFileSync(\'./location.config.js\');\n    } catch(e) {\n      location = defaultLocation;\n    }\n\n    module.exports = location;\n\nTODO\n---\n\nLook for `__dirname + "location.config.js"` and then look up one directory at each failure before finally giving up and using the default object.\n',
+907 silly resolved     _id: 'location@0.0.1',
+907 silly resolved     dist: { shasum: '007b37220cfd0c17e4e04f5c53a96773c11a0107' },
+907 silly resolved     _from: 'location@0.0.1' },
+907 silly resolved   { name: 'xmlhttprequest',
+907 silly resolved     description: 'XMLHttpRequest for Node',
+907 silly resolved     version: '1.4.2',
+907 silly resolved     author: { name: 'Dan DeFelippi', url: 'http://driverdan.com' },
+907 silly resolved     keywords: [ 'xhr', 'ajax' ],
+907 silly resolved     licenses: [ [Object] ],
+907 silly resolved     repository:
+907 silly resolved      { type: 'git',
+907 silly resolved        url: 'git://github.com/driverdan/node-XMLHttpRequest.git' },
+907 silly resolved     bugs: 'http://github.com/driverdan/node-XMLHttpRequest/issues',
+907 silly resolved     engines: { node: '>=0.4.0' },
+907 silly resolved     directories: { lib: './lib', example: './example' },
+907 silly resolved     main: './lib/XMLHttpRequest.js',
+907 silly resolved     readme: '# node-XMLHttpRequest #\n\nnode-XMLHttpRequest is a wrapper for the built-in http client to emulate the\nbrowser XMLHttpRequest object.\n\nThis can be used with JS designed for browsers to improve reuse of code and\nallow the use of existing libraries.\n\nNote: This library currently conforms to [XMLHttpRequest 1](http://www.w3.org/TR/XMLHttpRequest/). Version 2.0 will target [XMLHttpRequest Level 2](http://www.w3.org/TR/XMLHttpRequest2/).\n\n## Usage ##\n\nHere\'s how to include the module in your project and use as the browser-based\nXHR object.\n\n\tvar XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;\n\tvar xhr = new XMLHttpRequest();\n\nNote: use the lowercase string "xmlhttprequest" in your require(). On\ncase-sensitive systems (eg Linux) using uppercase letters won\'t work.\n\n## Versions ##\n\nPrior to 1.4.0 version numbers were arbitrary. From 1.4.0 on they conform to\nthe standard major.minor.bugfix. 1.x shouldn\'t necessarily be considered\nstable just because it\'s above 0.x.\n\nSince the XMLHttpRequest API is stable this library\'s API is stable as\nwell. Major version numbers indicate significant core code changes.\nMinor versions indicate minor core code changes or better conformity to\nthe W3C spec.\n\n## Supports ##\n\n* Async and synchronous requests\n* GET, POST, PUT, and DELETE requests\n* All spec methods (open, send, abort, getRequestHeader,\n  getAllRequestHeaders, event methods)\n* Requests to all domains\n\n## Known Issues / Missing Features ##\n\nFor a list of open issues or to report your own visit the [github issues\npage](https://github.com/driverdan/node-XMLHttpRequest/issues).\n\n* Local file access may have unexpected results for non-UTF8 files\n* Synchronous requests don\'t set headers properly\n* Synchronous requests freeze node while waiting for response (But that\'s what you want, right? Stick with async!).\n* Some events are missing, such as abort\n* getRequestHeader is case-sensitive\n* Cookies aren\'t persisted between requests\n* Missing XML support\n* Missing basic auth\n',
+907 silly resolved     _id: 'xmlhttprequest@1.4.2',
+907 silly resolved     dist: { shasum: '828171a8f0023a016ceb7ca91b59018437a2b399' },
+907 silly resolved     _from: 'xmlhttprequest@~1.4.2' },
+907 silly resolved   { author:
+907 silly resolved      { name: 'AJ ONeal',
+907 silly resolved        email: 'coolaj86@gmail.com',
+907 silly resolved        url: 'http://coolaj86.info' },
+907 silly resolved     name: 'navigator',
+907 silly resolved     description: 'A browser-esque `navigator` for Node.JS (for Ender.JS compatibility)',
+907 silly resolved     version: '1.0.1',
+907 silly resolved     repository:
+907 silly resolved      { type: 'git',
+907 silly resolved        url: 'git://github.com/coolaj86/node-navigator.git' },
+907 silly resolved     main: 'index.js',
+907 silly resolved     engines: { node: '>= v0.2.0' },
+907 silly resolved     dependencies: {},
+907 silly resolved     devDependencies: {},
+907 silly resolved     readme: 'navigator\n===\n\nEmulates the browser\'s `navigator`\n\n    {\n        appCodeName: "Mozilla"\n      , appName: "Netscape"\n      , appVersion: "5.0 (" + machine + "; " + arch + ") " + engine\n      , cookieEnabled: true\n      , geolocation: undefined\n        /*\n          clearWatch\n          getCurrentPosition\n          watchPosition\n        */\n      , mimeTypes: []\n        /*\n        */\n      , onLine: true\n      , platform: "MacIntel"\n      , plugins: []\n        /*\n        */\n      , product: "Gecko"\n      , productSub: "20030107"\n      , usegAgent: "Mozilla/5.0 (" + machine + "; " + arch + ") " + engine\n      , vendor: "Joyent"\n      , vendorSub: ""\n    }\n\nTODO\n===\n\nUse `process.os` and such for a more accurate readout\n',
+907 silly resolved     _id: 'navigator@1.0.1',
+907 silly resolved     dist: { shasum: '0e97cc7df4b3dcc6c3b33b0442badd0be0f28665' },
+907 silly resolved     _from: 'navigator@~1.0.1' },
+907 silly resolved   { name: 'contextify',
+907 silly resolved     version: '0.1.4',
+907 silly resolved     description: 'Turn an object into a persistent execution context.',
+907 silly resolved     author: { name: 'Brian McDaniel', email: 'brianmcd05@gmail.com' },
+907 silly resolved     contributors: [ [Object] ],
+907 silly resolved     keywords: [ 'context', 'vm' ],
+907 silly resolved     repository:
+907 silly resolved      { type: 'git',
+907 silly resolved        url: 'https://github.com/brianmcd/contextify.git' },
+907 silly resolved     main: './lib/contextify',
+907 silly resolved     scripts: { test: 'nodeunit test/', install: 'node-gyp rebuild' },
+907 silly resolved     engines: { node: '>=0.4.0' },
+907 silly resolved     licenses: [ [Object] ],
+907 silly resolved     dependencies: { bindings: '*' },
+907 silly resolved     devDependencies: { nodeunit: '>=0.5.x' },
+907 silly resolved     gypfile: true,
+907 silly resolved     readme: '# Contextify\n\nTurn an object into a V8 execution context.  A contextified object acts as the global \'this\' when executing scripts in its context.  Contextify adds 3 methods to the contextified object: run(code, filename), getGlobal(), and dispose().  The main difference between Contextify and Node\'s vm methods is that Contextify allows asynchronous functions to continue executing in the Contextified object\'s context.  See vm vs. Contextify below for more discussion.\n\n## Examples\n```javascript\nvar Contextify = require(\'contextify\');\nvar sandbox = { console : console, prop1 : \'prop1\'};\nContextify(sandbox);\nsandbox.run(\'console.log(prop1);\');\nsandbox.dispose(); // free the resources allocated for the context.\n```\n\n```javascript\nvar sandbox = Contextify(); // returns an empty contextified object.\nsandbox.run(\'var x = 3;\');\nconsole.log(sandbox.x); // prints 3\nsandbox.dispose();\n```\n\n```javascript\nvar sandbox = Contextify({setTimeout : setTimeout});\nsandbox.run("setTimeout(function () { x = 3; }, 5);");\nconsole.log(sandbox.x); // prints undefined\nsetTimeout(function () {\n    console.log(sandbox.x); // prints 3\n    sandbox.dispose();\n}, 10);\n```\n## Details\n\n**Contextify([sandbox])**\n\n    sandbox - The object to contextify, which will be modified as described below\n              If no sandbox is specified, an empty object will be allocated and used instead.\n\n    Returns the contextified object.  It doesn\'t make a copy, so if you already have a reference\n    to the sandbox, you don\'t need to catch the return value.\n\nA Contextified object has 2 methods added to it:\n\n**run(code, [filename])**\n\n    code - string containing JavaScript to execute\n    filename  - an optional filename for debugging.\n\n    Runs the code in the Contextified object\'s context.\n\n**getGlobal()**\n\nReturns the actual global object for the V8 context.  The global object is initialized with interceptors (discussed below) which forward accesses on it to the contextified object.  This means the contextified object acts like the global object in most cases.  Sometimes, though, you need to make a reference to the actual global object.\n\nFor example:\n\n```javascript\nvar window = Contextify({console : console});\nwindow.window = window;\nwindow.run("console.log(window === this);");\n// prints false.\n```\n\n```javascript\nvar window = Contextify({console : console});\nwindow.window = window.getGlobal();\nwindow.run("console.log(window === this);");\n// prints true\n```\n\nThe global object returned by getGlobal() can be treated like the contextified sandbox object, except that defining getters/setters will not work on it.  Define getters and setters on the actual sandbox object instead.\n\n**dispose()**\n\nFrees the memory allocated for the underlying V8 context.  If you don\'t call this when you\'re done, the V8 context memory will leak, as will the sandbox memory, since the context\'s global stores a strong reference to the sandbox object.  You can still use your sandbox object after calling dispose(), but it\'s unsafe to use a global previously returned from getGlobal().  run, getGlobal, and dispose will be removed from the sandbox object.\n\n## Install\n\n    npm install contextify\n\n## require(\'vm\') vs. Contextify\n\nNode\'s vm functions (runInContext etc) work by copying the values from the sandbox object onto a context\'s global object, executing the passed in script, then copying the results back.  This means that scripts that create asynchronous functions (using mechanisms like setTimeout) won\'t have see the results of executing those functions, since the copying in/out only occurs during an explicit call to runInContext and friends.  \n\nContextify creates a V8 context, and uses interceptors (see: http://code.google.com/apis/v8/embed.html#interceptors) to forward global object accesses to the sandbox object.  This means there is no copying in or out, so asynchronous functions have the expected effect on the sandbox object.  \n\n## Tests\n\nTesting is done with nodeunit.  Run the tests with\n\n    nodeunit test/\n\nOutput: \n\n    OK: 92 assertions (27ms)\n\n\n## Building\n\n    node-waf configure build\n\n## Acknowledgments\n\nInspiration taken from Assaf\'s Zombie.js context solution: https://github.com/assaf/zombie\n',
+907 silly resolved     _id: 'contextify@0.1.4',
+907 silly resolved     dist: { shasum: '806b65ad556febe0e573643e7847fd721a0cd70f' },
+907 silly resolved     _from: 'contextify@~0.1.3' },
+907 silly resolved   { name: 'htmlparser',
+907 silly resolved     description: 'Forgiving HTML/XML/RSS Parser in JS for *both* Node and Browsers',
+907 silly resolved     version: '1.7.6',
+907 silly resolved     author: { name: 'Chris Winberry', email: 'chris@winberry.net' },
+907 silly resolved     contributors: [],
+907 silly resolved     repository:
+907 silly resolved      { type: 'git',
+907 silly resolved        url: 'https://github.com/tautologistics/node-htmlparser' },
+907 silly resolved     keywords: [ 'html', 'xml', 'rss', 'parser' ],
+907 silly resolved     directories: { lib: './lib/' },
+907 silly resolved     main: './lib/htmlparser',
+907 silly resolved     homepage: 'http://github.com/tautologistics/node-htmlparser',
+907 silly resolved     bugs:
+907 silly resolved      { mail: 'chris@winberry.net',
+907 silly resolved        url: 'http://github.com/tautologistics/node-htmlparser/issues' },
+907 silly resolved     engines: { node: '>=0.1.33' },
+907 silly resolved     licenses: [ [Object] ],
+907 silly resolved     readme: '#NodeHtmlParser\nA forgiving HTML/XML/RSS parser written in JS for both the browser and NodeJS (yes, despite the name it works just fine in any modern browser). The parser can handle streams (chunked data) and supports custom handlers for writing custom DOMs/output.\n\n##Installing\n\n\tnpm install htmlparser\n\n##Running Tests\n\n###Run tests under node:\n\tnode runtests.js\n\n###Run tests in browser:\nView runtests.html in any browser\n\n##Usage In Node\n\n```javascript\nvar htmlparser = require("htmlparser");\nvar rawHtml = "Xyz <script language= javascript>var foo = \'<<bar>>\';< /  script><!--<!-- Waah! -- -->";\nvar handler = new htmlparser.DefaultHandler(function (error, dom) {\n\tif (error)\n\t\t[...do something for errors...]\n\telse\n\t\t[...parsing done, do something...]\n});\nvar parser = new htmlparser.Parser(handler);\nparser.parseComplete(rawHtml);\nsys.puts(sys.inspect(handler.dom, false, null));\n```\n\n##Usage In Browser\n\n```javascript\nvar handler = new Tautologistics.NodeHtmlParser.DefaultHandler(function (error, dom) {\n\tif (error)\n\t\t[...do something for errors...]\n\telse\n\t\t[...parsing done, do something...]\n});\nvar parser = new Tautologistics.NodeHtmlParser.Parser(handler);\nparser.parseComplete(document.body.innerHTML);\nalert(JSON.stringify(handler.dom, null, 2));\n```\n\n##Example output\n\n```javascript\n[ { raw: \'Xyz \', data: \'Xyz \', type: \'text\' }\n  , { raw: \'script language= javascript\'\n  , data: \'script language= javascript\'\n  , type: \'script\'\n  , name: \'script\'\n  , attribs: { language: \'javascript\' }\n  , children: \n     [ { raw: \'var foo = \\\'<bar>\\\';<\'\n       , data: \'var foo = \\\'<bar>\\\';<\'\n       , type: \'text\'\n       }\n     ]\n  }\n, { raw: \'<!-- Waah! -- \'\n  , data: \'<!-- Waah! -- \'\n  , type: \'comment\'\n  }\n]\n```\n\n##Streaming To Parser\n\n```javascript\nwhile (...) {\n\t...\n\tparser.parseChunk(chunk);\n}\nparser.done();\t\n```\n\n##Parsing RSS/Atom Feeds\n\n```javascript\nnew htmlparser.RssHandler(function (error, dom) {\n\t...\n});\n```\n\n##DefaultHandler Options\n\n###Usage\n\n```javascript\nvar handler = new htmlparser.DefaultHandler(\n\t  function (error) { ... }\n\t, { verbose: false, ignoreWhitespace: true }\n\t);\n```\n\n###Option: ignoreWhitespace\nIndicates whether the DOM should exclude text nodes that consists solely of whitespace. The default value is "false".\n\n####Example: true\n\nThe following HTML:\n\n```html\n<font>\n\t<br>this is the text\n<font>\n```\n\nbecomes:\n\n```javascript\n[ { raw: \'font\'\n  , data: \'font\'\n  , type: \'tag\'\n  , name: \'font\'\n  , children: \n     [ { raw: \'br\', data: \'br\', type: \'tag\', name: \'br\' }\n     , { raw: \'this is the text\\n\'\n       , data: \'this is the text\\n\'\n       , type: \'text\'\n       }\n     , { raw: \'font\', data: \'font\', type: \'tag\', name: \'font\' }\n     ]\n  }\n]\n```\n\n####Example: false\n\nThe following HTML:\n\n```html\n<font>\n\t<br>this is the text\n<font>\n```\n\nbecomes:\n\n```javascript\n[ { raw: \'font\'\n  , data: \'font\'\n  , type: \'tag\'\n  , name: \'font\'\n  , children: \n     [ { raw: \'\\n\\t\', data: \'\\n\\t\', type: \'text\' }\n     , { raw: \'br\', data: \'br\', type: \'tag\', name: \'br\' }\n     , { raw: \'this is the text\\n\'\n       , data: \'this is the text\\n\'\n       , type: \'text\'\n       }\n     , { raw: \'font\', data: \'font\', type: \'tag\', name: \'font\' }\n     ]\n  }\n]\n```\n\n###Option: verbose\nIndicates whether to include extra information on each node in the DOM. This information consists of the "raw" attribute (original, unparsed text found between "<" and ">") and the "data" attribute on "tag", "script", and "comment" nodes. The default value is "true". \n\n####Example: true\nThe following HTML:\n\n```html\n<a href="test.html">xxx</a>\n```\n\nbecomes:\n\n```javascript\n[ { raw: \'a href="test.html"\'\n  , data: \'a href="test.html"\'\n  , type: \'tag\'\n  , name: \'a\'\n  , attribs: { href: \'test.html\' }\n  , children: [ { raw: \'xxx\', data: \'xxx\', type: \'text\' } ]\n  }\n]\n```\n\n####Example: false\nThe following HTML:\n\n```javascript\n<a href="test.html">xxx</a>\n```\n\nbecomes:\n\n```javascript\n[ { type: \'tag\'\n  , name: \'a\'\n  , attribs: { href: \'test.html\' }\n  , children: [ { data: \'xxx\', type: \'text\' } ]\n  }\n]\n```\n\n###Option: enforceEmptyTags\nIndicates whether the DOM should prevent children on tags marked as empty in the HTML spec. Typically this should be set to "true" HTML parsing and "false" for XML parsing. The default value is "true".\n\n####Example: true\nThe following HTML:\n\n```html\n<link>text</link>\n```\n\nbecomes:\n\n```javascript\n[ { raw: \'link\', data: \'link\', type: \'tag\', name: \'link\' }\n, { raw: \'text\', data: \'text\', type: \'text\' }\n]\n```\n\n####Example: false\nThe following HTML:\n\n```html\n<link>text</link>\n```\n\nbecomes:\n\n```javascript\n[ { raw: \'link\'\n  , data: \'link\'\n  , type: \'tag\'\n  , name: \'link\'\n  , children: [ { raw: \'text\', data: \'text\', type: \'text\' } ]\n  }\n]\n```\n\n##DomUtils\n\n###TBD (see utils_example.js for now)\n\n##Related Projects\n\nLooking for CSS selectors to search the DOM? Try Node-SoupSelect, a port of SoupSelect to NodeJS: http://github.com/harryf/node-soupselect\n\nThere\'s also a port of hpricot to NodeJS that uses HtmlParser for HTML parsing: http://github.com/silentrob/Apricot\n\n',
+907 silly resolved     _id: 'htmlparser@1.7.6',
+907 silly resolved     dist: { shasum: '234ab65d35297022e65c72f66a69564df78213c7' },
+907 silly resolved     _from: 'htmlparser@1.7.6' },
+907 silly resolved   { name: 'jsdom',
+907 silly resolved     version: '0.2.19',
+907 silly resolved     description: 'A JavaScript implementation of the W3C DOM',
+907 silly resolved     keywords: [ 'dom', 'w3c', 'html' ],
+907 silly resolved     maintainers: [ [Object], [Object] ],
+907 silly resolved     contributors:
+907 silly resolved      [ [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object],
+907 silly resolved        [Object] ],
+907 silly resolved     bugs:
+907 silly resolved      { email: 'tmpvar@gmail.com',
+907 silly resolved        url: 'http://github.com/tmpvar/jsdom/issues' },
+907 silly resolved     licenses: [ [Object] ],
+907 silly resolved     repositories: [ [Object] ],
+907 silly resolved     implements: [ 'http://www.w3.org/TR/REC-DOM-Level-1' ],
+907 silly resolved     dependencies:
+907 silly resolved      { htmlparser: '1.x',
+907 silly resolved        request: '2.x',
+907 silly resolved        cssom: '0.2.x',
+907 silly resolved        cssstyle: '>=0.2.3',
+907 silly resolved        contextify: '0.1.x' },
+907 silly resolved     optionalDependencies: { contextify: '0.1.x' },
+907 silly resolved     devDependencies: { nodeunit: '>=0.5.x', 'console.log': '*', optimist: '*' },
+907 silly resolved     directories: { lib: './lib/jsdom' },
+907 silly resolved     scripts: { test: 'node ./test/runner' },
+907 silly resolved     main: './lib/jsdom',
+907 silly resolved     readme: '# jsdom\n\nA JavaScript implementation of the W3C DOM.\n\n## Install\n\n```bash\n$ npm install jsdom\n```\n\n## Human contact\n\nsee: [mailing list](http://groups.google.com/group/jsdom)\n\n## Easymode\n\nBootstrapping a DOM is generally a difficult process involving many error prone steps. We didn\'t want jsdom to fall into the same trap and that is why a new method, `jsdom.env()`, has been added in jsdom 0.2.0 which should make everyone\'s lives easier.\n\nwith URL\n\n```js\n// Count all of the links from the nodejs build page\nvar jsdom = require("jsdom");\n\njsdom.env(\n  "http://nodejs.org/dist/",\n  ["http://code.jquery.com/jquery.js"],\n  function (errors, window) {\n    console.log("there have been", window.$("a").length, "nodejs releases!");\n  }\n);\n```\n\nor with raw HTML\n\n```js\n// Run some jQuery on a html fragment\nvar jsdom = require("jsdom");\n\njsdom.env(\n  \'<p><a class="the-link" href="https://github.com/tmpvar/jsdom">jsdom\\\'s Homepage</a></p>\',\n  ["http://code.jquery.com/jquery.js"],\n  function(errors, window) {\n    console.log("contents of a.the-link:", window.$("a.the-link").text());\n  }\n);\n```\n\nor with a configuration object\n\n```js\n// Print all of the news items on hackernews\nvar jsdom = require("jsdom");\n\njsdom.env({\n  html: "http://news.ycombinator.com/",\n  scripts: ["http://code.jquery.com/jquery.js"],\n  done: function (errors, window) {\n    var $ = window.$;\n    console.log("HN Links");\n    $("td.title:not(:last) a").each(function() {\n      console.log(" -", $(this).text());\n    });\n  }\n});\n```\n\nor with raw JavaScript source\n\n```js\n// Print all of the news items on hackernews\nvar jsdom = require("jsdom");\nvar fs = require("fs");\nvar jquery = fs.readFileSync("./jquery.js").toString();\n\njsdom.env({\n  html: "http://news.ycombinator.com/",\n  src: [jquery],\n  done: function (errors, window) {\n    var $ = window.$;\n    console.log("HN Links");\n    $("td.title:not(:last) a").each(function() {\n      console.log(" -", $(this).text());\n    });\n  }\n});\n```\n\n### How it works\n`jsdom.env` is built for ease of use, which is rare in the world of the DOM! Since the web has some absolutely horrible JavaScript on it, as of jsdom 0.2.0 `jsdom.env` will not process external resources (scripts, images, etc).  If you want to process the JavaScript use one of the methods below (`jsdom.jsdom` or `jsdom.jQueryify`)\n\n```js\njsdom.env(html, [scripts], [config], callback);\n```\n\n- `html` (**required**): may be a URL, HTML fragment, or file.\n- `scripts` (**optional**): may contain files or URLs.\n- `config` (**optional**): see below.\n- `callback` (**required**): takes two arguments:\n  - `errors`: an array of errors\n  - `window`: a brand new window\n\n_example:_\n\n```js\njsdom.env(html, function (errors, window) {\n  // free memory associated with the window\n  window.close();\n});\n```\n\nIf you would like to specify a configuration object only:\n\n```js\njsdom.env(config);\n```\n\n- `config.html`: see `html` above.\n- `config.scripts`: see `scripts` above.\n- `config.src`: an array of JavaScript strings that will be evaluated against the resulting document. Similar to `scripts`, but it accepts JavaScript instead of paths/URLs.\n- `config.done`: see `callback` above.\n- `config.document`:\n  - `referer`: the new document will have this referer\n  - `cookie`: manually set a cookie value, e.g. `\'key=value; expires=Wed, Sep 21 2011 12:00:00 GMT; path=/\'`\n- `config.features` : see `Flexibility` section below. **Note**: the default feature set for jsdom.env does _not_ include fetching remote JavaScript and executing it. This is something that you will need to **carefully** enable yourself.\n\n## For the hardcore\n\nIf you want to spawn a document/window and specify all sorts of options this is the section for you. This section covers the `jsdom.jsdom` method:\n\n```js\nvar jsdom = require("jsdom").jsdom;\nvar doc = jsdom(markup, level, options);\nvar window = doc.createWindow();\n```\n\n- `markup` is an HTML/XML document to be parsed. You can also pass `null` or an undefined value to get a basic document with empty `<head>` and `<body>` tags. Document fragments are also supported (including `""`), and will behave as sanely as possible (e.g. the resulting document will lack the `head`, `body` and `documentElement` properties if the corresponding elements aren\'t included).\n\n- `level` is `null` (which means level3) by default, but you can pass another level if you\'d like.\n\n  ```js\n  var jsdom = require("jsdom");\n  var doc = jsdom.jsdom("<html><body></body></html>", jsdom.level(1, "core"));\n  ```\n\n- `options` see the **Flexibility** section below.\n\n### Flexibility\n\nOne of the goals of jsdom is to be as minimal and light as possible. This section details how someone can change the behavior of `Document`s on the fly.  These features are baked into the `DOMImplementation` that every `Document` has, and may be tweaked in two ways:\n\n1. When you create a new `Document` using the jsdom builder (`require("jsdom").jsdom()`)\n\n  ```js\n  var jsdom = require("jsdom").jsdom;\n  var doc = jsdom("<html><body></body></html>", null, {\n    features: {\n      FetchExternalResources : ["img"]\n    }\n  });\n  ```\n\n  Do note, that this will only affect the document that is currently being created. All other documents will use the defaults specified below (see: Default Features).\n\n2. Before creating any documents, you can modify the defaults for all future documents:\n\n  ```js\n  require("jsdom").defaultDocumentFeatures = {\n    FetchExternalResources: ["script"],\n    ProcessExternalResources: false,\n    MutationEvents: false,\n    QuerySelector: false\n  };\n  ```\n\n#### Default Features\n\nDefault features are extremely important for jsdom as they lower the configuration requirement and present developers a set of consistent default behaviors. The following sections detail the available features, their defaults, and the values that jsdom uses.\n\n\n`FetchExternalResources`\n\n- _Default_: `["script"]`\n- _Allowed_: `["script", "img", "css", "frame", "iframe", "link"]` or `false`\n\nEnables/disables fetching files over the file system/HTTP.\n\n`ProcessExternalResources`\n\n- _Default_: `["script"]`\n- _Allowed_: `["script"]` or `false`\n\nDisabling this will disable script execution (currently only JavaScript).\n\n`SkipExternalResources`\n\n- _Default_: `false`\n- _Allowed_: `/url to be skipped/` or `false`\n- _Example_: `/http:\\/\\/example.org/js/bad\\.js/`\n\nDo not download and process resources with url matching a regular expression.\n\n`MutationEvents`\n\n- _Default_: `"2.0"`\n- _Allowed_ : `"2.0"` or `false`\n\nInitially enabled to be up to spec. Disable this if you do not need mutation events and want jsdom to be a bit more efficient.\n\n**Note**: `ProcessExternalResources` requires this to be enabled.\n\n`QuerySelector`\n\n - _Default_ : `false`\n - _Allowed_ : `true`\n\nThis feature is backed by [sizzle][] but currently causes problems with some libraries. Enable this if you want `document.querySelector` and friends, but be aware that many libraries feature detect for this, and it may cause you a bit of trouble.\n\n[sizzle]: http://sizzlejs.com/\n\n## Canvas\n\njsdom includes support for using the [canvas](https://npmjs.org/package/canvas) package to extend any `<canvas>` elements with the canvas API. To make this work, you need to include canvas as a dependency in your project, as a peer of jsdom. If jsdom can find the canvas package, it will use it, but if it\'s not present, then `<canvas>` elements will behave like `<div>`s.\n\n# More Examples\n\n## Creating a document-less window\n\n```js\nvar jsdom = require("jsdom");\nvar window = jsdom.createWindow();\n\nconsole.log(window.document); // output: undefined\n```\n\n## Creating a document\n\n```js\nvar jsdom = require("jsdom");\nvar doc = new (jsdom.level(1, "core").Document)();\n\nconsole.log(doc.nodeName); // outputs: #document\n```\n\n## Creating a browser-like BOM/DOM/Window\n\n```js\nvar jsdom = require("jsdom").jsdom;\nvar document = jsdom("<html><head></head><body>hello world</body></html>");\nvar window = document.createWindow();\n\nconsole.log(window.document.innerHTML);\n// output: "<html><head></head><body>hello world</body></html>"\n\nconsole.log(window.innerWidth);\n// output: 1024\n\nconsole.log(typeof window.document.getElementsByClassName);\n// outputs: function\n```\n\n## jQueryify\n\n```js\nvar jsdom = require("jsdom");\nvar window = jsdom.jsdom().createWindow();\n\njsdom.jQueryify(window, "http://code.jquery.com/jquery.js", function () {\n  window.$("body").append(\'<div class="testing">Hello World, It works</div>\');\n\n  console.log(window.$(".testing").text());\n});\n```\n\n## Passing objects to scripts inside the page\n\n```js\nvar jsdom = require("jsdom").jsdom;\nvar window = jsdom().createWindow();\n\nwindow.__myObject = { foo: "bar" };\n\nvar scriptEl = window.document.createElement("script");\nscriptEl.src = "anotherScript.js";\nwindow.document.body.appendChild(scriptEl);\n\n// anotherScript.js will have the ability to read `window.__myObject`, even\n// though it originated in Node!\n```\n\n# Test Compliance:\n\n```\n level1/core                        532/532      100%\n level1/html                        238/238      100%\n level1/svg                         527/527      100%\n level2/core                        283/283      100%\n level2/html                        694/694      100%\n level2/style                           5/5      100%\n level2/extra                           4/4      100%\n level2/events                        24/24      100%\n level3/xpath                         93/93      100%\n window/index                           5/5      100%\n window/script                        10/10      100%\n window/frame                         14/14      100%\n sizzle/index                         12/15       80%\n jsdom/index                          83/83      100%\n jsonp/jsonp                            1/1      100%\n browser/contextifyReplacement          4/4      100%\n browser/index                        22/22      100%\n------------------------------------------------------\nTOTALS: 3/2554 failed; 99% success\n```\n\n## Running the tests\n\nFirst you\'ll want to `npm install`. To run all the tests, use `npm test`, which just calls `node test/runner`.\n\nUsing `test/runner` directly, you can slice and dice which tests your want to run from different levels. Usage is as follows:\n\n```\ntest/runner --help\nRun the jsdom test suite\n\nOptions:\n-s, --suites     suites that you want to run. ie: -s level1/core,1/html,html [string]\n-f, --fail-fast  stop on the first failed test\n-h, --help       show the help\n-t, --tests      choose the test cases to run. ie: -t jquery\n```\n',
+907 silly resolved     _id: 'jsdom@0.2.19',
+907 silly resolved     dist: { shasum: 'c92f309be66746957efa787189f9d4dc2f2dc77a' },
+907 silly resolved     _from: 'jsdom@~0.2.14' } ]
+908 info install location@0.0.1 into C:\work\GitHub\kissamaatti\node_modules\jquery
+909 info install xmlhttprequest@1.4.2 into C:\work\GitHub\kissamaatti\node_modules\jquery
+910 info install navigator@1.0.1 into C:\work\GitHub\kissamaatti\node_modules\jquery
+911 info install contextify@0.1.4 into C:\work\GitHub\kissamaatti\node_modules\jquery
+912 info install htmlparser@1.7.6 into C:\work\GitHub\kissamaatti\node_modules\jquery
+913 info install jsdom@0.2.19 into C:\work\GitHub\kissamaatti\node_modules\jquery
+914 info installOne location@0.0.1
+915 info installOne xmlhttprequest@1.4.2
+916 info installOne navigator@1.0.1
+917 info installOne contextify@0.1.4
+918 info installOne htmlparser@1.7.6
+919 info installOne jsdom@0.2.19
+920 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\location\0.0.1\package\package.json
+921 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\xmlhttprequest\1.4.2\package\package.json
+922 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\navigator\1.0.1\package\package.json
+923 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\contextify\0.1.4\package\package.json
+924 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\htmlparser\1.7.6\package\package.json
+925 info C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\location unbuild
+926 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\location\package.json
+927 info C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\xmlhttprequest unbuild
+928 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\xmlhttprequest\package.json
+929 info C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\navigator unbuild
+930 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\navigator\package.json
+931 info C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify unbuild
+932 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\package.json
+933 info C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\htmlparser unbuild
+934 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\htmlparser\package.json
+935 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\jsdom\0.2.19\package\package.json
+936 info C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\jsdom unbuild
+937 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\jsdom\package.json
+938 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\location\0.0.1\package.tgz
+939 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\xmlhttprequest\1.4.2\package.tgz
+940 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\navigator\1.0.1\package.tgz
+941 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\contextify\0.1.4\package.tgz
+942 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\htmlparser\1.7.6\package.tgz
+943 silly gunzTarPerm modes [ '755', '644' ]
+944 silly gunzTarPerm modes [ '755', '644' ]
+945 silly gunzTarPerm modes [ '755', '644' ]
+946 silly gunzTarPerm modes [ '755', '644' ]
+947 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\jsdom\0.2.19\package.tgz
+948 silly gunzTarPerm modes [ '755', '644' ]
+949 silly gunzTarPerm modes [ '755', '644' ]
+950 silly gunzTarPerm extractEntry package.json
+951 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+952 silly gunzTarPerm extractEntry package.json
+953 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+954 silly gunzTarPerm extractEntry package.json
+955 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+956 silly gunzTarPerm extractEntry package.json
+957 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+958 silly gunzTarPerm extractEntry package.json
+959 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+960 silly gunzTarPerm extractEntry package.json
+961 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+962 silly gunzTarPerm extractEntry README.md
+963 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+964 silly gunzTarPerm extractEntry location.js
+965 silly gunzTarPerm modified mode [ 'location.js', 438, 420 ]
+966 silly gunzTarPerm extractEntry README.md
+967 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+968 silly gunzTarPerm extractEntry index.js
+969 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+970 silly gunzTarPerm extractEntry .npmignore
+971 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+972 silly gunzTarPerm extractEntry README.md
+973 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+974 silly gunzTarPerm extractEntry README.md
+975 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+976 silly gunzTarPerm extractEntry LICENSE
+977 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+978 silly gunzTarPerm extractEntry README.md
+979 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+980 silly gunzTarPerm extractEntry lib/jsdom.js
+981 silly gunzTarPerm modified mode [ 'lib/jsdom.js', 438, 420 ]
+982 silly gunzTarPerm extractEntry README.md
+983 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+984 silly gunzTarPerm extractEntry autotest.watchr
+985 silly gunzTarPerm modified mode [ 'autotest.watchr', 438, 420 ]
+986 silly gunzTarPerm extractEntry lib/jsdom/utils.js
+987 silly gunzTarPerm modified mode [ 'lib/jsdom/utils.js', 438, 420 ]
+988 silly gunzTarPerm extractEntry lib/jsdom/browser/documentfeatures.js
+989 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/documentfeatures.js', 438, 420 ]
+990 silly gunzTarPerm extractEntry lib/jsdom/browser/domtohtml.js
+991 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/domtohtml.js', 438, 420 ]
+992 silly gunzTarPerm extractEntry lib/jsdom/browser/htmlencoding.js
+993 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/htmlencoding.js', 438, 420 ]
+994 silly gunzTarPerm extractEntry lib/jsdom/browser/htmltodom.js
+995 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/htmltodom.js', 438, 420 ]
+996 silly gunzTarPerm extractEntry lib/jsdom/browser/index.js
+997 silly gunzTarPerm modified mode [ 'lib/jsdom/browser/index.js', 438, 420 ]
+998 silly gunzTarPerm extractEntry lib/jsdom/level1/core.js
+999 silly gunzTarPerm modified mode [ 'lib/jsdom/level1/core.js', 438, 420 ]
+1000 silly gunzTarPerm extractEntry node-htmlparser.old.js
+1001 silly gunzTarPerm modified mode [ 'node-htmlparser.old.js', 438, 420 ]
+1002 silly gunzTarPerm extractEntry profile.getelement.js
+1003 silly gunzTarPerm modified mode [ 'profile.getelement.js', 438, 420 ]
+1004 silly gunzTarPerm extractEntry example/demo.js
+1005 silly gunzTarPerm modified mode [ 'example/demo.js', 438, 420 ]
+1006 silly gunzTarPerm extractEntry lib/XMLHttpRequest.js
+1007 silly gunzTarPerm modified mode [ 'lib/XMLHttpRequest.js', 438, 420 ]
+1008 silly gunzTarPerm extractEntry binding.gyp
+1009 silly gunzTarPerm modified mode [ 'binding.gyp', 438, 420 ]
+1010 silly gunzTarPerm extractEntry changelog
+1011 silly gunzTarPerm modified mode [ 'changelog', 438, 420 ]
+1012 silly gunzTarPerm extractEntry lib/jsdom/level2/core.js
+1013 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/core.js', 438, 420 ]
+1014 silly gunzTarPerm extractEntry newparser.js
+1015 silly gunzTarPerm modified mode [ 'newparser.js', 438, 420 ]
+1016 silly gunzTarPerm extractEntry tests/test-constants.js
+1017 silly gunzTarPerm modified mode [ 'tests/test-constants.js', 438, 420 ]
+1018 silly gunzTarPerm extractEntry rssbug.js
+1019 silly gunzTarPerm modified mode [ 'rssbug.js', 438, 420 ]
+1020 silly gunzTarPerm extractEntry tests/test-events.js
+1021 silly gunzTarPerm modified mode [ 'tests/test-events.js', 438, 420 ]
+1022 silly gunzTarPerm extractEntry runtests.js
+1023 silly gunzTarPerm modified mode [ 'runtests.js', 438, 420 ]
+1024 silly gunzTarPerm extractEntry runtests.min.js
+1025 silly gunzTarPerm modified mode [ 'runtests.min.js', 438, 420 ]
+1026 silly gunzTarPerm extractEntry runtests_new.js
+1027 silly gunzTarPerm modified mode [ 'runtests_new.js', 438, 420 ]
+1028 silly gunzTarPerm extractEntry snippet.js
+1029 silly gunzTarPerm modified mode [ 'snippet.js', 438, 420 ]
+1030 silly gunzTarPerm extractEntry test01.js
+1031 silly gunzTarPerm modified mode [ 'test01.js', 438, 420 ]
+1032 silly gunzTarPerm extractEntry json2.js
+1033 silly gunzTarPerm modified mode [ 'json2.js', 438, 420 ]
+1034 silly gunzTarPerm extractEntry lib/contextify.js
+1035 silly gunzTarPerm modified mode [ 'lib/contextify.js', 438, 420 ]
+1036 silly gunzTarPerm extractEntry LICENSE.txt
+1037 silly gunzTarPerm modified mode [ 'LICENSE.txt', 438, 420 ]
+1038 silly gunzTarPerm extractEntry lib/jsdom/level2/events.js
+1039 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/events.js', 438, 420 ]
+1040 silly gunzTarPerm extractEntry tests/test-exceptions.js
+1041 silly gunzTarPerm modified mode [ 'tests/test-exceptions.js', 438, 420 ]
+1042 silly gunzTarPerm extractEntry tests/test-headers.js
+1043 silly gunzTarPerm modified mode [ 'tests/test-headers.js', 438, 420 ]
+1044 silly gunzTarPerm extractEntry lib/jsdom/level2/html.js
+1045 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/html.js', 438, 420 ]
+1046 silly gunzTarPerm extractEntry src/contextify.cc
+1047 silly gunzTarPerm modified mode [ 'src/contextify.cc', 438, 420 ]
+1048 silly gunzTarPerm extractEntry test/contextify.js
+1049 silly gunzTarPerm modified mode [ 'test/contextify.js', 438, 420 ]
+1050 silly gunzTarPerm extractEntry lib/jsdom/level2/index.js
+1051 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/index.js', 438, 420 ]
+1052 silly gunzTarPerm extractEntry wscript
+1053 silly gunzTarPerm modified mode [ 'wscript', 438, 420 ]
+1054 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\location\package.json
+1055 silly gunzTarPerm extractEntry lib/jsdom/level2/style.js
+1056 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/style.js', 438, 420 ]
+1057 silly gunzTarPerm extractEntry lib/jsdom/level2/languages/javascript.js
+1058 silly gunzTarPerm modified mode [ 'lib/jsdom/level2/languages/javascript.js', 438, 420 ]
+1059 silly gunzTarPerm extractEntry lib/jsdom/level3/core.js
+1060 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/core.js', 438, 420 ]
+1061 silly gunzTarPerm extractEntry profile.js
+1062 silly gunzTarPerm modified mode [ 'profile.js', 438, 420 ]
+1063 silly gunzTarPerm extractEntry utils_example.js
+1064 silly gunzTarPerm modified mode [ 'utils_example.js', 438, 420 ]
+1065 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\navigator\package.json
+1066 silly gunzTarPerm extractEntry lib/jsdom/level3/events.js
+1067 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/events.js', 438, 420 ]
+1068 silly gunzTarPerm extractEntry lib/jsdom/level3/html.js
+1069 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/html.js', 438, 420 ]
+1070 silly gunzTarPerm extractEntry profile
+1071 silly gunzTarPerm modified mode [ 'profile', 438, 420 ]
+1072 silly gunzTarPerm extractEntry lib/jsdom/level3/index.js
+1073 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/index.js', 438, 420 ]
+1074 silly gunzTarPerm extractEntry tests/test-request-methods.js
+1075 silly gunzTarPerm modified mode [ 'tests/test-request-methods.js', 438, 420 ]
+1076 silly gunzTarPerm extractEntry tests/test-request-protocols.js
+1077 silly gunzTarPerm modified mode [ 'tests/test-request-protocols.js', 438, 420 ]
+1078 silly gunzTarPerm extractEntry lib/jsdom/level3/ls.js
+1079 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/ls.js', 438, 420 ]
+1080 silly gunzTarPerm extractEntry lib/jsdom/level3/xpath.js
+1081 silly gunzTarPerm modified mode [ 'lib/jsdom/level3/xpath.js', 438, 420 ]
+1082 silly gunzTarPerm extractEntry lib/jsdom/selectors/index.js
+1083 silly gunzTarPerm modified mode [ 'lib/jsdom/selectors/index.js', 438, 420 ]
+1084 silly gunzTarPerm extractEntry lib/jsdom/selectors/sizzle.js
+1085 silly gunzTarPerm modified mode [ 'lib/jsdom/selectors/sizzle.js', 438, 420 ]
+1086 silly gunzTarPerm extractEntry CHANGELOG
+1087 silly gunzTarPerm modified mode [ 'CHANGELOG', 438, 420 ]
+1088 silly gunzTarPerm extractEntry profile.getelement.txt
+1089 silly gunzTarPerm modified mode [ 'profile.getelement.txt', 438, 420 ]
+1090 silly gunzTarPerm extractEntry LICENSE.txt
+1091 silly gunzTarPerm modified mode [ 'LICENSE.txt', 438, 420 ]
+1092 info preinstall location@0.0.1
+1093 silly gunzTarPerm extractEntry .project.bak
+1094 silly gunzTarPerm modified mode [ '.project.bak', 438, 420 ]
+1095 silly gunzTarPerm extractEntry tests/testdata.txt
+1096 silly gunzTarPerm modified mode [ 'tests/testdata.txt', 438, 420 ]
+1097 info preinstall navigator@1.0.1
+1098 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\location\package.json
+1099 silly gunzTarPerm extractEntry profileresults.txt
+1100 silly gunzTarPerm modified mode [ 'profileresults.txt', 438, 420 ]
+1101 silly gunzTarPerm extractEntry pulls/node-htmlparser/package.json
+1102 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/package.json', 438, 420 ]
+1103 verbose readDependencies using package.json deps
+1104 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\location\package.json
+1105 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\navigator\package.json
+1106 silly gunzTarPerm extractEntry pulls/node-htmlparser/README.md
+1107 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/README.md', 438, 420 ]
+1108 verbose readDependencies using package.json deps
+1109 silly resolved []
+1110 verbose about to build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\location
+1111 info build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\location
+1112 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\location\package.json
+1113 verbose linkStuff [ false,
+1113 verbose linkStuff   false,
+1113 verbose linkStuff   false,
+1113 verbose linkStuff   'C:\\work\\GitHub\\kissamaatti\\node_modules\\jquery\\node_modules' ]
+1114 info linkStuff location@0.0.1
+1115 verbose linkBins location@0.0.1
+1116 verbose linkMans location@0.0.1
+1117 verbose rebuildBundles location@0.0.1
+1118 verbose readDependencies using package.json deps
+1119 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\navigator\package.json
+1120 silly gunzTarPerm extractEntry pulls/node-htmlparser/LICENSE
+1121 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/LICENSE', 438, 420 ]
+1122 info install location@0.0.1
+1123 silly gunzTarPerm extractEntry pulls/node-htmlparser/utils_example.js
+1124 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/utils_example.js', 438, 420 ]
+1125 verbose readDependencies using package.json deps
+1126 silly resolved []
+1127 verbose about to build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\navigator
+1128 info build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\navigator
+1129 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\navigator\package.json
+1130 silly gunzTarPerm extractEntry pulls/node-htmlparser/profile.js
+1131 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/profile.js', 438, 420 ]
+1132 verbose linkStuff [ false,
+1132 verbose linkStuff   false,
+1132 verbose linkStuff   false,
+1132 verbose linkStuff   'C:\\work\\GitHub\\kissamaatti\\node_modules\\jquery\\node_modules' ]
+1133 info linkStuff navigator@1.0.1
+1134 verbose linkBins navigator@1.0.1
+1135 verbose linkMans navigator@1.0.1
+1136 verbose rebuildBundles navigator@1.0.1
+1137 info postinstall location@0.0.1
+1138 silly gunzTarPerm extractEntry pulls/node-htmlparser/json2.js
+1139 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/json2.js', 438, 420 ]
+1140 info install navigator@1.0.1
+1141 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.js
+1142 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/runtests.js', 438, 420 ]
+1143 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.min.js
+1144 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/runtests.min.js', 438, 420 ]
+1145 info postinstall navigator@1.0.1
+1146 silly gunzTarPerm extractEntry pulls/node-htmlparser/snippet.js
+1147 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/snippet.js', 438, 420 ]
+1148 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.min.html
+1149 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/runtests.min.html', 438, 420 ]
+1150 silly gunzTarPerm extractEntry pulls/node-htmlparser/CHANGELOG
+1151 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/CHANGELOG', 438, 420 ]
+1152 silly gunzTarPerm extractEntry pulls/node-htmlparser/lib/node-htmlparser.js
+1153 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/lib/node-htmlparser.js', 438, 420 ]
+1154 silly gunzTarPerm extractEntry pulls/node-htmlparser/lib/node-htmlparser.min.js
+1155 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/lib/node-htmlparser.min.js', 438, 420 ]
+1156 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/01-basic.js
+1157 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/01-basic.js', 438, 420 ]
+1158 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/08-extra_spaces_in_tag.js
+1159 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/08-extra_spaces_in_tag.js',
+1159 silly gunzTarPerm   438,
+1159 silly gunzTarPerm   420 ]
+1160 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/09-unquoted_attrib.js
+1161 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/09-unquoted_attrib.js', 438, 420 ]
+1162 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/10-singular_attribute.js
+1163 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/10-singular_attribute.js',
+1163 silly gunzTarPerm   438,
+1163 silly gunzTarPerm   420 ]
+1164 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/07-unescaped_in_style.js
+1165 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/07-unescaped_in_style.js',
+1165 silly gunzTarPerm   438,
+1165 silly gunzTarPerm   420 ]
+1166 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/12-text_only.js
+1167 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/12-text_only.js', 438, 420 ]
+1168 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/13-comment_in_text.js
+1169 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/13-comment_in_text.js', 438, 420 ]
+1170 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/14-comment_in_text_in_script.js
+1171 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/14-comment_in_text_in_script.js',
+1171 silly gunzTarPerm   438,
+1171 silly gunzTarPerm   420 ]
+1172 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/15-non-verbose.js
+1173 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/15-non-verbose.js', 438, 420 ]
+1174 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/16-ignore_whitespace.js
+1175 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/16-ignore_whitespace.js',
+1175 silly gunzTarPerm   438,
+1175 silly gunzTarPerm   420 ]
+1176 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/06-comment_in_script.js
+1177 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/06-comment_in_script.js',
+1177 silly gunzTarPerm   438,
+1177 silly gunzTarPerm   420 ]
+1178 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/17-xml_namespace.js
+1179 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/17-xml_namespace.js', 438, 420 ]
+1180 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/05-tags_in_comment.js
+1181 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/05-tags_in_comment.js', 438, 420 ]
+1182 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/18-enforce_empty_tags.js
+1183 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/18-enforce_empty_tags.js',
+1183 silly gunzTarPerm   438,
+1183 silly gunzTarPerm   420 ]
+1184 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/04-unescaped_in_script.js
+1185 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/04-unescaped_in_script.js',
+1185 silly gunzTarPerm   438,
+1185 silly gunzTarPerm   420 ]
+1186 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/19-ignore_empty_tags.js
+1187 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/19-ignore_empty_tags.js',
+1187 silly gunzTarPerm   438,
+1187 silly gunzTarPerm   420 ]
+1188 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/03-single_tag_2.js
+1189 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/03-single_tag_2.js', 438, 420 ]
+1190 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/20-rss.js
+1191 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/20-rss.js', 438, 420 ]
+1192 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/02-single_tag_1.js
+1193 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/02-single_tag_1.js', 438, 420 ]
+1194 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/21-atom.js
+1195 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/21-atom.js', 438, 420 ]
+1196 silly gunzTarPerm extractEntry pulls/node-htmlparser/tests/11-text_outside_tags.js
+1197 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/tests/11-text_outside_tags.js',
+1197 silly gunzTarPerm   438,
+1197 silly gunzTarPerm   420 ]
+1198 silly gunzTarPerm extractEntry pulls/node-htmlparser/runtests.html
+1199 silly gunzTarPerm modified mode [ 'pulls/node-htmlparser/runtests.html', 438, 420 ]
+1200 silly gunzTarPerm extractEntry .project
+1201 silly gunzTarPerm modified mode [ '.project', 438, 420 ]
+1202 silly gunzTarPerm extractEntry lib/htmlparser.js
+1203 silly gunzTarPerm modified mode [ 'lib/htmlparser.js', 438, 420 ]
+1204 silly gunzTarPerm extractEntry lib/htmlparser.min.js
+1205 silly gunzTarPerm modified mode [ 'lib/htmlparser.min.js', 438, 420 ]
+1206 silly gunzTarPerm extractEntry lib/node-htmlparser.js
+1207 silly gunzTarPerm modified mode [ 'lib/node-htmlparser.js', 438, 420 ]
+1208 silly gunzTarPerm extractEntry lib/node-htmlparser.min.js
+1209 silly gunzTarPerm modified mode [ 'lib/node-htmlparser.min.js', 438, 420 ]
+1210 silly gunzTarPerm extractEntry rssbug.rss
+1211 silly gunzTarPerm modified mode [ 'rssbug.rss', 438, 420 ]
+1212 silly gunzTarPerm extractEntry runtests.html
+1213 silly gunzTarPerm modified mode [ 'runtests.html', 438, 420 ]
+1214 silly gunzTarPerm extractEntry libxmljs.node
+1215 silly gunzTarPerm modified mode [ 'libxmljs.node', 438, 420 ]
+1216 silly gunzTarPerm extractEntry runtests.min.html
+1217 silly gunzTarPerm modified mode [ 'runtests.min.html', 438, 420 ]
+1218 silly gunzTarPerm extractEntry .settings/.jsdtscope
+1219 silly gunzTarPerm modified mode [ '.settings/.jsdtscope', 438, 420 ]
+1220 silly gunzTarPerm extractEntry .settings/org.eclipse.core.resources.prefs
+1221 silly gunzTarPerm modified mode [ '.settings/org.eclipse.core.resources.prefs', 438, 420 ]
+1222 silly gunzTarPerm extractEntry .settings/org.eclipse.wst.jsdt.ui.superType.container
+1223 silly gunzTarPerm modified mode [ '.settings/org.eclipse.wst.jsdt.ui.superType.container',
+1223 silly gunzTarPerm   438,
+1223 silly gunzTarPerm   420 ]
+1224 silly gunzTarPerm extractEntry .settings/org.eclipse.wst.jsdt.ui.superType.name
+1225 silly gunzTarPerm modified mode [ '.settings/org.eclipse.wst.jsdt.ui.superType.name', 438, 420 ]
+1226 silly gunzTarPerm extractEntry new/compat.js
+1227 silly gunzTarPerm modified mode [ 'new/compat.js', 438, 420 ]
+1228 silly gunzTarPerm extractEntry new/htmlparser.js
+1229 silly gunzTarPerm modified mode [ 'new/htmlparser.js', 438, 420 ]
+1230 silly gunzTarPerm extractEntry new/test01.js
+1231 silly gunzTarPerm modified mode [ 'new/test01.js', 438, 420 ]
+1232 silly gunzTarPerm extractEntry new/test02.js
+1233 silly gunzTarPerm modified mode [ 'new/test02.js', 438, 420 ]
+1234 silly gunzTarPerm extractEntry new/a
+1235 silly gunzTarPerm modified mode [ 'new/a', 438, 420 ]
+1236 silly gunzTarPerm extractEntry new/b
+1237 silly gunzTarPerm modified mode [ 'new/b', 438, 420 ]
+1238 silly gunzTarPerm extractEntry new/parser.zip
+1239 silly gunzTarPerm modified mode [ 'new/parser.zip', 438, 420 ]
+1240 silly gunzTarPerm extractEntry a
+1241 silly gunzTarPerm modified mode [ 'a', 438, 420 ]
+1242 silly gunzTarPerm extractEntry b
+1243 silly gunzTarPerm modified mode [ 'b', 438, 420 ]
+1244 silly gunzTarPerm extractEntry testdata/.tmp_test.html.2854~
+1245 silly gunzTarPerm modified mode [ 'testdata/.tmp_test.html.2854~', 438, 420 ]
+1246 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker.html.65425~
+1247 silly gunzTarPerm modified mode [ 'testdata/.tmp_trackerchecker.html.65425~', 438, 420 ]
+1248 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker.html.76922~
+1249 silly gunzTarPerm modified mode [ 'testdata/.tmp_trackerchecker.html.76922~', 438, 420 ]
+1250 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker.html.80022~
+1251 silly gunzTarPerm modified mode [ 'testdata/.tmp_trackerchecker.html.80022~', 438, 420 ]
+1252 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\xmlhttprequest\package.json
+1253 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker2.html.51378~
+1254 silly gunzTarPerm modified mode [ 'testdata/.tmp_trackerchecker2.html.51378~', 438, 420 ]
+1255 silly gunzTarPerm extractEntry testdata/.tmp_trackerchecker2.html.75287~
+1256 silly gunzTarPerm modified mode [ 'testdata/.tmp_trackerchecker2.html.75287~', 438, 420 ]
+1257 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\package.json
+1258 info preinstall xmlhttprequest@1.4.2
+1259 silly gunzTarPerm extractEntry testdata/api.html
+1260 silly gunzTarPerm modified mode [ 'testdata/api.html', 438, 420 ]
+1261 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\xmlhttprequest\package.json
+1262 verbose readDependencies using package.json deps
+1263 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\xmlhttprequest\package.json
+1264 verbose readDependencies using package.json deps
+1265 silly resolved []
+1266 verbose about to build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\xmlhttprequest
+1267 info build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\xmlhttprequest
+1268 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\xmlhttprequest\package.json
+1269 verbose linkStuff [ false,
+1269 verbose linkStuff   false,
+1269 verbose linkStuff   false,
+1269 verbose linkStuff   'C:\\work\\GitHub\\kissamaatti\\node_modules\\jquery\\node_modules' ]
+1270 info linkStuff xmlhttprequest@1.4.2
+1271 verbose linkBins xmlhttprequest@1.4.2
+1272 verbose linkMans xmlhttprequest@1.4.2
+1273 verbose rebuildBundles xmlhttprequest@1.4.2
+1274 info install xmlhttprequest@1.4.2
+1275 silly gunzTarPerm extractEntry testdata/getelement.html
+1276 silly gunzTarPerm modified mode [ 'testdata/getelement.html', 438, 420 ]
+1277 info postinstall xmlhttprequest@1.4.2
+1278 silly gunzTarPerm extractEntry testdata/trackerchecker.html
+1279 silly gunzTarPerm modified mode [ 'testdata/trackerchecker.html', 438, 420 ]
+1280 info preinstall contextify@0.1.4
+1281 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\package.json
+1282 verbose readDependencies using package.json deps
+1283 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\package.json
+1284 verbose readDependencies using package.json deps
+1285 silly gunzTarPerm extractEntry tests/01-basic.js
+1286 silly gunzTarPerm modified mode [ 'tests/01-basic.js', 438, 420 ]
+1287 silly gunzTarPerm extractEntry tests/08-extra_spaces_in_tag.js
+1288 silly gunzTarPerm modified mode [ 'tests/08-extra_spaces_in_tag.js', 438, 420 ]
+1289 silly gunzTarPerm extractEntry tests/09-unquoted_attrib.js
+1290 silly gunzTarPerm modified mode [ 'tests/09-unquoted_attrib.js', 438, 420 ]
+1291 silly gunzTarPerm extractEntry tests/10-singular_attribute.js
+1292 silly gunzTarPerm modified mode [ 'tests/10-singular_attribute.js', 438, 420 ]
+1293 silly gunzTarPerm extractEntry tests/11-text_outside_tags.js
+1294 silly gunzTarPerm modified mode [ 'tests/11-text_outside_tags.js', 438, 420 ]
+1295 silly gunzTarPerm extractEntry tests/07-unescaped_in_style.js
+1296 silly gunzTarPerm modified mode [ 'tests/07-unescaped_in_style.js', 438, 420 ]
+1297 silly gunzTarPerm extractEntry tests/13-comment_in_text.js
+1298 silly gunzTarPerm modified mode [ 'tests/13-comment_in_text.js', 438, 420 ]
+1299 silly gunzTarPerm extractEntry tests/14-comment_in_text_in_script.js
+1300 silly gunzTarPerm modified mode [ 'tests/14-comment_in_text_in_script.js', 438, 420 ]
+1301 silly gunzTarPerm extractEntry tests/15-non-verbose.js
+1302 silly gunzTarPerm modified mode [ 'tests/15-non-verbose.js', 438, 420 ]
+1303 silly gunzTarPerm extractEntry tests/16-ignore_whitespace.js
+1304 silly gunzTarPerm modified mode [ 'tests/16-ignore_whitespace.js', 438, 420 ]
+1305 silly gunzTarPerm extractEntry tests/17-xml_namespace.js
+1306 silly gunzTarPerm modified mode [ 'tests/17-xml_namespace.js', 438, 420 ]
+1307 silly gunzTarPerm extractEntry tests/06-comment_in_script.js
+1308 silly gunzTarPerm modified mode [ 'tests/06-comment_in_script.js', 438, 420 ]
+1309 silly gunzTarPerm extractEntry tests/18-enforce_empty_tags.js
+1310 silly gunzTarPerm modified mode [ 'tests/18-enforce_empty_tags.js', 438, 420 ]
+1311 silly gunzTarPerm extractEntry tests/05-tags_in_comment.js
+1312 silly gunzTarPerm modified mode [ 'tests/05-tags_in_comment.js', 438, 420 ]
+1313 silly gunzTarPerm extractEntry tests/19-ignore_empty_tags.js
+1314 silly gunzTarPerm modified mode [ 'tests/19-ignore_empty_tags.js', 438, 420 ]
+1315 silly gunzTarPerm extractEntry tests/04-unescaped_in_script.js
+1316 silly gunzTarPerm modified mode [ 'tests/04-unescaped_in_script.js', 438, 420 ]
+1317 silly gunzTarPerm extractEntry tests/20-rss.js
+1318 silly gunzTarPerm modified mode [ 'tests/20-rss.js', 438, 420 ]
+1319 silly gunzTarPerm extractEntry tests/03-single_tag_2.js
+1320 silly gunzTarPerm modified mode [ 'tests/03-single_tag_2.js', 438, 420 ]
+1321 silly gunzTarPerm extractEntry tests/21-atom.js
+1322 silly gunzTarPerm modified mode [ 'tests/21-atom.js', 438, 420 ]
+1323 silly gunzTarPerm extractEntry tests/02-single_tag_1.js
+1324 silly gunzTarPerm modified mode [ 'tests/02-single_tag_1.js', 438, 420 ]
+1325 silly gunzTarPerm extractEntry tests/22-position_data.js
+1326 silly gunzTarPerm modified mode [ 'tests/22-position_data.js', 438, 420 ]
+1327 silly gunzTarPerm extractEntry tests/12-text_only.js
+1328 silly gunzTarPerm modified mode [ 'tests/12-text_only.js', 438, 420 ]
+1329 silly gunzTarPerm extractEntry tmp/snippet.js
+1330 silly gunzTarPerm modified mode [ 'tmp/snippet.js', 438, 420 ]
+1331 silly gunzTarPerm extractEntry c
+1332 silly gunzTarPerm modified mode [ 'c', 438, 420 ]
+1333 silly gunzTarPerm extractEntry v8.log
+1334 silly gunzTarPerm modified mode [ 'v8.log', 438, 420 ]
+1335 verbose cache add [ 'bindings@*', null ]
+1336 silly cache add name=undefined spec="bindings@*" args=["bindings@*",null]
+1337 verbose parsed url { pathname: 'bindings@*',
+1337 verbose parsed url   path: 'bindings@*',
+1337 verbose parsed url   href: 'bindings@*' }
+1338 silly cache add name="bindings" spec="*" args=["bindings","*"]
+1339 verbose parsed url { pathname: '*', path: '*', href: '*' }
+1340 verbose addNamed [ 'bindings', '*' ]
+1341 verbose addNamed [ null, '' ]
+1342 silly addNameRange { name: 'bindings', range: '', hasData: false }
+1343 verbose url raw bindings
+1344 verbose url resolving [ 'https://registry.npmjs.org/', './bindings' ]
+1345 verbose url resolved https://registry.npmjs.org/bindings
+1346 http GET https://registry.npmjs.org/bindings
+1347 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\jsdom\package.json
+1348 info preinstall jsdom@0.2.19
+1349 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\jsdom\package.json
+1350 verbose readDependencies using package.json deps
+1351 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\jsdom\package.json
+1352 verbose readDependencies using package.json deps
+1353 verbose cache add [ 'request@2.x', null ]
+1354 silly cache add name=undefined spec="request@2.x" args=["request@2.x",null]
+1355 verbose parsed url { pathname: 'request@2.x',
+1355 verbose parsed url   path: 'request@2.x',
+1355 verbose parsed url   href: 'request@2.x' }
+1356 silly cache add name="request" spec="2.x" args=["request","2.x"]
+1357 verbose parsed url { pathname: '2.x', path: '2.x', href: '2.x' }
+1358 verbose addNamed [ 'request', '2.x' ]
+1359 verbose addNamed [ null, '>=2.0.0- <3.0.0-' ]
+1360 silly addNameRange { name: 'request', range: '>=2.0.0- <3.0.0-', hasData: false }
+1361 verbose cache add [ 'cssom@0.2.x', null ]
+1362 silly cache add name=undefined spec="cssom@0.2.x" args=["cssom@0.2.x",null]
+1363 verbose parsed url { pathname: 'cssom@0.2.x',
+1363 verbose parsed url   path: 'cssom@0.2.x',
+1363 verbose parsed url   href: 'cssom@0.2.x' }
+1364 silly cache add name="cssom" spec="0.2.x" args=["cssom","0.2.x"]
+1365 verbose parsed url { pathname: '0.2.x', path: '0.2.x', href: '0.2.x' }
+1366 verbose addNamed [ 'cssom', '0.2.x' ]
+1367 verbose addNamed [ null, '>=0.2.0- <0.3.0-' ]
+1368 silly addNameRange { name: 'cssom', range: '>=0.2.0- <0.3.0-', hasData: false }
+1369 verbose cache add [ 'cssstyle@>=0.2.3', null ]
+1370 silly cache add name=undefined spec="cssstyle@>=0.2.3" args=["cssstyle@>=0.2.3",null]
+1371 verbose parsed url { pathname: 'cssstyle@%3E=0.2.3',
+1371 verbose parsed url   path: 'cssstyle@%3E=0.2.3',
+1371 verbose parsed url   href: 'cssstyle@%3E=0.2.3' }
+1372 silly cache add name="cssstyle" spec=">=0.2.3" args=["cssstyle",">=0.2.3"]
+1373 verbose parsed url { pathname: '%3E=0.2.3', path: '%3E=0.2.3', href: '%3E=0.2.3' }
+1374 verbose addNamed [ 'cssstyle', '>=0.2.3' ]
+1375 verbose addNamed [ null, '>=0.2.3' ]
+1376 silly addNameRange { name: 'cssstyle', range: '>=0.2.3', hasData: false }
+1377 verbose url raw request
+1378 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+1379 verbose url resolved https://registry.npmjs.org/request
+1380 http GET https://registry.npmjs.org/request
+1381 verbose url raw cssstyle
+1382 verbose url resolving [ 'https://registry.npmjs.org/', './cssstyle' ]
+1383 verbose url resolved https://registry.npmjs.org/cssstyle
+1384 http GET https://registry.npmjs.org/cssstyle
+1385 verbose url raw cssom
+1386 verbose url resolving [ 'https://registry.npmjs.org/', './cssom' ]
+1387 verbose url resolved https://registry.npmjs.org/cssom
+1388 verbose etag "76QSI2J0RHD2J5TMOZBNPIM0X"
+1389 http GET https://registry.npmjs.org/cssom
+1390 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\htmlparser\package.json
+1391 info preinstall htmlparser@1.7.6
+1392 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\htmlparser\package.json
+1393 verbose readDependencies using package.json deps
+1394 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\htmlparser\package.json
+1395 verbose readDependencies using package.json deps
+1396 silly resolved []
+1397 verbose about to build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\htmlparser
+1398 info build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\htmlparser
+1399 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\htmlparser\package.json
+1400 verbose linkStuff [ false,
+1400 verbose linkStuff   false,
+1400 verbose linkStuff   false,
+1400 verbose linkStuff   'C:\\work\\GitHub\\kissamaatti\\node_modules\\jquery\\node_modules' ]
+1401 info linkStuff htmlparser@1.7.6
+1402 verbose linkBins htmlparser@1.7.6
+1403 verbose linkMans htmlparser@1.7.6
+1404 verbose rebuildBundles htmlparser@1.7.6
+1405 info install htmlparser@1.7.6
+1406 info postinstall htmlparser@1.7.6
+1407 http 304 https://registry.npmjs.org/cssom
+1408 silly registry.get cb [ 304,
+1408 silly registry.get   { server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+1408 silly registry.get     etag: '"76QSI2J0RHD2J5TMOZBNPIM0X"',
+1408 silly registry.get     date: 'Sat, 02 Mar 2013 15:56:02 GMT',
+1408 silly registry.get     'content-length': '0' } ]
+1409 verbose etag cssom from cache
+1410 silly addNameRange number 2 { name: 'cssom', range: '>=0.2.0- <0.3.0-', hasData: true }
+1411 silly addNameRange versions [ 'cssom',
+1411 silly addNameRange   [ '0.2.0', '0.2.1', '0.2.2', '0.2.3', '0.2.4', '0.2.5' ] ]
+1412 verbose read json C:\Users\ohra\AppData\Roaming\npm-cache\cssom\0.2.5\package\package.json
+1413 http 200 https://registry.npmjs.org/bindings
+1414 silly registry.get cb [ 200,
+1414 silly registry.get   { vary: 'Accept',
+1414 silly registry.get     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+1414 silly registry.get     etag: '"4UBBUV6A23T2Q8C5KB2R9069V"',
+1414 silly registry.get     date: 'Sat, 02 Mar 2013 15:56:02 GMT',
+1414 silly registry.get     'content-type': 'application/json',
+1414 silly registry.get     'content-length': '23272' } ]
+1415 silly addNameRange number 2 { name: 'bindings', range: '', hasData: true }
+1416 silly addNameRange versions [ 'bindings',
+1416 silly addNameRange   [ '0.0.1',
+1416 silly addNameRange     '0.1.0',
+1416 silly addNameRange     '0.1.1',
+1416 silly addNameRange     '0.2.0',
+1416 silly addNameRange     '0.2.1',
+1416 silly addNameRange     '0.2.2',
+1416 silly addNameRange     '0.2.3',
+1416 silly addNameRange     '0.2.4',
+1416 silly addNameRange     '0.3.0',
+1416 silly addNameRange     '0.4.0',
+1416 silly addNameRange     '1.0.0' ] ]
+1417 verbose addRemoteTarball [ 'https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz',
+1417 verbose addRemoteTarball   'c3ccde60e9de6807c6f1aa4ef4843af29191c828' ]
+1418 verbose fetch to= C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239764106-0.22649947879835963\tmp.tgz
+1419 http GET https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz
+1420 http 200 https://registry.npmjs.org/cssstyle
+1421 silly registry.get cb [ 200,
+1421 silly registry.get   { vary: 'Accept',
+1421 silly registry.get     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+1421 silly registry.get     etag: '"8YWWQIZWKRI6L62JBDMR3HPFE"',
+1421 silly registry.get     date: 'Sat, 02 Mar 2013 15:56:02 GMT',
+1421 silly registry.get     'content-type': 'application/json',
+1421 silly registry.get     'content-length': '11674' } ]
+1422 silly addNameRange number 2 { name: 'cssstyle', range: '>=0.2.3', hasData: true }
+1423 silly addNameRange versions [ 'cssstyle', [ '0.1.0', '0.2.0', '0.2.1', '0.2.2', '0.2.3' ] ]
+1424 verbose addRemoteTarball [ 'https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.3.tgz',
+1424 verbose addRemoteTarball   'fc6a0cb8c72b99f10b17d2028adcdb9bcc73cb49' ]
+1425 verbose fetch to= C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239764297-0.23973910510540009\tmp.tgz
+1426 http GET https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.3.tgz
+1427 http 200 https://registry.npmjs.org/request
+1428 silly registry.get cb [ 200,
+1428 silly registry.get   { vary: 'Accept',
+1428 silly registry.get     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+1428 silly registry.get     etag: '"4W1K0FZ6HJG2WPZ3JTYL36I9V"',
+1428 silly registry.get     date: 'Sat, 02 Mar 2013 15:56:02 GMT',
+1428 silly registry.get     'content-type': 'application/json',
+1428 silly registry.get     'content-length': '219971' } ]
+1429 silly addNameRange number 2 { name: 'request', range: '>=2.0.0- <3.0.0-', hasData: true }
+1430 silly addNameRange versions [ 'request',
+1430 silly addNameRange   [ '0.10.0',
+1430 silly addNameRange     '0.8.3',
+1430 silly addNameRange     '0.9.0',
+1430 silly addNameRange     '0.9.1',
+1430 silly addNameRange     '0.9.5',
+1430 silly addNameRange     '1.0.0',
+1430 silly addNameRange     '1.1.0',
+1430 silly addNameRange     '1.1.1',
+1430 silly addNameRange     '1.2.0',
+1430 silly addNameRange     '1.9.0',
+1430 silly addNameRange     '1.9.1',
+1430 silly addNameRange     '1.9.2',
+1430 silly addNameRange     '1.9.3',
+1430 silly addNameRange     '1.9.5',
+1430 silly addNameRange     '1.9.7',
+1430 silly addNameRange     '1.9.8',
+1430 silly addNameRange     '1.9.9',
+1430 silly addNameRange     '2.0.0',
+1430 silly addNameRange     '2.0.1',
+1430 silly addNameRange     '2.0.2',
+1430 silly addNameRange     '2.0.3',
+1430 silly addNameRange     '2.0.4',
+1430 silly addNameRange     '2.0.5',
+1430 silly addNameRange     '2.1.0',
+1430 silly addNameRange     '2.1.1',
+1430 silly addNameRange     '2.2.0',
+1430 silly addNameRange     '2.2.5',
+1430 silly addNameRange     '2.2.6',
+1430 silly addNameRange     '2.2.9',
+1430 silly addNameRange     '2.9.0',
+1430 silly addNameRange     '2.9.1',
+1430 silly addNameRange     '2.9.2',
+1430 silly addNameRange     '2.9.3',
+1430 silly addNameRange     '2.9.100',
+1430 silly addNameRange     '2.9.150',
+1430 silly addNameRange     '2.9.151',
+1430 silly addNameRange     '2.9.152',
+1430 silly addNameRange     '2.9.153',
+1430 silly addNameRange     '2.9.200',
+1430 silly addNameRange     '2.9.201',
+1430 silly addNameRange     '2.9.202',
+1430 silly addNameRange     '2.9.203',
+1430 silly addNameRange     '2.10.0',
+1430 silly addNameRange     '2.11.0',
+1430 silly addNameRange     '2.11.1',
+1430 silly addNameRange     '2.11.2',
+1430 silly addNameRange     '2.11.3',
+1430 silly addNameRange     '2.11.4',
+1430 silly addNameRange     '2.12.0',
+1430 silly addNameRange     '2.14.0' ] ]
+1431 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.14.0.tgz',
+1431 verbose addRemoteTarball   '0d8acbb0b14c1ab82e000b7d381fa8c80d1a7d88' ]
+1432 verbose fetch to= C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239765340-0.03738367883488536\tmp.tgz
+1433 http GET https://registry.npmjs.org/request/-/request-2.14.0.tgz
+1434 silly shasum updated bytes 3456
+1435 info shasum c3ccde60e9de6807c6f1aa4ef4843af29191c828
+1435 info shasum C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239764106-0.22649947879835963\tmp.tgz
+1436 verbose tar unpack C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239764106-0.22649947879835963\tmp.tgz
+1437 silly gunzTarPerm modes [ '755', '644' ]
+1438 silly gunzTarPerm extractEntry package.json
+1439 silly gunzTarPerm extractEntry README.md
+1440 silly gunzTarPerm extractEntry bindings.js
+1441 verbose read json C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239764106-0.22649947879835963\package\package.json
+1442 verbose from cache C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239764106-0.22649947879835963\package\package.json
+1443 verbose tar pack [ 'C:\\Users\\ohra\\AppData\\Roaming\\npm-cache\\bindings\\1.0.0\\package.tgz',
+1443 verbose tar pack   'C:\\Users\\ohra\\AppData\\Local\\Temp\\npm-1362239750990\\1362239764106-0.22649947879835963\\package' ]
+1444 verbose tarball C:\Users\ohra\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+1445 verbose folder C:\Users\ohra\AppData\Local\Temp\npm-1362239750990\1362239764106-0.22649947879835963\package
+1446 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+1447 silly gunzTarPerm modes [ '755', '644' ]
+1448 silly gunzTarPerm extractEntry package.json
+1449 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+1450 silly gunzTarPerm extractEntry README.md
+1451 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+1452 silly gunzTarPerm extractEntry bindings.js
+1453 silly gunzTarPerm modified mode [ 'bindings.js', 438, 420 ]
+1454 verbose read json C:\Users\ohra\AppData\Roaming\npm-cache\bindings\1.0.0\package\package.json
+1455 silly shasum updated bytes 3437
+1456 info shasum ae056679e24f25d6c3fd8685720451bd77dc69d2
+1456 info shasum C:\Users\ohra\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+1457 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\bindings\1.0.0\package\package.json
+1458 verbose chmod C:\Users\ohra\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz 644
+1459 silly chown skipping for windows C:\Users\ohra\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+1460 silly resolved [ { name: 'bindings',
+1460 silly resolved     description: 'Helper module for loading your native module\'s .node file',
+1460 silly resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+1460 silly resolved     version: '1.0.0',
+1460 silly resolved     author:
+1460 silly resolved      { name: 'Nathan Rajlich',
+1460 silly resolved        email: 'nathan@tootallnate.net',
+1460 silly resolved        url: 'http://tootallnate.net' },
+1460 silly resolved     repository:
+1460 silly resolved      { type: 'git',
+1460 silly resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+1460 silly resolved     main: './bindings.js',
+1460 silly resolved     readme: 'node-bindings\n=============\n### Helper module for loading your native module\'s .node file\n\nThis is a helper module for authors of Node.js native addon modules.\nIt is basically the "swiss army knife" of `require()`ing your native module\'s\n`.node` file.\n\nThroughout the course of Node\'s native addon history, addons have ended up being\ncompiled in a variety of different places, depending on which build tool and which\nversion of node was used. To make matters worse, now the _gyp_ build tool can\nproduce either a _Release_ or _Debug_ build, each being built into different\nlocations.\n\nThis module checks _all_ the possible locations that a native addon would be built\nat, and returns the first one that loads successfully.\n\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install bindings\n```\n\nOr add it to the `"dependencies"` section of your _package.json_ file.\n\n\nExample\n-------\n\n`require()`ing the proper bindings file for the current node version, platform\nand architecture is as simple as:\n\n``` js\nvar bindings = require(\'bindings\')(\'binding.node\')\n\n// Use your bindings defined in your C files\nbindings.your_c_function()\n```\n\n\nNice Error Output\n-----------------\n\nWhen the `.node` file could not be loaded, `node-bindings` throws an Error with\na nice error message telling you exactly what was tried. You can also check the\n`err.tries` Array property.\n\n```\nError: Could not load the bindings file. Tried:\n → /Users/nrajlich/ref/build/binding.node\n → /Users/nrajlich/ref/build/Debug/binding.node\n → /Users/nrajlich/ref/build/Release/binding.node\n → /Users/nrajlich/ref/out/Debug/binding.node\n → /Users/nrajlich/ref/Debug/binding.node\n → /Users/nrajlich/ref/out/Release/binding.node\n → /Users/nrajlich/ref/Release/binding.node\n → /Users/nrajlich/ref/build/default/binding.node\n → /Users/nrajlich/ref/compiled/0.8.2/darwin/x64/binding.node\n    at bindings (/Users/nrajlich/ref/node_modules/bindings/bindings.js:84:13)\n    at Object.<anonymous> (/Users/nrajlich/ref/lib/ref.js:5:47)\n    at Module._compile (module.js:449:26)\n    at Object.Module._extensions..js (module.js:467:10)\n    at Module.load (module.js:356:32)\n    at Function.Module._load (module.js:312:12)\n    ...\n```\n\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+1460 silly resolved     _id: 'bindings@1.0.0',
+1460 silly resolved     dist: { shasum: 'ae056679e24f25d6c3fd8685720451bd77dc69d2' },
+1460 silly resolved     _from: 'bindings@*' } ]
+1461 info install bindings@1.0.0 into C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify
+1462 info installOne bindings@1.0.0
+1463 verbose from cache C:\Users\ohra\AppData\Roaming\npm-cache\bindings\1.0.0\package\package.json
+1464 info C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\node_modules\bindings unbuild
+1465 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\node_modules\bindings\package.json
+1466 verbose tar unpack C:\Users\ohra\AppData\Roaming\npm-cache\bindings\1.0.0\package.tgz
+1467 silly gunzTarPerm modes [ '755', '644' ]
+1468 silly gunzTarPerm extractEntry package.json
+1469 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+1470 silly gunzTarPerm extractEntry README.md
+1471 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+1472 silly gunzTarPerm extractEntry bindings.js
+1473 silly gunzTarPerm modified mode [ 'bindings.js', 438, 420 ]
+1474 verbose read json C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\node_modules\bindings\package.json
+1475 info preinstall bindings@1.0.0
+1476 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\node_modules\bindings\package.json
+1477 verbose readDependencies using package.json deps
+1478 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\node_modules\bindings\package.json
+1479 verbose readDependencies using package.json deps
+1480 silly resolved []
+1481 verbose about to build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\node_modules\bindings
+1482 info build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\node_modules\bindings
+1483 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\node_modules\bindings\package.json
+1484 verbose linkStuff [ false,
+1484 verbose linkStuff   false,
+1484 verbose linkStuff   false,
+1484 verbose linkStuff   'C:\\work\\GitHub\\kissamaatti\\node_modules\\jquery\\node_modules\\contextify\\node_modules' ]
+1485 info linkStuff bindings@1.0.0
+1486 verbose linkBins bindings@1.0.0
+1487 verbose linkMans bindings@1.0.0
+1488 verbose rebuildBundles bindings@1.0.0
+1489 info install bindings@1.0.0
+1490 info postinstall bindings@1.0.0
+1491 verbose about to build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify
+1492 info build C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify
+1493 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\package.json
+1494 verbose linkStuff [ false,
+1494 verbose linkStuff   false,
+1494 verbose linkStuff   false,
+1494 verbose linkStuff   'C:\\work\\GitHub\\kissamaatti\\node_modules\\jquery\\node_modules' ]
+1495 info linkStuff contextify@0.1.4
+1496 verbose linkBins contextify@0.1.4
+1497 verbose linkMans contextify@0.1.4
+1498 verbose rebuildBundles contextify@0.1.4
+1499 verbose rebuildBundles [ 'bindings' ]
+1500 info install contextify@0.1.4
+1501 verbose unsafe-perm in lifecycle true
+1502 silly exec cmd "/c" "node-gyp rebuild"
+1503 silly cmd,/c,node-gyp rebuild,C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify spawning
+1504 info contextify@0.1.4 Failed to exec install script
+1505 info C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify unbuild
+1506 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules\contextify\package.json
+1507 info preuninstall contextify@0.1.4
+1508 info uninstall contextify@0.1.4
+1509 verbose false,C:\work\GitHub\kissamaatti\node_modules,C:\work\GitHub\kissamaatti\node_modules\jquery\node_modules unbuild contextify@0.1.4
+1510 info postuninstall contextify@0.1.4
+1511 verbose about to build C:\work\GitHub\kissamaatti\node_modules\jquery
+1512 info C:\work\GitHub\kissamaatti\node_modules\jquery unbuild
+1513 verbose from cache C:\work\GitHub\kissamaatti\node_modules\jquery\package.json
+1514 info preuninstall jquery@1.8.3
+1515 info uninstall jquery@1.8.3
+1516 verbose true,C:\work\GitHub\kissamaatti\node_modules,C:\work\GitHub\kissamaatti\node_modules unbuild jquery@1.8.3
+1517 info postuninstall jquery@1.8.3
+1518 error contextify@0.1.4 install: `node-gyp rebuild`
+1518 error `cmd "/c" "node-gyp rebuild"` failed with 1
+1519 error Failed at the contextify@0.1.4 install script.
+1519 error This is most likely a problem with the contextify package,
+1519 error not with npm itself.
+1519 error Tell the author that this fails on your system:
+1519 error     node-gyp rebuild
+1519 error You can get their info via:
+1519 error     npm owner ls contextify
+1519 error There is likely additional logging output above.
+1520 error System Windows_NT 6.1.7601
+1521 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+1522 error cwd C:\work\GitHub\kissamaatti
+1523 error node -v v0.8.0
+1524 error npm -v 1.1.32
+1525 error code ELIFECYCLE
+1526 error message contextify@0.1.4 install: `node-gyp rebuild`
+1526 error message `cmd "/c" "node-gyp rebuild"` failed with 1
+1527 verbose exit [ 1, true ]
