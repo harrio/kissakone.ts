@@ -11,7 +11,7 @@ $(window).load(function() {
         url = $form.attr('action');
  
         /* Send the data using post */
-        var posting = $.post(url, {});
+        var posting = $.post(url, collectData($form));
  
         /* Put the results in a div */
         posting.done(function( data ) {
@@ -19,4 +19,13 @@ $(window).load(function() {
             $("#result").empty().append(data);
         });
     });
+
+    $("#runDatePicker").datepicker();
 });
+
+var collectData = function($form) {
+    if ($form.attr('id') === 'addRunForm') {
+        return { "name": "name1", "date": $("#runDatePicker").datepicker("getDate") };
+    }
+    return {}
+}

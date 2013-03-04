@@ -1,6 +1,6 @@
 extends layout
 
-block content
+block body
   h1= title
   p Welcome to #{title}
 
@@ -8,5 +8,13 @@ block content
     input(type="submit", value="On", id="btnOn")
   form(action="/gpioOff", method="POST", id="offForm", class="switchForm")
     input(type="submit", value="Off", id="btnOff")
+
+  ul
+      li
+        a(href='/') Home
+      li
+        a(href='/addRun') Add a new run
+
+    div(ng-view)
 
   div(id="result")
