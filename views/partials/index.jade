@@ -1,0 +1,9 @@
+p There are {{runs.length}} entries
+div(ng-repeat='run in runs')
+  h3 {{run.name}}
+  div {{run.date}}
+  a(href='readPost/{{run._id}}') More
+  |  - 
+  a(href='editRun/{{run._id}}') Edit
+  |  - 
+  a(href='deleteRun/{{run._id}}') Delete
