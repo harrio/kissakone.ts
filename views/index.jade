@@ -1,20 +1,27 @@
 extends layout
 
 block body
-  h1= title
-  p Welcome to #{title}
+  - if (!everyauth.loggedIn)
+    h2 Not Authenticated
+    #password-login
+      a(href='/login', style='border: 0px') Login with Password
+  - else
+    h1= title
+    p Welcome to #{title}
 
-  form(action="/gpioOn", method="POST", id="onForm", class="switchForm")
-    input(type="submit", value="On", id="btnOn")
-  form(action="/gpioOff", method="POST", id="offForm", class="switchForm")
-    input(type="submit", value="Off", id="btnOff")
+    form(action="/gpioOn", method="POST", id="onForm", class="switchForm")
+      input(type="submit", value="On", id="btnOn")
+    form(action="/gpioOff", method="POST", id="offForm", class="switchForm")
+      input(type="submit", value="Off", id="btnOff")
 
-  ul
+    ul
       li
         a(href='/') Home
       li
         a(href='/addRun') Add a new run
+      li
+        a(href='/logout', target='_self') Logout
 
     div(ng-view)
 
-  div(id="result")
+    div(id="result")
