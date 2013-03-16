@@ -163,6 +163,7 @@ setInterval(function() {
                     console.log("Start run...");
                     
                     gpio.registerListener(function(val) {
+                        console.log("Switch off: " + val);
                         if (val === 1) {
                             gpio.gpioOff();
                             gpio.unregisterListener();
@@ -171,7 +172,7 @@ setInterval(function() {
 
                     gpio.gpioOn();
                     setTimeout(function() {
-                        console.log("Finished run");
+                        console.log("Timeout");
                         gpio.gpioOff();
                     }, 5000);
                 });

@@ -7,6 +7,15 @@ exports.gpioOn = function(req, res) {
 	   	direction: 'out',
 
    		ready: function() {
+
+        gpio.registerListener(function(val) {
+                        console.log("Switch off: " + val);
+                        if (val === 1) {
+                            gpio.gpioOff();
+                            gpio.unregisterListener();
+                        }
+                    });
+        
     		gpio4.set();                 // sets pin to high
       		console.log("on: " + gpio4.value);    // should log 1
    		}
