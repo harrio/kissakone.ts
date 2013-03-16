@@ -161,6 +161,14 @@ setInterval(function() {
                 rundb.updateRun(run._id.toString(), run, function() {
                     console.log("Marked " + run._id + " as done.");
                     console.log("Start run...");
+                    
+                    gpio.registerListener(function(val) {
+                        if (val === 1) {
+                            gpio.gpioOff();
+                            gpio.unregisterListener();
+                        }
+                    });
+
                     gpio.gpioOn();
                     setTimeout(function() {
                         console.log("Finished run");

@@ -13,17 +13,7 @@ MongoClient.connect("mongodb://localhost:27017/kissa", function(err, _db) {
   db = _db;
   console.log("Connected to 'kissa' database");
         db.collection(COLL_NAME, {w:1}, function(err, collection) {
-            console.log("Collection: " + collection);
-
-            for (var key in collection) {
-                var obj = collection[key];
-                if (typeof obj === 'function') { continue; }
-                for (var prop in obj) {
-                if (typeof obj[prop] === 'function') { continue; }
-                console.log(prop + " = " + obj[prop]);
-                }
-            }
-
+            
            //if (err) {
            //     console.log("The 'schedule' collection doesn't exist. Creating it with sample data...");
            //     populateDB();
