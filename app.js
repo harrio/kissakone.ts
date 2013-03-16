@@ -174,6 +174,7 @@ setInterval(function() {
                     setTimeout(function() {
                         console.log("Timeout");
                         gpio.gpioOff();
+                        gpio.unregisterListener();
                     }, 5000);
                 });
             }
