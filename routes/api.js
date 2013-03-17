@@ -77,3 +77,50 @@ exports.gpioOff = function(req, res) {
     res.send("Off");
 };
 
+function cycleOne(callback) {
+    var startTime = new Date().getTime();
+    gpio.registerListener(function(val) {
+        if (val === 1) {
+            console.log("...cycled");
+            gpio.gpioOff();
+            gpio.unregisterListener();
+            var elapsed = new Date().getTime() - startTime();
+            callback(elapsed);
+        }
+    });
+    console.log("cycle one...");
+    gpio.gpioOn();
+}
+
+function cycleClicks(clicks, maincallback) {
+    var done = 0;
+    var callback = function(elapsed) {
+        done++;
+        if (done === clicks) {
+            console.log("cycle done");
+            maincallback();
+        } else {
+            console.log("cycled so far: " + done);
+            cycleOne(callback);
+        }
+    };
+    callback();
+}
+
+exports.resetCycle = function(req, res) {
+    console.log("reset");
+    var callback = function(elapsed) {
+        if (elapsed > 1600) {
+            console.log("cycle until 6");
+            cycleClicks(6, function() {
+                res.send("Ok");
+            });
+        } else {
+            console.log("cycle until gap");
+            cycleOne(callback);
+        }
+    };
+    callback();
+
+};
+

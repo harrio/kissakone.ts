@@ -137,7 +137,7 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 
-app.post('/gpioOn', api.gpioOn);
+app.post('/gpioOn', api.resetCycle);
 app.post('/gpioOff', api.gpioOff);
 
 app.get('/api/runs', api.findAll);
@@ -174,7 +174,7 @@ setInterval(function() {
                     setTimeout(function() {
                         console.log("Timeout");
                         gpio.gpioOff();
-                        gpio.unregisterListener();
+                        gpio.unregisterListener();  
                     }, 5000);
                 });
             }
