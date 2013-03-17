@@ -164,7 +164,7 @@ setInterval(function() {
                     
                     gpio.registerListener(function(val) {
                         console.log("Switch off: " + val);
-                        if (val === 1) {
+                        if (val == 1) {
                             gpio.gpioOff();
                             gpio.unregisterListener();
                         }

@@ -80,11 +80,11 @@ exports.gpioOff = function(req, res) {
 function cycleOne(callback) {
     var startTime = new Date().getTime();
     gpio.registerListener(function(val) {
-        if (val === 1) {
+        if (val == 1) {
             console.log("...cycled");
             gpio.gpioOff();
             gpio.unregisterListener();
-            var elapsed = new Date().getTime() - startTime();
+            var elapsed = new Date().getTime() - startTime;
             callback(elapsed);
         }
     });
@@ -120,7 +120,7 @@ exports.resetCycle = function(req, res) {
             cycleOne(callback);
         }
     };
-    callback();
+    callback(0);
 
 };
 
