@@ -6,13 +6,6 @@ block body
     #password-login
       a(href='/login', style='border: 0px') Login with Password
   - else
-    h1= title
-    p Welcome to #{title}
-
-    form(action="/gpioOn", method="POST", id="onForm", class="switchForm")
-      input(type="submit", value="On", id="btnOn")
-    form(action="/gpioOff", method="POST", id="offForm", class="switchForm")
-      input(type="submit", value="Off", id="btnOff")
 
     ul
       li
