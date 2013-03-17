@@ -7,6 +7,12 @@ function IndexCtrl($scope, $http) {
     success(function(data, status, headers, config) {
       $scope.runsDone = data.runsDone;
     });
+  $scope.resetCycle = function () {
+    $http.post('/gpioOn', $scope.form).
+      success(function(data) {
+        $location.path('/');
+      });
+  };
 }
  
 function AddRunCtrl($scope, $http, $location) {
