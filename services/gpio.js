@@ -1,6 +1,7 @@
 var gpio = require("gpio");
 
 var gpio4;
+var gpio17;
 var gpio24;
 
 exports.gpioOn = function() {
@@ -9,7 +10,6 @@ exports.gpioOn = function() {
 
    		ready: function() {
     		gpio4.set();                 // sets pin to high
-      	console.log("on: " + gpio4.value);    // should log 1
    		}
 	});
 };
@@ -17,9 +17,25 @@ exports.gpioOn = function() {
 exports.gpioOff = function() {
     if (gpio4) {
     	gpio4.reset();                 // sets pin to high
-    	console.log("off: " + gpio4.value);    // should log 1 
    		gpio4.unexport();
    	}
+};
+
+exports.rumbleOn = function() {
+  gpio17 = gpio.export(17, {
+      direction: 'out',
+
+      ready: function() {
+        gpio17.set();                 // sets pin to high
+      }
+  });
+};
+
+exports.rumbleOff = function() {
+    if (gpio17) {
+      gpio17.reset();                 // sets pin to high
+      gpio17.unexport();
+    }
 };
 
 exports.registerListener = function(callback) {
