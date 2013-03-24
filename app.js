@@ -10,6 +10,7 @@ var express = require('express')
   , path = require('path')
   , gpio = require("./services/gpio")
   , api = require("./routes/api")
+//  , gallery = require('node-gallery/gallery')
   , rundb = require("./services/rundb");
 
 var everyauthRoot = __dirname + '/..';
@@ -113,21 +114,23 @@ everyauth
     .loginSuccessRedirect('/');
 
 
-app.configure(function(){
+app.configure(function() {
+  app.use(express.logger());
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
-  app.use(express.logger('dev'));
   app.use(express.cookieParser());
   app.use(express.session({ secret: 'foobar' }));
   app.use(express.bodyParser());
   app.use(preEveryauthMiddlewareHack());
   app.use(everyauth.middleware(app));
   app.use(postEveryauthMiddlewareHack());
-  app.use(express.methodOverride());
+  app.use(express.methodOverride()); // delete & put
+  //app.use(gallery.middleware({static: 'photos', directory: '.', rootURL: "/gallery"}));
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
+  //app.use('/gallery', express.static(path.join(__dirname, 'photos')));
 });
 
 app.configure('development', function(){
@@ -146,6 +149,13 @@ app.get('/api/run/:id', api.findById);
 app.post('/api/run', api.addRun);
 app.put('/api/run/:id', api.updateRun);
 app.delete('/api/run/:id', api.deleteRun);
+
+//app.get('/gallery*', function(req, res){
+  // We automatically have the gallery data available to us in req thanks to middleware
+  //var data = req.gallery;
+  // and we can res.render using one of the supplied templates (photo.ejs/album.ejs) or one of our own
+  //res.render(data.type + '.jade', data);
+//});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
@@ -167,6 +177,12 @@ setInterval(function() {
                         if (val == 1) {
                             gpio.gpioOff();
                             gpio.unregisterListener();
+
+                            gpio.rumbleOn();
+                            setTimeout(function() {
+                                console.log("Rumble");
+                                gpio.rumbleOff();
+                            }, 2000);
                         }
                     });
 
