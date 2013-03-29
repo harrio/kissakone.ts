@@ -9,7 +9,7 @@ var DB_NAME = 'kissa';
 var COLL_NAME = 'schedule';
  
 //var mongoClient = new MongoClient(new Server('localhost', 27017, {auto_reconnect: true}));
-MongoClient.connect("mongodb://localhost:27017/kissa", function(err, _db) {
+MongoClient.connect("mongodb://localhost:27017/kissa?connectTimeoutMS=300000", function(err, _db) {
   db = _db;
   console.log("Connected to 'kissa' database");
         db.collection(COLL_NAME, {w:1}, function(err, collection) {
