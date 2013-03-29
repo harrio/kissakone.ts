@@ -124,3 +124,11 @@ exports.resetCycle = function(req, res) {
 
 };
 
+exports.rumble = function(req, res) {
+    console.log("rumble");
+    gpio.rumbleOn();
+    setTimeout(function() {
+        gpio.rumbleOff();
+    }, 2000);
+};
+

@@ -141,6 +141,7 @@ app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 
 app.post('/gpioOn', api.resetCycle);
+app.post('/rumble', api.rumble);
 app.post('/gpioOff', api.gpioOff);
 
 app.get('/api/runs', api.findAll);
@@ -182,7 +183,7 @@ setInterval(function() {
                             setTimeout(function() {
                                 console.log("Rumble");
                                 gpio.rumbleOff();
-                            }, 2000);
+                            }, 4000);
                         }
                     });
 
