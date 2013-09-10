@@ -19,9 +19,9 @@ table.table.maintable
             td
               {{run.date | date: 'dd.MM.yyyy HH:mm'}}
             td
-              a(href='editRun/{{run._id}}') Edit
+              a(href='editRun/{{run.id}}') Edit
               |  - 
-              a(href='deleteRun/{{run._id}}') Delete
+              a(href='deleteRun/{{run.id}}') Delete
       
     td
       table.table.table-striped
@@ -39,6 +39,6 @@ table.table.maintable
             td
               {{run.date | date: 'dd.MM.yyyy HH:mm'}}
             td
-              a(href='editRun/{{run._id}}') Edit
+              a(href='editRun/{{run.id}}') Edit
               |  - 
-              a(href='deleteRun/{{run._id}}') Delete
+              a(href='deleteRun/{{run.id}}') Delete

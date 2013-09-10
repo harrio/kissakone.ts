@@ -1,97 +1,139 @@
-var mongo = require('mongodb');
- 
-var Server = mongo.Server,
-    Db = mongo.Db,
-    BSON = mongo.BSONPure,
-    MongoClient = mongo.MongoClient;
-
-var DB_NAME = 'kissa';
-var COLL_NAME = 'schedule';
- 
-//var mongoClient = new MongoClient(new Server('localhost', 27017, {auto_reconnect: true}));
-MongoClient.connect("mongodb://localhost:27017/kissa?connectTimeoutMS=300000", function(err, _db) {
-  db = _db;
-  console.log("Connected to 'kissa' database");
-        db.collection(COLL_NAME, {w:1}, function(err, collection) {
-            
-           //if (err) {
-           //     console.log("The 'schedule' collection doesn't exist. Creating it with sample data...");
-           //     populateDB();
-           // }
-        });
-});
+var jf = require('./jsonfile');
+var _ = require('underscore');
   
-exports.findById = function(id, callback) {
+var FILE = "kissa.json";
+
+exports.findById = function(id) {
     console.log('Retrieving run: ' + id);
-    db.collection(COLL_NAME, function(err, collection) {
-        collection.findOne({'_id':new BSON.ObjectID(id)}, callback);
+    return jf.readFileQ(FILE)
+    .then(function(runs) {
+        if (runs === null || runs.length === 0)
+        {
+            return null;
+        }
+        return _.find(runs, function(run) { return run.id == id; });
+    })
+    .fail(function(err) {
+        return err;
     });
 };
  
-exports.findAll = function(callback) {
-    db.collection(COLL_NAME, function(err, collection) {
-        collection.find({done: false}).toArray(callback);
-    });
+var filterRuns = function(done) {
+    return function(runs) {
+        if (runs !== null && runs.length > 0) {
+            return _.filter(runs, function(run) { return run.done === done; });
+        } else {
+            console.log("no runs");
+            return [];
+        }
+    };
 };
 
-exports.findAllDone = function(callback) {
-    db.collection(COLL_NAME, function(err, collection) {
-        collection.find({done: true}).toArray(callback);
-    });
+exports.findAll = function() {
+    var promise = jf.readFileQ(FILE);
+    return promise;
+};
+
+exports.findAllUndone = function() {
+    var promise = jf.readFileQ(FILE);
+    return promise.then(filterRuns(false));
+};
+
+exports.findAllDone = function() {
+    var promise = jf.readFileQ(FILE);
+    return promise.then(filterRuns(true));
 };
  
-exports.findBeforeDate = function(querydate, callback) {
+exports.findBeforeDate = function(querydate) {
     console.log("Find before: " + querydate);
-    db.collection(COLL_NAME, function(err, collection) {
-        collection.find({date: {$lt: querydate}, done: false}).toArray(callback);
+    return jf.readFileQ(FILE)
+    .then(function(runs) {
+        if (runs !== null && runs.length > 0) {
+            return _.find(runs, function(thisRun) { return new Date(thisRun.date) < querydate; });
+        } else {
+            return null;
+        }
+    })
+    .fail(function(err) {
+        return null;
     });
-}
+};
 
-exports.addRun = function(run, callback) {
-    console.log('Adding run: ' + JSON.stringify(run));
+exports.addRun = function(run) {
     delete run.time;
     run.done = false;
     run.date = new Date(run.date);
-    db.collection(COLL_NAME, function(err, collection) {
-        collection.insert(run, {safe:true}, callback);
-    });
+    return exports.findAll()
+        .then(function(runs) {
+            if (runs === null || runs.length === 0) {
+                return { runs: [], maxId: 0 };
+            }
+            var maxId = _.max(runs, function(run) { return run.id; }).id;
+            return { runs: runs, maxId: maxId };
+        })
+        .then(function(runsAndMaxId) {
+            run.id = runsAndMaxId.maxId + 1;
+            runsAndMaxId.runs.push(run);
+            return runsAndMaxId.runs;
+        })
+        .then(function(runs) {
+            return jf.writeFileQ(FILE, runs);
+        });
 };
  
-exports.updateRun = function(id, run, callback) {
-    console.log('Updating run: ' + id);
-    console.log(JSON.stringify(run));
-    delete run._id;
+exports.updateRun = function(id, run) {
     delete run.time;
     run.date = new Date(run.date);
-    db.collection(COLL_NAME, function(err, collection) {
-        collection.update({'_id':new BSON.ObjectID(id)}, run, {safe:true}, callback);
-    });
+    return exports.findAll()
+        .then(function(runs) {
+            if (runs === null || runs.length === 0) {
+                runs = [];
+            }
+            var updateRuns = _.reject(runs, function(thisRun) {
+                return thisRun.id == id; });
+            updateRuns.push(run);
+            return updateRuns;
+        })
+        .then(function(runs) {
+            return jf.writeFileQ(FILE, runs);
+        });
 };
  
-exports.deleteRun = function(id, callback) {
+exports.deleteRun = function(id) {
     console.log('Deleting run: ' + id);
-    db.collection(COLL_NAME, function(err, collection) {
-        collection.remove({'_id':new BSON.ObjectID(id)}, {safe:true}, callback);
-    });
+    return exports.findAll()
+        .then(function(runs) {
+            if (runs === null || runs.length === 0) {
+                runs = [];
+            }
+            var updateRuns = _.reject(runs, function(thisRun) {
+                return thisRun.id == id; });
+            return updateRuns;
+        })
+        .then(function(runs) {
+            return jf.writeFileQ(FILE, runs);
+        });
 };
  
 /*--------------------------------------------------------------------------------------------------------------------*/
 // Populate database with sample data -- Only used once: the first time the application is started.
 // You'd typically not find this code in a real-life app, since the database would already exist.
-var populateDB = function() {
+exports.populateDB = function() {
  
     var runs = [
     {
+        id: 1,
         name: "Run 1",
-        date: new Date("2013-08-29T16:00:00+02:00")
+        date: new Date("2013-08-29T16:00:00+02:00"),
+        done: false
     },
     {
-        name: "Run 1",
-        date: new Date("2013-03-09T17:00:00+02:00")
+        id: 2,
+        name: "Run 2",
+        date: new Date("2013-03-09T17:00:00+02:00"),
+        done: false
     }];
  
-    db.createCollection(COLL_NAME, function(err, collection) {
-        collection.insert(runs, {safe:true}, function(err, result) {});
-    });
+    jf.writeFile(FILE, runs, function() {});
  
 };

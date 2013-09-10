@@ -1,16 +1,17 @@
-var db = require('../services/rundb')
-    , gpio = require('../services/gpio');
+var db = require('../services/rundb'),
+gpio = require('../services/gpio');
 
 exports.findById = function(req, res) {
     var id = req.params.id;
     console.log('Retrieving run: ' + id);
-    db.findById(id, function(err, item) {
+    db.findById(id)
+    .then(function(item) {
         res.json({ run: item });
     });
 };
 
-exports.findAll = function(req, res) {
-    db.findAll(function(err, items) {
+exports.findAllUndone = function(req, res) {
+    db.findAllUndone().then(function(items) {
         res.json({
             runs: items
         });
@@ -18,7 +19,7 @@ exports.findAll = function(req, res) {
 };
 
 exports.findAllDone = function(req, res) {
-    db.findAllDone(function(err, items) {
+    db.findAllDone().then(function(items) {
         res.json({
             runsDone: items
         });
@@ -27,13 +28,12 @@ exports.findAllDone = function(req, res) {
 
 exports.addRun = function(req, res) {
     var run = req.body;
-    db.addRun(run, function(err, result) {
-        if (err) {
-            res.json(false);
-        } else {
-            console.log('Success: ' + JSON.stringify(result[0]));
-            res.json(req.body);
-        }
+    db.addRun(run).then(function(result) {
+        console.log('Success: ' + JSON.stringify(result[0]));
+        res.json(req.body);
+    })
+    .fail(function (err) {
+        res.json(false);
     });
 };
 
@@ -44,26 +44,29 @@ exports.updateRun = function(req, res) {
         res.json(false);
         return;
     }
-    db.updateRun(id, run, function(err, result) {
-        if (err) {
-            console.log('Error updating run: ' + err);
-            res.json(false);
-        } else {
-            console.log('' + result + ' document(s) updated');
-            res.json(true);
-        }
+    db.updateRun(id, run)
+    .then(function(result) {
+        res.json(true);
+    })
+    .fail(function(err) {
+        console.log('Error updating run: ' + err);
+        res.json(false);
     });
 };
 
 exports.deleteRun = function(req, res) {
     var id = req.params.id;
-    db.deleteRun(id, function(err, result) {
-        if (err) {
-            res.json(false);
-        } else {
-            console.log('' + result + ' document(s) deleted');
-            res.json(true);
-        }
+    if (!req.loggedIn) {
+        res.json(false);
+        return;
+    }
+    db.deleteRun(id)
+    .then(function(result) {
+        res.json(true);
+    })
+    .fail(function(err) {
+        console.log('Error updating run: ' + err);
+        res.json(false);
     });
 };
 

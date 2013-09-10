@@ -116,7 +116,7 @@ everyauth
 
 app.configure(function() {
   app.use(express.logger());
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.PORT || 3001);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
@@ -144,7 +144,7 @@ app.post('/gpioOn', api.resetCycle);
 app.post('/rumble', api.rumble);
 app.post('/gpioOff', api.gpioOff);
 
-app.get('/api/runs', api.findAll);
+app.get('/api/runs', api.findAllUndone);
 app.get('/api/runsDone', api.findAllDone);
 app.get('/api/run/:id', api.findById);
 app.post('/api/run', api.addRun);
@@ -163,38 +163,31 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 setInterval(function() {
-    rundb.findBeforeDate(new Date(), function(err, items) {
-        console.log(items);
-        if (items !== null) {
-            for (var i = 0; i < items.length; i++) {
-                var run = items[i];
-                run.done = true;
-                rundb.updateRun(run._id.toString(), run, function() {
-                    console.log("Marked " + run._id + " as done.");
-                    console.log("Start run...");
+    rundb.findBeforeDate(new Date())
+    .then(function(run) {
+        if (run !== null) {
+            run.done = true;
+            rundb.updateRun(run.id.toString(), run)
+            .then(function() {
+                console.log("Marked " + run._id + " as done.");
+                console.log("Start run...");
                     
-                    gpio.registerListener(function(val) {
-                        console.log("Switch off: " + val);
-                        if (val == 1) {
-                            gpio.gpioOff();
-                            gpio.unregisterListener();
-
-                            gpio.rumbleOn();
-                            setTimeout(function() {
-                                console.log("Rumble");
-                                gpio.rumbleOff();
-                            }, 4000);
-                        }
-                    });
-
-                    gpio.gpioOn();
-                    setTimeout(function() {
-                        console.log("Timeout");
+                gpio.registerListener(function(val) {
+                    console.log("Switch off: " + val);
+                    if (val == 1) {
                         gpio.gpioOff();
-                        gpio.unregisterListener();  
-                    }, 5000);
+                        gpio.unregisterListener();
+                    }
                 });
-            }
+
+                gpio.gpioOn();
+                setTimeout(function() {
+                    console.log("Timeout");
+                    gpio.gpioOff();
+                    gpio.unregisterListener();
+                }, 5000);
+            });
+            
         }
     });
 }, 10000);
