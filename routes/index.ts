@@ -3,11 +3,11 @@
  * GET home page.
  */
 
-exports.index = function(req, res){
+export function index(req, res){
   res.render('index', { title: 'Express' });
 };
 
-exports.partials = function (req, res) {
+export function partials(req, res) {
   var name = req.params.name;
   res.render('partials/' + name);
 };

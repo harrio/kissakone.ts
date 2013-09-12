@@ -1,11 +1,12 @@
-var gpio = require("gpio");
+///<reference path='../node/gpio.d.ts' />
+import gpio = require("gpio");
 
 var gpio4;
 var gpio17;
 var gpio24;
 
-exports.gpioOn = function() {
-	gpio4 = gpio.export(4, {
+export function gpioOn() {
+	gpio4 = gpio.exportz(4, {
 	   	direction: 'out',
 
    		ready: function() {
@@ -14,15 +15,15 @@ exports.gpioOn = function() {
 	});
 };
 
-exports.gpioOff = function() {
+export function gpioOff() {
     if (gpio4) {
     	gpio4.reset();                 // sets pin to high
    		gpio4.unexport();
    	}
 };
 
-exports.rumbleOn = function() {
-  gpio17 = gpio.export(17, {
+export function rumbleOn() {
+  gpio17 = gpio.exportz(17, {
       direction: 'out',
 
       ready: function() {
@@ -31,16 +32,16 @@ exports.rumbleOn = function() {
   });
 };
 
-exports.rumbleOff = function() {
+export function rumbleOff() {
     if (gpio17) {
       gpio17.reset();                 // sets pin to high
       gpio17.unexport();
     }
 };
 
-exports.registerListener = function(callback) {
+export function registerListener(callback) {
     console.log("Registering listener...");
-    gpio24 = gpio.export(24, {
+    gpio24 = gpio.exportz(24, {
       direction: 'in',
 
       ready: function() {
@@ -50,7 +51,7 @@ exports.registerListener = function(callback) {
     });
 };
 
-exports.unregisterListener = function() {
+export function unregisterListener() {
   console.log("Unregistering listener");
     gpio24.removeAllListeners('change');   // unbinds change event
     gpio24.reset();                        // sets header to low

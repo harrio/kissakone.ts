@@ -1,8 +1,8 @@
-var gpio = require("gpio");
+import gpio = require("gpio");
 
 var gpio4;
 
-exports.gpioOn = function(req, res) {
+export function gpioOn(req, res) {
 	gpio4 = gpio.export(4, {
 	   	direction: 'out',
 
@@ -23,7 +23,7 @@ exports.gpioOn = function(req, res) {
 	res.send("On");
 };
 
-exports.gpioOff = function(req, res) {
+export function gpioOff(req, res) {
     if (gpio4) {
     	gpio4.reset();                 // sets pin to high
     	console.log("off: " + gpio4.value);    // should log 1 
@@ -62,7 +62,7 @@ function cycleClicks(clicks, maincallback) {
     callback();
 }
 
-exports.resetCycle = function(req, res) {
+export function resetCycle(req, res) {
     console.log("reset");
     var callback = function(elapsed) {
         if (elapsed > 1600) {

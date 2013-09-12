@@ -1,21 +1,24 @@
-
+///<reference path='node/node.d.ts' />
+///<reference path='node/express.d.ts' />
+///<reference path='node/everyauth.d.ts' />
+///<reference path='node/underscore.d.ts' />
 /**
  * Module dependencies.
  */
-
-var express = require('express')
-  , routes = require('./routes')
-  , everyauth = require('everyauth')
-  , http = require('http')
-  , path = require('path')
-  , gpio = require("./services/gpio")
-  , api = require("./routes/api")
-//  , gallery = require('node-gallery/gallery')
-  , rundb = require("./services/rundb");
+import _ = require('underscore');
+import express = require('express');
+import routes = require('./routes/index');
+import everyauth = require('everyauth');
+import http = require('http');
+import path = require('path');
+import gpio = require("./services/gpio");
+import api = require("./routes/api");
+//  import gallery = require('node-gallery/gallery')
+import rundb = require("./services/rundb");
 
 var everyauthRoot = __dirname + '/..';
 
-everyauth.debug = true;
+//everyauth.debug = true;
 
 var usersById = {};
 var nextUserId = 0;
@@ -24,7 +27,7 @@ var usersByLogin = {
   'morko': addUser({ login: 'morko', password: 'RaisuJaNirppu'})
 };
 
-function addUser (source, sourceUser) {
+function addUser (source, sourceUser?) {
   var user;
   if (arguments.length === 1) { // password-based
     user = sourceUser = source;
@@ -52,7 +55,7 @@ function preEveryauthMiddlewareHack() {
     return function (req, res, next) {
       var sess = req.session
         , auth = sess.auth
-        , ea = { loggedIn: !!(auth && auth.loggedIn) };
+        , ea:any = { loggedIn: !!(auth && auth.loggedIn) };
 
       // Copy the session.auth properties over
       for (var k in auth) {
@@ -81,7 +84,7 @@ function postEveryauthMiddlewareHack() {
   };
 };
 
-var app = express();
+var app = express.createServer  ();
 
 everyauth
   .password
@@ -169,9 +172,14 @@ setInterval(function() {
             run.done = true;
             rundb.updateRun(run.id.toString(), run)
             .then(function() {
-                console.log("Marked " + run._id + " as done.");
+                console.log("Marked " + run.id + " as done.");
                 console.log("Start run...");
-                    
+                
+                if (process.argv[2] == 'debug') {
+                    console.log("debug skip");
+                    return;
+                }
+
                 gpio.registerListener(function(val) {
                     console.log("Switch off: " + val);
                     if (val == 1) {

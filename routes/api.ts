@@ -1,7 +1,7 @@
-var db = require('../services/rundb'),
-gpio = require('../services/gpio');
+import db = require('../services/rundb');
+import gpio = require('../services/gpio');
 
-exports.findById = function(req, res) {
+export function findById(req, res) {
     var id = req.params.id;
     console.log('Retrieving run: ' + id);
     db.findById(id)
@@ -10,7 +10,7 @@ exports.findById = function(req, res) {
     });
 };
 
-exports.findAllUndone = function(req, res) {
+export function findAllUndone(req, res) {
     db.findAllUndone().then(function(items) {
         res.json({
             runs: items
@@ -18,7 +18,7 @@ exports.findAllUndone = function(req, res) {
     });
 };
 
-exports.findAllDone = function(req, res) {
+export function findAllDone(req, res) {
     db.findAllDone().then(function(items) {
         res.json({
             runsDone: items
@@ -26,7 +26,7 @@ exports.findAllDone = function(req, res) {
     });
 };
 
-exports.addRun = function(req, res) {
+export function addRun(req, res) {
     var run = req.body;
     db.addRun(run).then(function(result) {
         console.log('Success: ' + JSON.stringify(result[0]));
@@ -37,7 +37,7 @@ exports.addRun = function(req, res) {
     });
 };
 
-exports.updateRun = function(req, res) {
+export function updateRun(req, res) {
     var id = req.params.id;
     var run = req.body;
     if (!req.loggedIn) {
@@ -54,7 +54,7 @@ exports.updateRun = function(req, res) {
     });
 };
 
-exports.deleteRun = function(req, res) {
+export function deleteRun(req, res) {
     var id = req.params.id;
     if (!req.loggedIn) {
         res.json(false);
@@ -70,12 +70,12 @@ exports.deleteRun = function(req, res) {
     });
 };
 
-exports.gpioOn = function(req, res) {
+export function gpioOn(req, res) {
     gpio.gpioOn();
     res.send("On");
 };
 
-exports.gpioOff = function(req, res) {
+export function gpioOff(req, res) {
     gpio.gpioOff();
     res.send("Off");
 };
@@ -97,7 +97,7 @@ function cycleOne(callback) {
 
 function cycleClicks(clicks, maincallback) {
     var done = 0;
-    var callback = function(elapsed) {
+    var callback = function() {
         done++;
         if (done === clicks) {
             console.log("cycle done");
@@ -110,7 +110,7 @@ function cycleClicks(clicks, maincallback) {
     callback();
 }
 
-exports.resetCycle = function(req, res) {
+export function resetCycle(req, res) {
     console.log("reset");
     var callback = function(elapsed) {
         if (elapsed > 1600) {
@@ -127,7 +127,7 @@ exports.resetCycle = function(req, res) {
 
 };
 
-exports.rumble = function(req, res) {
+export function rumble(req, res) {
     console.log("rumble");
     gpio.rumbleOn();
     setTimeout(function() {

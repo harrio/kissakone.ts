@@ -1,11 +1,12 @@
-var jf = require('./jsonfile');
-var _ = require('underscore');
+///<reference path='../node/underscore.d.ts' />
+import jf = require('./jsonfile');
+import _ = require('underscore');
   
 var FILE = "kissa.json";
 
-exports.findById = function(id) {
+export function findById(id) {
     console.log('Retrieving run: ' + id);
-    return jf.readFileQ(FILE)
+    return jf.readFile(FILE)
     .then(function(runs) {
         if (runs === null || runs.length === 0)
         {
@@ -29,27 +30,27 @@ var filterRuns = function(done) {
     };
 };
 
-exports.findAll = function() {
-    var promise = jf.readFileQ(FILE);
+export function findAll() {
+    var promise = jf.readFile(FILE);
     return promise;
 };
 
-exports.findAllUndone = function() {
-    var promise = jf.readFileQ(FILE);
+export function findAllUndone() {
+    var promise = jf.readFile(FILE);
     return promise.then(filterRuns(false));
 };
 
-exports.findAllDone = function() {
-    var promise = jf.readFileQ(FILE);
+export function findAllDone() {
+    var promise = jf.readFile(FILE);
     return promise.then(filterRuns(true));
 };
  
-exports.findBeforeDate = function(querydate) {
+export function findBeforeDate(querydate) {
     console.log("Find before: " + querydate);
-    return jf.readFileQ(FILE)
+    return jf.readFile(FILE)
     .then(function(runs) {
         if (runs !== null && runs.length > 0) {
-            return _.find(runs, function(thisRun) { return new Date(thisRun.date) < querydate; });
+            return _.find(runs, function(thisRun) { return new Date(thisRun.date) < querydate && !thisRun.done; });
         } else {
             return null;
         }
@@ -59,11 +60,11 @@ exports.findBeforeDate = function(querydate) {
     });
 };
 
-exports.addRun = function(run) {
+export function addRun(run) {
     delete run.time;
     run.done = false;
     run.date = new Date(run.date);
-    return exports.findAll()
+    return findAll()
         .then(function(runs) {
             if (runs === null || runs.length === 0) {
                 return { runs: [], maxId: 0 };
@@ -77,14 +78,14 @@ exports.addRun = function(run) {
             return runsAndMaxId.runs;
         })
         .then(function(runs) {
-            return jf.writeFileQ(FILE, runs);
+            return jf.writeFile(FILE, runs);
         });
 };
  
-exports.updateRun = function(id, run) {
+export function updateRun(id, run) {
     delete run.time;
     run.date = new Date(run.date);
-    return exports.findAll()
+    return findAll()
         .then(function(runs) {
             if (runs === null || runs.length === 0) {
                 runs = [];
@@ -95,13 +96,13 @@ exports.updateRun = function(id, run) {
             return updateRuns;
         })
         .then(function(runs) {
-            return jf.writeFileQ(FILE, runs);
+            return jf.writeFile(FILE, runs);
         });
 };
  
-exports.deleteRun = function(id) {
+export function deleteRun(id) {
     console.log('Deleting run: ' + id);
-    return exports.findAll()
+    return findAll()
         .then(function(runs) {
             if (runs === null || runs.length === 0) {
                 runs = [];
@@ -111,29 +112,7 @@ exports.deleteRun = function(id) {
             return updateRuns;
         })
         .then(function(runs) {
-            return jf.writeFileQ(FILE, runs);
+            return jf.writeFile(FILE, runs);
         });
 };
  
-/*--------------------------------------------------------------------------------------------------------------------*/
-// Populate database with sample data -- Only used once: the first time the application is started.
-// You'd typically not find this code in a real-life app, since the database would already exist.
-exports.populateDB = function() {
- 
-    var runs = [
-    {
-        id: 1,
-        name: "Run 1",
-        date: new Date("2013-08-29T16:00:00+02:00"),
-        done: false
-    },
-    {
-        id: 2,
-        name: "Run 2",
-        date: new Date("2013-03-09T17:00:00+02:00"),
-        done: false
-    }];
- 
-    jf.writeFile(FILE, runs, function() {});
- 
-};
