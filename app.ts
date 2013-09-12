@@ -13,8 +13,8 @@ import http = require('http');
 import path = require('path');
 import gpio = require("./services/gpio");
 import api = require("./routes/api");
-//  import gallery = require('node-gallery/gallery')
 import rundb = require("./services/rundb");
+import jf = require("./services/jsonfile");
 
 var everyauthRoot = __dirname + '/..';
 
@@ -23,8 +23,10 @@ var everyauthRoot = __dirname + '/..';
 var usersById = {};
 var nextUserId = 0;
 
+var config = jf.readFileSync(process.argv[2]);
+
 var usersByLogin = {
-  'morko': addUser({ login: 'morko', password: 'RaisuJaNirppu'})
+  'morko': addUser({ login: config.user, password: config.password })
 };
 
 function addUser (source, sourceUser?) {
@@ -175,7 +177,7 @@ setInterval(function() {
                 console.log("Marked " + run.id + " as done.");
                 console.log("Start run...");
                 
-                if (process.argv[2] == 'debug') {
+                if (config.debug) {
                     console.log("debug skip");
                     return;
                 }

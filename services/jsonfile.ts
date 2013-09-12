@@ -27,3 +27,7 @@ export function writeFile(file, obj) {
   console.log("writeFileQ: " + file);
   return writeFileQ(file, stringify(obj));
 };
+
+export function readFileSync(file: string): any {
+  return JSON.parse(fs.readFileSync(file, 'utf8'));
+};
