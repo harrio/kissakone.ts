@@ -32,7 +32,7 @@ export function reverseOn() {
   });
 };
 
-export function forwardOff() {
+export function reverseOff() {
     if (gpio18) {
       gpio18.reset();                 // sets pin to high
       gpio18.unexport();

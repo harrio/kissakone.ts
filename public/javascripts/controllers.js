@@ -13,12 +13,6 @@ function IndexCtrl($scope, $http) {
         $location.path('/');
       });
   };
-  $scope.rumble = function () {
-    $http.post('/rumble', $scope.form).
-      success(function(data) {
-        $location.path('/');
-      });
-  };
 }
  
 function AddRunCtrl($scope, $http, $location) {

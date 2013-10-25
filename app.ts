@@ -146,7 +146,6 @@ app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 
 app.post('/gpioOn', api.resetCycle);
-app.post('/gpioOff', api.gpioOff);
 
 app.get('/api/runs', api.findAllUndone);
 app.get('/api/runsDone', api.findAllDone);
