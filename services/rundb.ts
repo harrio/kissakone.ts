@@ -1,28 +1,38 @@
 ///<reference path='../node/underscore.d.ts' />
+///<reference path='../node/Q.d.ts' />
+import q = require('q');
 import jf = require('./jsonfile');
 import _ = require('underscore');
-  
+ 
 var FILE = "kissa.json";
 
-export function findById(id) {
+export interface Run {
+    id: number;
+    name: string;
+    time: any;
+    date: any;
+    done: boolean;
+}
+
+export function findById(id: number): q.Promise<Run> {
     console.log('Retrieving run: ' + id);
     return jf.readFile(FILE)
-    .then(function(runs) {
+    .then(function(runs: Run[]) {
         if (runs === null || runs.length === 0)
         {
             return null;
         }
-        return _.find(runs, function(run) { return run.id == id; });
+        return _.find(runs, function(run: Run) { return run.id == id; });
     })
     .fail(function(err) {
         return err;
     });
 };
  
-var filterRuns = function(done) {
-    return function(runs) {
+var filterRuns = function(done: boolean) {
+    return function(runs: Run[]) {
         if (runs !== null && runs.length > 0) {
-            return _.filter(runs, function(run) { return run.done === done; });
+            return _.filter(runs, function(run: Run) { return run.done === done; });
         } else {
             console.log("no runs");
             return [];
@@ -30,27 +40,27 @@ var filterRuns = function(done) {
     };
 };
 
-export function findAll() {
+export function findAll(): q.Promise<Run[]> {
     var promise = jf.readFile(FILE);
     return promise;
 };
 
-export function findAllUndone() {
+export function findAllUndone(): q.Promise<Run[]> {
     var promise = jf.readFile(FILE);
     return promise.then(filterRuns(false));
 };
 
-export function findAllDone() {
+export function findAllDone(): q.Promise<Run[]> {
     var promise = jf.readFile(FILE);
     return promise.then(filterRuns(true));
 };
  
-export function findBeforeDate(querydate) {
+export function findBeforeDate(querydate: Date): q.Promise<Run> {
     console.log("Find before: " + querydate);
     return jf.readFile(FILE)
-    .then(function(runs) {
+    .then(function(runs: Run[]): Run {
         if (runs !== null && runs.length > 0) {
-            return _.find(runs, function(thisRun) { return new Date(thisRun.date) < querydate && !thisRun.done; });
+            return _.find(runs, function(thisRun: Run) { return new Date(thisRun.date) < querydate && !thisRun.done; });
         } else {
             return null;
         }
@@ -60,7 +70,7 @@ export function findBeforeDate(querydate) {
     });
 };
 
-export function addRun(run) {
+export function addRun(run: Run) {
     delete run.time;
     run.done = false;
     run.date = new Date(run.date);
