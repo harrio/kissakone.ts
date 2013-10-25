@@ -23,7 +23,7 @@ export function forwardOff() {
 };
 
 export function reverseOn() {
-  gpio17 = gpio.exportz(18, {
+  gpio18 = gpio.exportz(18, {
       direction: 'out',
 
       ready: function() {
