@@ -165,6 +165,38 @@ http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
 
+var done = 0;
+var reverse;
+
+var forward = function() {
+  gpio.registerListener(function(val) {
+    console.log("Switch off: " + val);
+    if (val == 1) {
+      gpio.forwardOff();
+      gpio.unregisterListener();
+      done++;
+      if (done < 3) {
+        reverse();
+      } 
+    }
+  });
+
+  gpio.forwardOn();
+}
+
+reverse = function() {
+  gpio.registerListener(function(val) {
+    console.log("Switch off: " + val);
+    if (val == 1) {
+      gpio.reverseOff();
+      gpio.unregisterListener();
+      forward();
+    }
+  });
+
+  gpio.reverseOn();
+}
+
 setInterval(function() {
     rundb.findBeforeDate(new Date())
     .then(function(run) {
@@ -179,8 +211,9 @@ setInterval(function() {
                     console.log("debug skip");
                     return;
                 }
-
-                gpio.registerListener(function(val) {
+                done = 0;
+                forward();
+                /*gpio.registerListener(function(val) {
                     console.log("Switch off: " + val);
                     if (val == 1) {
                         gpio.forwardOff();
@@ -193,7 +226,7 @@ setInterval(function() {
                     console.log("Timeout");
                     gpio.forwardOff();
                     gpio.unregisterListener();
-                }, 5000);
+                }, 5000);*/
             });
             
         }
