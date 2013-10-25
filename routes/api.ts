@@ -70,13 +70,13 @@ export function deleteRun(req, res) {
     });
 };
 
-export function gpioOn(req, res) {
-    gpio.gpioOn();
+export function forwardOn(req, res) {
+    gpio.forwardOn();
     res.send("On");
 };
 
-export function gpioOff(req, res) {
-    gpio.gpioOff();
+export function forwardOff(req, res) {
+    gpio.forwardOff();
     res.send("Off");
 };
 
@@ -85,14 +85,14 @@ function cycleOne(callback) {
     gpio.registerListener(function(val) {
         if (val == 1) {
             console.log("...cycled");
-            gpio.gpioOff();
+            gpio.forwardOff();
             gpio.unregisterListener();
             var elapsed = new Date().getTime() - startTime;
             callback(elapsed);
         }
     });
     console.log("cycle one...");
-    gpio.gpioOn();
+    gpio.forwardOn();
 }
 
 function cycleClicks(clicks, maincallback) {
@@ -125,13 +125,5 @@ export function resetCycle(req, res) {
     };
     callback(0);
 
-};
-
-export function rumble(req, res) {
-    console.log("rumble");
-    gpio.rumbleOn();
-    setTimeout(function() {
-        gpio.rumbleOff();
-    }, 2000);
 };
 

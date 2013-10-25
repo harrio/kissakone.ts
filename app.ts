@@ -146,7 +146,6 @@ app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 
 app.post('/gpioOn', api.resetCycle);
-app.post('/rumble', api.rumble);
 app.post('/gpioOff', api.gpioOff);
 
 app.get('/api/runs', api.findAllUndone);
@@ -185,15 +184,15 @@ setInterval(function() {
                 gpio.registerListener(function(val) {
                     console.log("Switch off: " + val);
                     if (val == 1) {
-                        gpio.gpioOff();
+                        gpio.forwardOff();
                         gpio.unregisterListener();
                     }
                 });
 
-                gpio.gpioOn();
+                gpio.forwardOn();
                 setTimeout(function() {
                     console.log("Timeout");
-                    gpio.gpioOff();
+                    gpio.forwardOff();
                     gpio.unregisterListener();
                 }, 5000);
             });
